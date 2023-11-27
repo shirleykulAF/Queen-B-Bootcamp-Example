@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "build:client": "cd client && npm install --no-audit && npm run build",
     "build": "npm run build:client && npm install --no-audit",
