@@ -19,7 +19,9 @@ app.get("/teachers", (req, res) => {
   res.send(teachers);
 });
 
-//teacher by id to do
+app.get("/teachers/:id", (req, res) => {
+  res.json(teachers.find((f) => f.id == req.params.id));
+});
 
 app.get("/*", (req, res) => {
   // res.send('Anything else');
