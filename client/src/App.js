@@ -1,6 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import React, {useState, useEffect} from 'react';
 import axios from 'axios';
-import firstPerson from './images/person1.svg';
+import StudentProfile from "./StudentProfile";
+import AllStudents from "./AllStudents";
 const port = process.env.PORT || 5001;
 
 function App() {
@@ -13,10 +15,16 @@ function App() {
   }, [])
 
   return (
-    <div className="App">
-      <h1>{message}</h1>
-      <img src={firstPerson} alt="person1" />
-    </div>
+      <>
+          <Router>
+              <>
+                  <Routes>
+                      <Route path="/" element={<AllStudents />} />
+                      <Route path="/products/*" element={<StudentProfile />} />
+                  </Routes>
+              </>
+          </Router>
+      </>
   );
 }
 
