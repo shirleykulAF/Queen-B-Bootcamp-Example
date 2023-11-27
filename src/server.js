@@ -1,8 +1,9 @@
-const express = require('express');
-const cors = require('cors');
-const path = require('path');
+const express = require("express");
+const cors = require("cors");
+const path = require("path");
 const app = express();
 const port = process.env.PORT || 5001;
+const teachers = require("./teachers.js");
 
 /*
 CORS (Cross-Origin Resource Sharing) is a browser security feature that restricts
@@ -12,15 +13,17 @@ We will use this Node.js package to allow cross-origin requests.
 app.use(cors());
 app.use(express.json());
 // enables the server to serve the client app without running it
-app.use(express.static(path.join(__dirname, '../client/build')));
+app.use(express.static(path.join(__dirname, "../client/build")));
 
-app.get('/api/helloworld', (req, res) => {
-  res.send('Hello World');
+app.get("/teachers", (req, res) => {
+  res.send(teachers);
 });
 
-app.get('/*', (req, res) => {
+//teacher by id to do
+
+app.get("/*", (req, res) => {
   // res.send('Anything else');
-  res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
+  res.sendFile(path.join(__dirname, "../client/build", "index.html"));
 });
 
 app.listen(port, () => {
