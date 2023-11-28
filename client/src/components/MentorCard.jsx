@@ -5,13 +5,13 @@ import {useEffect, useState} from "react";
 import Container from 'react-bootstrap/Container';
 // import Image from 'react-bootstrap/Image';
 import Row from 'react-bootstrap/Row';
-import person1 from '../images/person1.svg';
-import person2 from '../images/person2.svg';
-import person3 from '../images/person3.svg';
-import person4 from '../images/person4.svg';
-import person5 from '../images/person5.svg';
-import person6 from '../images/person6.svg';
-import person7 from '../images/person7.svg';
+// import person1 from '../images/person1.svg';
+// import person2 from '../images/person2.svg';
+// import person3 from '../images/person3.svg';
+// import person4 from '../images/person4.svg';
+// import person5 from '../images/person5.svg';
+// import person6 from '../images/person6.svg';
+// import person7 from '../images/person7.svg';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
