@@ -1,44 +1,33 @@
-import React from "react";
-import {BrowserRouter as Router, BrowserRouter, Link, Route, Routes} from 'react-router-dom';
-import StudentProfile from "./StudentProfile";
+import React, {useEffect, useState} from "react";
+import {Link} from 'react-router-dom';
+import MentorCard from "./MentorCard";
+import axios from "axios";
+import ImageList from "@mui/material/ImageList";
+const port = process.env.PORT || 5001;
 
 function AllStudents(){
+    const [allMentors, setMentors] = useState(null);
+
+    useEffect(() => {
+        axios.get(`http://localhost:${port}/students`)
+            .then(response => setMentors(response.data))
+            .catch(error => console.error(`There was an error retrieving the message: ${error}`))
+    }, [])
+
     return (
         <>
-            <>
-                <nav>
-                    <ul>
-                        <li>
-                            <Link to="/">Home</Link>
-                        </li>
-                        <li>
-                            <Link to="/about">About</Link>
-                        </li>
-                        <li>
-                            <Link to="/products">Products</Link>
-                        </li>
-                    </ul>
-                </nav>
+            <ImageList rowHeight={400} gap={20} cols={4}>
+                {allMentors?.map((item) => (
+                    <MentorCard key={item.id} student={item} />
+                ))}
+            </ImageList>
 
-                <Routes>
-                    <Route path="/" element={<AllStudentsContent />} />
-                    <Route path=":id" element={<StudentProfile />} />
-                </Routes>
-
-                <Link to="/products/1">
+            <Link to="/students/:id">
                     <button>View</button>
                 </Link>
-            </>
         </>
         );
 }
 
-function AllStudentsContent() {
-    return (
-        <div>
-            {/* Your content for AllStudents goes here */}
-        </div>
-    );
-}
 
 export default AllStudents;

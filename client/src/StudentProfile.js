@@ -1,13 +1,24 @@
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
-import React from 'react';
+import React, {useEffect, useState} from 'react';
+import axios from "axios";
 import { MDBCol, MDBContainer, MDBRow, MDBCard, MDBCardText, MDBCardBody, MDBCardImage, MDBBtn, MDBTypography, MDBIcon } from 'mdb-react-ui-kit';
 import firstPerson from './images/person1.svg';
 import { TiSocialGithub, TiSocialLinkedin} from "react-icons/ti";
 import { FaWhatsapp } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
-import QueenbLogo from './images/QueenbLogo.png;
+import QueenbLogo from './images/QueenbLogo.png';
+
+const port = process.env.PORT || 5001;
 
 function StudentProfile(){
+    const [student, setStudent] = useState(null);
+
+    useEffect(() => {
+        axios.get(`http://localhost:${port}/students/:id`)
+            .then(response => setStudent(response.data))
+            .catch(error => console.error(`There was an error retrieving the message: ${error}`))
+    }, [])
+
     return (
         <div className="vh-100" style={{ backgroundColor: 'pink' }}>
             <MDBContainer className="container py-5 h-100">
@@ -60,7 +71,7 @@ function StudentProfile(){
                     </MDBCol>
                 </MDBRow>
             </MDBContainer>
-            <img alt={} src={QueenbLogo}/>
+            <img src={QueenbLogo}/>
         </div>
     );
 }
