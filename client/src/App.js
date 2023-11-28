@@ -1,5 +1,12 @@
 import React, { useState, useEffect } from 'react';
 // import axios from 'axios';
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route,
+} from "react-router-dom";
+import HomePage from "./components/HomePage";
+import MentorPage from "./components/MentorPage";
 import firstPerson from './images/person1.svg';
 import MentorCard from "./components/MentorCard";
 import teachers from './mentors';
@@ -19,11 +26,17 @@ function App() {
   // }, [])
   //   console.log("app mentors: " + mentors);
   return (
-    <div className="App">
-      {/*<h1>{mentors}</h1>*/}
-        <MentorCard mentorsList={teachers} port={port}/>
-      <img src={firstPerson} alt="person1" />
-    </div>
+      <div className="App">
+          <Router>
+              <Routes>
+                  <Route exact path="/" element={<HomePage port={port}/>} />
+                  <Route path="/teachers" element={<MentorPage port={port}/> }/>
+                  {/*<Route path="/mentor" element={<About />} />*/}
+              </Routes>
+          </Router>
+      </div>
+
+
   );
 }
 
