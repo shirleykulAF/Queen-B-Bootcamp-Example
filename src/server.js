@@ -3,20 +3,23 @@ const cors = require('cors');
 const path = require('path');
 const app = express();
 const port = process.env.PORT || 5001;
+const users = require('./users_data');
 
-/*
-CORS (Cross-Origin Resource Sharing) is a browser security feature that restricts
-cross-origin HTTP requests with other servers and specifies which domains access your resources.
-We will use this Node.js package to allow cross-origin requests.
- */
 app.use(cors());
 app.use(express.json());
 // enables the server to serve the client app without running it
 app.use(express.static(path.join(__dirname, '../client/build')));
 
-app.get('/api/helloworld', (req, res) => {
-  res.send('Hello World');
+//first param is the url adress the client calls/sends massage to
+app.get('/mentor', (req, res) => {
+  res.send(users);
 });
+
+
+// app.get('/mentor/:id', (req, res) => {
+//   const usersById = users.filter(item => item.name === req.params.id);
+//   res.send(usersById);
+// });
 
 app.get('/*', (req, res) => {
   // res.send('Anything else');

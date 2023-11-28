@@ -1,0 +1,47 @@
+.MiniMentor {
+    align-items: center;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 20px 50px rgba(250, 190, 189, 0.30);
+    justify-content: center;
+    height: 176px;
+    width: 112px;
+  }
+  
+  .grid {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, 150px);
+    place-items: center;
+  }
+
+  .img-MiniMentor{
+    margin-top: 10px;
+    margin-left: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 63px;
+    height: 109px;
+    flex-shrink: 500;
+    border-radius: 12px;
+    background: rgba(250, 190, 189, 0.30);
+}
+
+.h1-MiniMentor{
+    color: #363738;
+    font-family: Exo;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 0.8em;
+    text-align: center;
+}
+.p-MiniMentor{
+    color: #363738;
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 0.3em;
+    text-align: center;
+}
