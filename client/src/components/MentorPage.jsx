@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
-import {useLocation} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 import {type} from "@testing-library/user-event/dist/type";
+import {Button} from "react-bootstrap";
 
 
 
@@ -11,11 +12,11 @@ export default function MentorPage({port}) {
     const check_null = location.state === null;
     let {from} = (check_null === true) ? null : location.state;
 
-    // useEffect(() => {
-    //     setId(from);
-    //     console.log("from: ", from, typeof (from))
-    //     console.log("id: ", id, typeof (id))
-    // }, [check_null, from]);
+    useEffect(() => {
+        setId(from);
+        console.log("from: ", from, typeof (from))
+        console.log("id: ", id, typeof (id))
+    }, [check_null, from]);
 
     console.log(port);
     useEffect(() => {
@@ -44,7 +45,7 @@ export default function MentorPage({port}) {
                     <h4>mentor id: {id}</h4>
                 </div>)
             }
-
+            <Link style={{fontSize: '2rem'}} to="/">To Home Page</Link>
             {/*    add your components here :) */}
         </div>
     )
