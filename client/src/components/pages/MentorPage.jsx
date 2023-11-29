@@ -35,7 +35,7 @@ export default function MentorPage({port}) {
         fetch(`http://localhost:${port}/teachers/${from}`)
             .then(response => response.json())
             .then(data => {
-                setMentorData(JSON.stringify(data));
+                setMentorData(data);
             })
             .catch(error => {
                 console.error("Error fetching data:", error);
@@ -47,7 +47,7 @@ export default function MentorPage({port}) {
             {(from == null) ? (<h1>the mentor is not exist</h1> ):
                 (<div>
                     <h1>this is the mentor page!</h1>
-                    <h4>mentor data: {mentorData}</h4>
+                    <h4>mentor data: {JSON.stringify(mentorData)}</h4>
                     <h4>mentor data type: {typeof (mentorData)}</h4>
                     <h4>mentor id: {id}</h4>
                 </div>)
