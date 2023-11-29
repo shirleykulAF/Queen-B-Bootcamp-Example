@@ -3,6 +3,7 @@ import React, {useEffect, useState} from "react";
 import Main from "../Main";
 import Header from "../Header";
 import Footer from "../Footer";
+import SearchBar from "../SearchBar";
 import {Link} from "react-router-dom";
 
 
@@ -25,6 +26,7 @@ export default function HomePage({port}) {
     return(
         <div>
             <Header />
+            <SearchBar teachers={mentors}/>
             <Main teachersList={mentors}/>
             <Footer/>
             {/*<MentorCard mentorsList={mentors}/>*/}
