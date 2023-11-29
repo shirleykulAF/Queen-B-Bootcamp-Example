@@ -5,8 +5,8 @@ import {
     Routes,
     Route,
 } from "react-router-dom";
-import HomePage from "./components/HomePage";
-import MentorPage from "./components/MentorPage";
+import HomePage from "./components/pages/HomePage";
+import MentorPage from "./components/pages/MentorPage";
 import firstPerson from './images/person1.svg';
 import MentorCard from "./components/MentorCard";
 import teachers from './mentors';

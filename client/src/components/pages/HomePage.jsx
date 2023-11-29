@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import MentorCard from "./MentorCard";
+import MentorCard from "../MentorCard";
 
 
 export default function HomePage({port}) {

@@ -14,7 +14,7 @@ import Row from 'react-bootstrap/Row';
 // import person7 from '../images/person7.svg';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Link} from "react-router-dom";
-import MentorPage from "./MentorPage";
+import MentorPage from "./pages/MentorPage";
 
 
 
