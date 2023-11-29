@@ -1,0 +1,87 @@
+
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #fff;
+    color: #000;
+    font-size: 15px;
+    margin: 0; /* Added to remove default body margin */
+}
+
+a {
+    color: #262626;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+
+
+.btn {
+    cursor: pointer;
+    display: inline-block;
+    border: 0;
+    font-weight: bold;
+    padding: 10px 20px;
+    background: #262626;
+    color: #fff;
+    font-size: 15px;;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.dark {
+    color: #fff;
+}
+
+.dark .btn {
+    background: #f4f4f4;
+    color: #333;
+}
+
+/* Showcase */
+.showcase {
+    width: 100%;
+    height: 100vh;
+    background: url('https://wearetechwomen.com/wp-content/uploads/2022/03/shutterstock_1598370349.jpg') no-repeat center center/cover;
+    background-size: 60% 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: flex-end;
+    padding-bottom: 50px;
+
+}
+
+/* Overlay Text */
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Ensure text is above the black box */
+}
+
+/* White Text with Shadow */
+.white-text {
+    color: #EDEDED;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); /* Black shadow */
+}
+
+/* Black Box Overlay */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black; /* Solid black box */
+    opacity: 0.7; /* Adjust the opacity as needed */
+    z-index: 0; /* Ensure the black box is below the text */
+}

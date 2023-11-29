@@ -2,7 +2,7 @@ const itemsList = [
     {
         id: 1,
         img: 'person1.svg',
-        name: 'Breakfast',
+        name: 'Kevin Hart',
         interest: 'JavaScript',
         about: 'I love football',
         github: 'https://github.com/',
@@ -13,8 +13,8 @@ const itemsList = [
     {
         id: 2,
         img: 'person2.svg',
-        name: 'Hidaya',
-        interest: 'Java, Statistics. OOP',
+        name: 'Hidaya Baraky',
+        interest: 'Java, Statistics, OOP',
         about: 'I love car races, they excite me!',
         github: 'https://github.com/hidaya-baraky/hidaya-baraky',
         linkedin: 'https://www.linkedin.com/in/hidaya-baraky-39a9311b2/',
@@ -24,7 +24,7 @@ const itemsList = [
     {
         id: 3,
         img: 'person3.svg',
-        name: 'Lilian',
+        name: 'Lilian Harb',
         interest: 'Java, DataStructures, OOP',
         about: 'I like baking, running and life :)',
         github: 'https://github.com/LilianHarb',
@@ -35,7 +35,7 @@ const itemsList = [
     {
         id: 4,
         img: 'person4.svg',
-        name: 'Yamama',
+        name: 'Yamama Ighbarieh',
         interest: 'Java, Statistics, Python',
         about: 'I love cats :)',
         github: 'https://github.com/IghbariehYamama',
@@ -57,7 +57,7 @@ const itemsList = [
     {
         id:6,
         img: 'person6.svg',
-        name: 'Lana',
+        name: 'Lana Abu Mokh',
         interest: 'Python, Statistics, Java',
         about: 'I love dogs!',
         github: 'https://github.com/',
@@ -68,7 +68,7 @@ const itemsList = [
     {
         id:7,
         img: 'person7.svg',
-        name: 'Maria',
+        name: 'Maria Atia',
         interest: 'C, C++, Java',
         about: 'I dont like dogs',
         github: 'https://github.com/',
