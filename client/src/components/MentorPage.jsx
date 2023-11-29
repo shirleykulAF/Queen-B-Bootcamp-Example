@@ -42,7 +42,6 @@ export default function MentorPage({port}) {
             });
     }, [from, port]);
 
-    console.log(mentorData.type)
     return(
         <div>
             {(from == null) ? (<h1>the mentor is not exist</h1> ):
