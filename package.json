@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
+    "build:client": "cd client && npm install --no-audit && npm run build",
+    "build": "npm run build:client && npm install --no-audit",
+    "start:prod": "npm run build && npm run start",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/server.js",
     "dev": "nodemon src/server.js"
