@@ -12,16 +12,50 @@ app.use(express.static(path.join(__dirname, '../client/build')));
 
 //first param is the url adress the client calls/sends massage to
 app.get('/mentor', (req, res) => {
-  res.send(users);
+  try{
+    res.send(users);
+  }
+  catch(err){
+    res.status(500).send({message: err.message});
+  }
 });
 
 
-// app.get('/mentor/:id', (req, res) => {
-//   const usersById = users.filter(item => item.name === req.params.id);
-//   res.send(usersById);
-// });
+app.get('/mentor/:id', (req, res) => {
+  try{
+    let found
+    const userId = Number(req.params.id);
+    console.log(userId);
+    found = users.find(user =>
+      user.id === userId
+    )
+    console.log(found);
+    res.send(found);
+  } catch(err){
+    res.status(500).send({message: err.message});
+  }
+});
 
-app.get('/*', (req, res) => {
+
+app.get('/mentorFilter', (req, res) => {
+  try{
+    let filtered = users
+    const searchFilter = req.query.searchFilter.toLowerCase();
+    if (searchFilter){
+      filtered = users.filter(user =>
+        Object.values(user).some(value =>
+          typeof value === 'string' && value.toLocaleLowerCase().includes(searchFilter)
+          )
+        )
+    }
+    res.send(filtered);
+  } catch(err){
+    res.status(500).send({message: err.message});
+  }
+});
+
+
+app.get('/', (req, res) => {
   // res.send('Anything else');
   res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
 });

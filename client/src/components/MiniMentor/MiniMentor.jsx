@@ -20,26 +20,16 @@ const imageMapper={
   person7,
 }
 
-//fetch returns promise (resolved/reject)
-const getUsers = () =>{
-  return fetch('http://localhost:5001/mentor').then(response => {
-    response.json().then(data=>{
-      console.log(data);
-    });
-    return response;
-  });
-}
-
-
-
 function MiniMentor({users}){
-  // const users = getUsers();
+  
   const miniCardArray = users.map?.(user=>
+    <a href={`mentor/${user.id}`}>
     <div className="MiniMentor" key={user.id}>
       <img className="img-MiniMentor" src={imageMapper[user.image]} alt= {user.image}/>
       <h1 className="h1-MiniMentor">{user.name}</h1>
       <p className="p-MiniMentor">{user.skill}</p>
     </div>
+    </a>
   )
   return(
   <div className="grid">
