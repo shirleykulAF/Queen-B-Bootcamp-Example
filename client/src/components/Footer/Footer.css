@@ -1,7 +1,7 @@
 
 .Footer{
     background-color: #FABEBD ;
-    border-top: 2px solid rgb(31, 6, 6);
+    /* border-top: 2px solid rgb(31, 6, 6); */
     position: fixed;
     bottom: 0;
     color: white;
@@ -12,5 +12,6 @@
 .img-Footer{
     width: 140px;
     height: 75.385px;
-    margin-left: 38%;
+    position: absolute;
+    left: 35%;
 }

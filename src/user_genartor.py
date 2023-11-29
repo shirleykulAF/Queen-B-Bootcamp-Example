@@ -12,19 +12,14 @@ for i in range(1, 21):
         "name": fake.name(),
         "email": fake.email(),
         "skill": random.choice(["HTML", "JavaScript", "nodeJS", "React", "CSS"]),
-        "description": {
-            "education": {
-                "field": "computer science",  # For simplicity, using a fixed field
-                "graduation": str(random.randint(2015, 2023))  # Random graduation year between 2015 and 2023
-            },
-            "work": {
-                "job": fake.job(),
-                "company": fake.company()
-            },
-            "hobby": fake.random_choices(elements=("sing", "dance", "play sports", "paint", "cook"), length=2)
-        },
-        "isActive": False,
-        "image": f"person{random.choice([1,2,3,4,5,6,7])}"
+        "educationField" :"computer science",
+        "graduationYear": str(random.randint(2015, 2023)),
+        "jobTitle": fake.job(),
+        "jobCompany" : fake.company(),
+        "hobbyFirst": random.choice(["sing", "dance", "play sports", "paint", "cook"]),
+        "hobbySecond" : random.choice(["drive", "volunteer", "code", "go shopping", "read"]),
+        "image": f"person{random.choice([1,2,3,4,5,6,7])}",
+        "number": f"9725{str(random.randint(20000000, 400000000))}"
     }
     users.append(user)
 

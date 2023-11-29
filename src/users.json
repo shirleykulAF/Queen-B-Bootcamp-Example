@@ -1,442 +1,282 @@
 [
   {
     "id": 1,
-    "name": "Edwin Conley",
-    "email": "haledevin@example.org",
+    "name": "Oscar Jackson",
+    "email": "ewingashley@example.com",
     "skill": "JavaScript",
-    "description": {
-      "education": {
-        "field": "computer science",
-        "graduation": "2017"
-      },
-      "work": {
-        "job": "Engineer, building services",
-        "company": "Robinson-Scott"
-      },
-      "hobby": [
-        "dance",
-        "play sports"
-      ]
-    },
-    "isActive": false,
-    "image": "person5"
+    "educationField": "computer science",
+    "graduationYear": "2022",
+    "jobTitle": "Furniture conservator/restorer",
+    "jobCompany": "Cole-Atkins",
+    "hobbyFirst": "paint",
+    "hobbySecond": "drive",
+    "image": "person5",
+    "number": "972527476177"
   },
   {
     "id": 2,
-    "name": "Michael Franklin",
-    "email": "cheryllopez@example.net",
-    "skill": "nodeJS",
-    "description": {
-      "education": {
-        "field": "computer science",
-        "graduation": "2023"
-      },
-      "work": {
-        "job": "Investment banker, corporate",
-        "company": "Morrison, Martinez and Fernandez"
-      },
-      "hobby": [
-        "cook",
-        "play sports"
-      ]
-    },
-    "isActive": false,
-    "image": "person4"
+    "name": "Sherry Rice",
+    "email": "zhernandez@example.org",
+    "skill": "React",
+    "educationField": "computer science",
+    "graduationYear": "2023",
+    "jobTitle": "Theme park manager",
+    "jobCompany": "Anderson LLC",
+    "hobbyFirst": "cook",
+    "hobbySecond": "volunteer",
+    "image": "person3",
+    "number": "9725100410965"
   },
   {
     "id": 3,
-    "name": "Diana Becker",
-    "email": "kwilcox@example.net",
-    "skill": "JavaScript",
-    "description": {
-      "education": {
-        "field": "computer science",
-        "graduation": "2020"
-      },
-      "work": {
-        "job": "Air cabin crew",
-        "company": "Hays, Bryant and Nguyen"
-      },
-      "hobby": [
-        "dance",
-        "play sports"
-      ]
-    },
-    "isActive": false,
-    "image": "person3"
+    "name": "Scott Garcia",
+    "email": "barbara81@example.net",
+    "skill": "HTML",
+    "educationField": "computer science",
+    "graduationYear": "2015",
+    "jobTitle": "Retail manager",
+    "jobCompany": "Ware, Tyler and Villegas",
+    "hobbyFirst": "paint",
+    "hobbySecond": "code",
+    "image": "person1",
+    "number": "9725172333812"
   },
   {
     "id": 4,
-    "name": "Joanna Brown",
-    "email": "cookrobert@example.com",
-    "skill": "HTML",
-    "description": {
-      "education": {
-        "field": "computer science",
-        "graduation": "2022"
-      },
-      "work": {
-        "job": "Producer, television/film/video",
-        "company": "Robinson-Garcia"
-      },
-      "hobby": [
-        "cook",
-        "dance"
-      ]
-    },
-    "isActive": false,
-    "image": "person4"
+    "name": "Joshua Kennedy",
+    "email": "mooremary@example.com",
+    "skill": "nodeJS",
+    "educationField": "computer science",
+    "graduationYear": "2023",
+    "jobTitle": "Management consultant",
+    "jobCompany": "Sanders Inc",
+    "hobbyFirst": "play sports",
+    "hobbySecond": "read",
+    "image": "person5",
+    "number": "972571617226"
   },
   {
     "id": 5,
-    "name": "Zachary Deleon",
-    "email": "tmurray@example.org",
-    "skill": "CSS",
-    "description": {
-      "education": {
-        "field": "computer science",
-        "graduation": "2020"
-      },
-      "work": {
-        "job": "Animal technologist",
-        "company": "Taylor, Smith and Fowler"
-      },
-      "hobby": [
-        "dance",
-        "cook"
-      ]
-    },
-    "isActive": false,
-    "image": "person7"
+    "name": "Manuel Mann",
+    "email": "shannonnewman@example.net",
+    "skill": "HTML",
+    "educationField": "computer science",
+    "graduationYear": "2019",
+    "jobTitle": "Retail buyer",
+    "jobCompany": "Moore-Smith",
+    "hobbyFirst": "cook",
+    "hobbySecond": "read",
+    "image": "person1",
+    "number": "9725211037072"
   },
   {
     "id": 6,
-    "name": "Sandra Wells",
-    "email": "jacobmoyer@example.com",
-    "skill": "JavaScript",
-    "description": {
-      "education": {
-        "field": "computer science",
-        "graduation": "2017"
-      },
-      "work": {
-        "job": "Podiatrist",
-        "company": "Wolf, Gordon and Irwin"
-      },
-      "hobby": [
-        "paint",
-        "dance"
-      ]
-    },
-    "isActive": false,
-    "image": "person7"
+    "name": "Crystal Mills",
+    "email": "michelle94@example.org",
+    "skill": "CSS",
+    "educationField": "computer science",
+    "graduationYear": "2023",
+    "jobTitle": "Theatre manager",
+    "jobCompany": "Keith, Tucker and Hayes",
+    "hobbyFirst": "paint",
+    "hobbySecond": "go shopping",
+    "image": "person3",
+    "number": "9725396254468"
   },
   {
     "id": 7,
-    "name": "Donna Richards",
-    "email": "uwilson@example.net",
+    "name": "Allen Becker",
+    "email": "briannahoward@example.net",
     "skill": "JavaScript",
-    "description": {
-      "education": {
-        "field": "computer science",
-        "graduation": "2018"
-      },
-      "work": {
-        "job": "Chiropodist",
-        "company": "Young Group"
-      },
-      "hobby": [
-        "dance",
-        "sing"
-      ]
-    },
-    "isActive": false,
-    "image": "person5"
+    "educationField": "computer science",
+    "graduationYear": "2018",
+    "jobTitle": "Accountant, chartered",
+    "jobCompany": "Mason, Simmons and Mcmahon",
+    "hobbyFirst": "paint",
+    "hobbySecond": "volunteer",
+    "image": "person1",
+    "number": "9725324936708"
   },
   {
     "id": 8,
-    "name": "Dustin Nicholson",
-    "email": "ibarradebra@example.org",
-    "skill": "nodeJS",
-    "description": {
-      "education": {
-        "field": "computer science",
-        "graduation": "2018"
-      },
-      "work": {
-        "job": "Energy engineer",
-        "company": "Robinson-Jordan"
-      },
-      "hobby": [
-        "paint",
-        "cook"
-      ]
-    },
-    "isActive": false,
-    "image": "person3"
+    "name": "Meredith Colon",
+    "email": "ericwright@example.org",
+    "skill": "CSS",
+    "educationField": "computer science",
+    "graduationYear": "2018",
+    "jobTitle": "Designer, exhibition/display",
+    "jobCompany": "Wu, Jimenez and Hale",
+    "hobbyFirst": "dance",
+    "hobbySecond": "read",
+    "image": "person4",
+    "number": "972538695598"
   },
   {
     "id": 9,
-    "name": "Nathan Waters",
-    "email": "lorettaclements@example.net",
-    "skill": "nodeJS",
-    "description": {
-      "education": {
-        "field": "computer science",
-        "graduation": "2016"
-      },
-      "work": {
-        "job": "Scientist, physiological",
-        "company": "Murray-Cohen"
-      },
-      "hobby": [
-        "cook",
-        "sing"
-      ]
-    },
-    "isActive": false,
-    "image": "person3"
+    "name": "Erika Scott",
+    "email": "ashleyday@example.com",
+    "skill": "JavaScript",
+    "educationField": "computer science",
+    "graduationYear": "2016",
+    "jobTitle": "Clinical research associate",
+    "jobCompany": "Johnson-Johnson",
+    "hobbyFirst": "dance",
+    "hobbySecond": "code",
+    "image": "person2",
+    "number": "9725197343848"
   },
   {
     "id": 10,
-    "name": "Diana Williams",
-    "email": "caseyvelazquez@example.com",
-    "skill": "nodeJS",
-    "description": {
-      "education": {
-        "field": "computer science",
-        "graduation": "2016"
-      },
-      "work": {
-        "job": "Wellsite geologist",
-        "company": "Lewis-Barber"
-      },
-      "hobby": [
-        "dance",
-        "dance"
-      ]
-    },
-    "isActive": false,
-    "image": "person6"
+    "name": "Jeff Hansen",
+    "email": "johnchapman@example.org",
+    "skill": "React",
+    "educationField": "computer science",
+    "graduationYear": "2021",
+    "jobTitle": "Accommodation manager",
+    "jobCompany": "Robinson-Ortega",
+    "hobbyFirst": "cook",
+    "hobbySecond": "volunteer",
+    "image": "person1",
+    "number": "9725189260213"
   },
   {
     "id": 11,
-    "name": "Amy Barrett",
-    "email": "sfreeman@example.net",
+    "name": "Selena Newman",
+    "email": "eharris@example.com",
     "skill": "CSS",
-    "description": {
-      "education": {
-        "field": "computer science",
-        "graduation": "2020"
-      },
-      "work": {
-        "job": "Dispensing optician",
-        "company": "Gray-Johnston"
-      },
-      "hobby": [
-        "dance",
-        "paint"
-      ]
-    },
-    "isActive": false,
-    "image": "person2"
+    "educationField": "computer science",
+    "graduationYear": "2015",
+    "jobTitle": "Teacher, adult education",
+    "jobCompany": "Jones-Valentine",
+    "hobbyFirst": "sing",
+    "hobbySecond": "volunteer",
+    "image": "person6",
+    "number": "972535789825"
   },
   {
     "id": 12,
-    "name": "Thomas Morris",
-    "email": "iedwards@example.com",
+    "name": "Phillip Tran",
+    "email": "judithanderson@example.net",
     "skill": "React",
-    "description": {
-      "education": {
-        "field": "computer science",
-        "graduation": "2016"
-      },
-      "work": {
-        "job": "Therapist, art",
-        "company": "Miller-Sanchez"
-      },
-      "hobby": [
-        "play sports",
-        "sing"
-      ]
-    },
-    "isActive": false,
-    "image": "person6"
+    "educationField": "computer science",
+    "graduationYear": "2021",
+    "jobTitle": "Pharmacologist",
+    "jobCompany": "Morales-Wilson",
+    "hobbyFirst": "sing",
+    "hobbySecond": "code",
+    "image": "person7",
+    "number": "9725311702284"
   },
   {
     "id": 13,
-    "name": "Ryan Smith",
-    "email": "bconley@example.net",
+    "name": "Marvin Cochran",
+    "email": "nbarnett@example.org",
     "skill": "CSS",
-    "description": {
-      "education": {
-        "field": "computer science",
-        "graduation": "2020"
-      },
-      "work": {
-        "job": "Exercise physiologist",
-        "company": "Page Ltd"
-      },
-      "hobby": [
-        "dance",
-        "cook"
-      ]
-    },
-    "isActive": false,
-    "image": "person1"
+    "educationField": "computer science",
+    "graduationYear": "2015",
+    "jobTitle": "Solicitor",
+    "jobCompany": "Scott-Spencer",
+    "hobbyFirst": "sing",
+    "hobbySecond": "code",
+    "image": "person2",
+    "number": "9725221701937"
   },
   {
     "id": 14,
-    "name": "Kathy Thomas",
-    "email": "travissmith@example.com",
+    "name": "Mary Cook DDS",
+    "email": "ricardo87@example.net",
     "skill": "CSS",
-    "description": {
-      "education": {
-        "field": "computer science",
-        "graduation": "2017"
-      },
-      "work": {
-        "job": "Amenity horticulturist",
-        "company": "Peters Group"
-      },
-      "hobby": [
-        "cook",
-        "sing"
-      ]
-    },
-    "isActive": false,
-    "image": "person2"
+    "educationField": "computer science",
+    "graduationYear": "2017",
+    "jobTitle": "Outdoor activities/education manager",
+    "jobCompany": "Moore Group",
+    "hobbyFirst": "play sports",
+    "hobbySecond": "drive",
+    "image": "person7",
+    "number": "972558218885"
   },
   {
     "id": 15,
-    "name": "Kenneth Gray",
-    "email": "ncoleman@example.org",
-    "skill": "CSS",
-    "description": {
-      "education": {
-        "field": "computer science",
-        "graduation": "2017"
-      },
-      "work": {
-        "job": "Paramedic",
-        "company": "Arnold PLC"
-      },
-      "hobby": [
-        "paint",
-        "sing"
-      ]
-    },
-    "isActive": false,
-    "image": "person1"
+    "name": "Gary Dixon",
+    "email": "annewebb@example.com",
+    "skill": "React",
+    "educationField": "computer science",
+    "graduationYear": "2020",
+    "jobTitle": "Tax inspector",
+    "jobCompany": "Harris-Johnson",
+    "hobbyFirst": "play sports",
+    "hobbySecond": "code",
+    "image": "person5",
+    "number": "972597681977"
   },
   {
     "id": 16,
-    "name": "Walter Oconnor",
-    "email": "danajenkins@example.org",
-    "skill": "React",
-    "description": {
-      "education": {
-        "field": "computer science",
-        "graduation": "2022"
-      },
-      "work": {
-        "job": "Production assistant, radio",
-        "company": "Bonilla, Copeland and Bowman"
-      },
-      "hobby": [
-        "dance",
-        "paint"
-      ]
-    },
-    "isActive": false,
-    "image": "person3"
+    "name": "Alexis Rogers",
+    "email": "adamcamacho@example.com",
+    "skill": "JavaScript",
+    "educationField": "computer science",
+    "graduationYear": "2021",
+    "jobTitle": "Designer, graphic",
+    "jobCompany": "Peterson-Robinson",
+    "hobbyFirst": "paint",
+    "hobbySecond": "read",
+    "image": "person7",
+    "number": "972572477316"
   },
   {
     "id": 17,
-    "name": "Kathryn Clark",
-    "email": "harrisdustin@example.net",
-    "skill": "JavaScript",
-    "description": {
-      "education": {
-        "field": "computer science",
-        "graduation": "2020"
-      },
-      "work": {
-        "job": "Hospital doctor",
-        "company": "Johnston-Fischer"
-      },
-      "hobby": [
-        "sing",
-        "sing"
-      ]
-    },
-    "isActive": false,
-    "image": "person3"
+    "name": "William Meyer",
+    "email": "monica73@example.net",
+    "skill": "nodeJS",
+    "educationField": "computer science",
+    "graduationYear": "2023",
+    "jobTitle": "Librarian, academic",
+    "jobCompany": "Kline, Mathis and Holland",
+    "hobbyFirst": "paint",
+    "hobbySecond": "drive",
+    "image": "person1",
+    "number": "9725122657006"
   },
   {
     "id": 18,
-    "name": "Terri Daniel",
-    "email": "khanbrittany@example.org",
-    "skill": "React",
-    "description": {
-      "education": {
-        "field": "computer science",
-        "graduation": "2022"
-      },
-      "work": {
-        "job": "Learning mentor",
-        "company": "Williams LLC"
-      },
-      "hobby": [
-        "dance",
-        "paint"
-      ]
-    },
-    "isActive": false,
-    "image": "person6"
+    "name": "Mary Williamson",
+    "email": "katelyn68@example.org",
+    "skill": "JavaScript",
+    "educationField": "computer science",
+    "graduationYear": "2023",
+    "jobTitle": "Tour manager",
+    "jobCompany": "Spencer-Mccoy",
+    "hobbyFirst": "cook",
+    "hobbySecond": "code",
+    "image": "person4",
+    "number": "9725273961292"
   },
   {
     "id": 19,
-    "name": "Heather Wilson",
-    "email": "carrie67@example.org",
+    "name": "Robert Williams",
+    "email": "seanjohnson@example.com",
     "skill": "JavaScript",
-    "description": {
-      "education": {
-        "field": "computer science",
-        "graduation": "2017"
-      },
-      "work": {
-        "job": "Information officer",
-        "company": "Huynh, Alexander and Little"
-      },
-      "hobby": [
-        "paint",
-        "dance"
-      ]
-    },
-    "isActive": false,
-    "image": "person2"
+    "educationField": "computer science",
+    "graduationYear": "2015",
+    "jobTitle": "Teacher, adult education",
+    "jobCompany": "Barry PLC",
+    "hobbyFirst": "play sports",
+    "hobbySecond": "go shopping",
+    "image": "person7",
+    "number": "9725343997669"
   },
   {
     "id": 20,
-    "name": "Deborah Washington",
-    "email": "medinadonna@example.com",
+    "name": "Latoya Carlson",
+    "email": "kenneth20@example.net",
     "skill": "HTML",
-    "description": {
-      "education": {
-        "field": "computer science",
-        "graduation": "2018"
-      },
-      "work": {
-        "job": "Bookseller",
-        "company": "Hopkins-Lowe"
-      },
-      "hobby": [
-        "paint",
-        "paint"
-      ]
-    },
-    "isActive": false,
-    "image": "person3"
+    "educationField": "computer science",
+    "graduationYear": "2020",
+    "jobTitle": "Tree surgeon",
+    "jobCompany": "Merritt, Smith and Lawrence",
+    "hobbyFirst": "cook",
+    "hobbySecond": "code",
+    "image": "person6",
+    "number": "9725218164263"
   }
 ]

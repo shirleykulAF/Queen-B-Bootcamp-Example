@@ -23,7 +23,7 @@ const imageMapper={
 function MiniMentor({users}){
   
   const miniCardArray = users.map?.(user=>
-    <a href={`mentor/${user.id}`}>
+    <a className="link-MiniMentor" href={`mentor/${user.id}`}>
     <div className="MiniMentor" key={user.id}>
       <img className="img-MiniMentor" src={imageMapper[user.image]} alt= {user.image}/>
       <h1 className="h1-MiniMentor">{user.name}</h1>

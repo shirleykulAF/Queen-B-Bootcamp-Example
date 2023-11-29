@@ -1,0 +1,61 @@
+.back{
+    width: 356px;
+    height: 710px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background: #FFF;
+    margin: auto;
+ 
+}
+
+.focusedPara{
+    color: #364356;
+    text-align: right;
+    font-family: American Typewriter, serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: left;
+    margin-left: 10px;
+}
+.focusedBold{
+    color: #364356;
+    font-family: American Typewriter, serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-left: 10px;
+}
+.focusedSkill{
+    color: #364356;
+    font-family: American Typewriter, serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 10px;
+  
+
+}
+.focusedName{
+    color: #363738;
+    font-family: American Typewriter, serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-left: 10px;
+    
+}
+.focusedImg{
+    width: 334px;
+    height: 333px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background: rgba(250, 190, 189, 0.30);
+    margin-top: 11px;
+    margin-left: 11px;
+
+}
