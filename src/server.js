@@ -23,7 +23,7 @@ app.get("/teachers", (req, res) => {
 app.get("/teachers/:id", (req, res) => {
   const teacherData = teachers.find(f => f.id == req.params.id);
   // const teacherDataJson = JSON.stringify(teacherData);
-  res.send([teacherData]);
+  res.send(teacherData);
 });
 
 app.get("/*", (req, res) => {
