@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import MiniMentor from '../components/MiniMentor/MiniMentor';
 import Footer from '../components/Footer/Footer';
 import axios from 'axios';
+import './HomeDetailedView.css';
 
 const port = process.env.PORT || 5001;
 
@@ -42,15 +43,37 @@ function HomeDetailedView(){
       // the first web page
       return (
         <div className="App">
-          <input
+        <br/>
+            <header className='head'>
+                <div className="boxCover"> 
+                    <input
+                        type = 'text'
+                        placeholder='Search for your mentor :)'
+                        value={searchFilter}
+                        onChange={handleSearch}
+                        required
+                    />
+                </div>
+            </header>
+
+          {/* <input
             type = 'text'
             placeholder='Search...'
             value={searchFilter}
             onChange={handleSearch}
-          />
+          /> */}
+          <br/>
+          <br/>
+          
           <MiniMentor users={message} />
           <Footer/>
+
+
+          
         </div>
+
+
+
     );
   }
 
