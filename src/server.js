@@ -20,7 +20,8 @@ app.get('/students', (req, res) => {
 });
 
 app.get('/students/:id', (req, res) => {
-  res.send('Hello World');
+  const id = parseInt(req.params.id);
+  res.send(data.find(item => item.id === id));
 });
 
 app.get('*', (req, res) => {

@@ -1,15 +1,15 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import React from 'react';
-import StudentProfile from "./StudentProfile";
-import AllStudents from "./AllStudents";
+import MentorProfile from "./MentorProfile";
+import AllMentors from "./AllMentors";
 
 function App() {
 
   return (
           <Router>
                   <Routes>
-                         <Route path="/" element={<AllStudents />} />
-                         <Route path="/students/:id" element={<StudentProfile />} />
+                         <Route path="/" element={<AllMentors />} />
+                         <Route path="/students/:id" element={<MentorProfile />} />
                   </Routes>
           </Router>
   );

@@ -7,15 +7,17 @@ import { TiSocialGithub, TiSocialLinkedin} from "react-icons/ti";
 import { FaWhatsapp } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 import QueenbLogo from './images/QueenbLogo.png';
+import { useParams } from 'react-router-dom';
 
 const port = process.env.PORT || 5001;
 
-function StudentProfile(){
-    const [student, setStudent] = useState(null);
+function MentorProfile(){
+    const [Mentor, setMentor] = useState(null);
+    const { id } = useParams();
 
     useEffect(() => {
-        axios.get(`http://localhost:${port}/students/:id`)
-            .then(response => setStudent(response.data))
+        axios.get(`http://localhost:${port}/students/${id}`)
+            .then(response => setMentor(response.data))
             .catch(error => console.error(`There was an error retrieving the message: ${error}`))
     }, [])
 
@@ -27,12 +29,12 @@ function StudentProfile(){
                         <MDBCard style={{ borderRadius: '15px' }}>
                             <MDBCardBody className="text-center">
                                 <div className="mt-3 mb-4">
-                                    <MDBCardImage src={firstPerson}
+                                    <MDBCardImage src={require('./images/'+Mentor?.img)}
                                                   className="rounded-circle" fluid style={{ width: '100px' }} />
                                 </div>
-                                <MDBTypography tag="h4">Julie L. Arsenault</MDBTypography>
+                                <MDBTypography tag="h4">{Mentor?.name}</MDBTypography>
                                 <MDBCardText className="text-muted mb-4">
-                                    Computer Science <span className="mx-2">|</span> Student @ TAU
+                                    {Mentor?.interest} <span className="mx-2">|</span> Student @ TAU
                                 </MDBCardText>
                                 <div className="mb-4 pb-2">
                                     <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
@@ -76,4 +78,4 @@ function StudentProfile(){
     );
 }
 
-export default StudentProfile;
+export default MentorProfile;
