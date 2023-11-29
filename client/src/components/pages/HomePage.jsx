@@ -1,5 +1,9 @@
 import React, {useEffect, useState} from "react";
-import MentorCard from "../MentorCard";
+// import MentorCard from "../MentorCard";
+import Main from "../Main";
+import Header from "../Header";
+import Footer from "../Footer";
+import {Link} from "react-router-dom";
 
 
 export default function HomePage({port}) {
@@ -20,7 +24,10 @@ export default function HomePage({port}) {
 
     return(
         <div>
-            <MentorCard mentorsList={mentors}/>
+            <Header />
+            <Main teachersList={mentors}/>
+            <Footer/>
+            {/*<MentorCard mentorsList={mentors}/>*/}
 
         {/*    add your components here :) */}
         </div>
