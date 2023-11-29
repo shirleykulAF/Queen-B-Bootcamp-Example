@@ -4,6 +4,7 @@ const path = require("path");
 const app = express();
 const port = process.env.PORT || 5001;
 const teachers = require("./teachers.js");
+const {json} = require("express");
 
 /*
 CORS (Cross-Origin Resource Sharing) is a browser security feature that restricts
@@ -20,7 +21,9 @@ app.get("/teachers", (req, res) => {
 });
 
 app.get("/teachers/:id", (req, res) => {
-  res.json(teachers.find((f) => f.id == req.params.id));
+  const teacherData = teachers.find(f => f.id == req.params.id);
+  // const teacherDataJson = JSON.stringify(teacherData);
+  res.send([teacherData]);
 });
 
 app.get("/*", (req, res) => {
