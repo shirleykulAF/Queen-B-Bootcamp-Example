@@ -10,7 +10,7 @@ export default function Card({ teacherObj }) {
         <h4>{teacherObj.ingredients}</h4>
         <p>📍{teacherObj.location}</p>
         <span>
-          {teacherObj.soldOut ? "Currently Unavalible" : teacherObj.price}
+          {teacherObj.soldOut ? "Currently Unavailable" : teacherObj.price}
         </span>
       </div>
     </li>
