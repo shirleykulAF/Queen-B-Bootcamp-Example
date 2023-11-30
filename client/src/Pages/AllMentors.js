@@ -3,7 +3,7 @@ import MentorCard from "./MentorCard";
 import axios from "axios";
 import ImageList from "@mui/material/ImageList";
 import NavbarSearch from "./NavbarSearch";
-const port = process.env.PORT || 5001;
+
 
 function AllMentors(){
     const [allMentors, setAllMentors] = useState(null);

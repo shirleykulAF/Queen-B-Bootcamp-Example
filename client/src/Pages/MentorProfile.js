@@ -8,7 +8,7 @@ import { SiGmail } from "react-icons/si";
 import { useParams } from 'react-router-dom';
 import NavbarSearch from "./NavbarSearch";
 
-const port = process.env.PORT || 5001;
+
 function MentorProfile(){
     const [Mentor, setMentor] = useState(null);
     const { id } = useParams();
