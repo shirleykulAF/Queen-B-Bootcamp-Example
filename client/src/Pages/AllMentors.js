@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from "react";
-import {Link} from 'react-router-dom';
 import MentorCard from "./MentorCard";
 import axios from "axios";
 import ImageList from "@mui/material/ImageList";

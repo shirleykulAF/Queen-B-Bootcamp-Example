@@ -1,8 +1,7 @@
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import React, {useEffect, useState} from 'react';
 import axios from "axios";
-import { MDBCol, MDBContainer, MDBRow, MDBCard, MDBCardText, MDBCardBody, MDBCardImage, MDBBtn, MDBTypography, MDBIcon } from 'mdb-react-ui-kit';
-import firstPerson from '../images/person1.svg';
+import { MDBCol, MDBContainer, MDBRow, MDBCard, MDBCardText, MDBCardBody, MDBCardImage, MDBBtn, MDBTypography } from 'mdb-react-ui-kit';
 import { TiSocialGithub, TiSocialLinkedin} from "react-icons/ti";
 import { FaWhatsapp } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
@@ -18,7 +17,7 @@ function MentorProfile(){
         axios.get(`http://localhost:${port}/mentors/${id}`)
             .then(response => setMentor(response.data))
             .catch(error => console.error(`There was an error retrieving the message: ${error}`))
-    }, [])
+    }, [id])
 
     return (
         <div className="vh-100" >

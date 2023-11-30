@@ -24,7 +24,7 @@ function NavbarSearch({ setFilteredMentors, OriginalMentors }) {
     return (
         <Navbar expand="lg" style={{ backgroundColor: "#FABEBD"}}>
             <Container fluid>
-                <Navbar.Brand href="https://queenb.org.il/" target="_blank" rel="noopener noreferrer"><img src={QueenbLogo} width={90} height={50}/></Navbar.Brand>
+                <Navbar.Brand href="https://queenb.org.il/" target="_blank" rel="noopener noreferrer"><img alt={"QueenB"} src={QueenbLogo} width={90} height={50}/></Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
                     <Nav
