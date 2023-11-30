@@ -38,7 +38,7 @@ jobs:
       - name: Create new ElasticBeanstalk Application Version
         run: |
           aws elasticbeanstalk create-application-version \
-          --application-name queenb-dan-test-app \
+          --application-name Queenb-eva-poluliakhov-2-env \
           --source-bundle S3Bucket="queenb-deploy-bucket",S3Key="deploy_package.zip" \
           --version-label "ver-${{ github.sha }}" \
           --description "commit-sha-${{ github.sha }}"
