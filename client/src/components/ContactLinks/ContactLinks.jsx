@@ -11,11 +11,13 @@ function ContactLinks({mentor}){
 
             <img className = "link-comment" src={comment} alt = 'comment'/>
 
+
             <a target="_blank" href={`mailto: ${mentor.email}`} rel="noreferrer"> 
                 <img className = "link-mail" src={mail} alt = 'mail'/>
             </a>
             
             <img className = "link-call" src={call} alt = 'call'/>
+
 
             <a target="_blank" href={`https://wa.me/${mentor.number}`} rel="noreferrer">
                 <img className = "link-whatsapp" src={whatsapp} alt = 'whatsapp'/>
