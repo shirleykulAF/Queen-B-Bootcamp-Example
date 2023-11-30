@@ -14,7 +14,7 @@ function MentorProfile(){
     const { id } = useParams();
 
     useEffect(() => {
-        axios.get(`http://localhost:${port}/mentors/${id}`)
+        axios.get(`/api/mentors/${id}`)
             .then(response => setMentor(response.data))
             .catch(error => console.error(`There was an error retrieving the message: ${error}`))
     }, [id])

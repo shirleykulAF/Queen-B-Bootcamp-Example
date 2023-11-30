@@ -15,11 +15,11 @@ app.use(express.json());
 // enables the server to serve the client app without running it
 app.use(express.static(path.join(__dirname, '../client/build')));
 
-app.get('/mentors', (req, res) => {
+app.get('/api/mentors', (req, res) => {
   res.send(data);
 });
 
-app.get('/mentors/:id', (req, res) => {
+app.get('/api/mentors/:id', (req, res) => {
   const id = parseInt(req.params.id);
   res.send(data.find(item => item.id === id));
 });

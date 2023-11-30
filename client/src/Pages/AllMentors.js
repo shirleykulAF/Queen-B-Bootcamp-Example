@@ -10,7 +10,7 @@ function AllMentors(){
     const [filteredMentors, setFilteredMentors] = useState(null);
 
     useEffect(() => {
-        axios.get(`http://localhost:${port}/mentors`)
+        axios.get(`/api/mentors`)
             .then(response => {
                 setAllMentors(response.data);
                 setFilteredMentors(response.data);
