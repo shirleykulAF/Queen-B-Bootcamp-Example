@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import MiniMentor from '../components/MiniMentor/MiniMentor';
 import Footer from '../components/Footer/Footer';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
@@ -40,7 +39,7 @@ function FocusMentor(props){
       .catch(error => {
         console.error(`There was an error retrieving the message: ${error}`)
       })
-    }, []);
+    }, [id]);
 
     
     return(
