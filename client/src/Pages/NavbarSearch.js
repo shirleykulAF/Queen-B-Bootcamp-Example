@@ -47,6 +47,7 @@ function NavbarSearch({ setFilteredMentors, OriginalMentors }) {
                             value={searchQuery}
                             onChange={handleInputChange}
                         />
+
                         <Button style={{ backgroundColor: "darkgrey"}} onClick={handleSearch}>Search</Button>
                     </Form>
                 </Navbar.Collapse>

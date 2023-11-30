@@ -36,18 +36,19 @@ function MentorProfile(){
                                 <MDBCardText className="text-muted mb-4">
                                     {Mentor?.interest} <span className="mx-2">|</span> Student @ TAU
                                 </MDBCardText>
+                                <p>{Mentor?.about}</p>
                                 <div className="mb-4 pb-2">
-                                    <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                                    <a href={Mentor?.github} target="_blank" rel="noopener noreferrer">
                                         <TiSocialGithub size={37} />
                                     </a>
-                                    <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                                    <a href={Mentor?.linkedin} target="_blank" rel="noopener noreferrer">
                                         <TiSocialLinkedin size={37} />
                                     </a>
-                                    <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                                    <a href={"https://wa.me/"+Mentor?.phone} target="_blank" rel="noopener noreferrer">
                                         <FaWhatsapp size={30} />
                                     </a>
                                     <> </>
-                                    <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                                    <a href={"mailto:"+Mentor?.gmail} target="_blank" rel="noopener noreferrer">
                                         <SiGmail size={30}/>
                                     </a>
                                 </div>
