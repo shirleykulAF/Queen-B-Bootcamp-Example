@@ -1,0 +1,99 @@
+@import "./variables.css";
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bodyColor);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: var(--headerColor);
+}
+
+header img {
+  height: 70px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+main {
+  padding: 40px;
+  display: flex; /* Flexbox to align content */
+  justify-content: space-between;
+  align-items: center;
+}
+
+section {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.leftSide-container {
+  flex: 1;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 36px;
+  color: var(--titleColor);
+  text-align: center;
+}
+
+section p {
+  font-size: 18px;
+  color: var(--paragraphColor);
+  text-align: center;
+  line-height: 1.6; /* Adjusts line spacing for readability */
+  margin-bottom: 20px;
+}
+
+.button-container {
+  display: inline-flex; /* Align buttons horizontally */
+  gap: 40px;
+  justify-content: center;
+}
+
+button {
+  background-color: var(--buttonColor);
+  border: none;
+  color: var(--buttonTextColor);
+  padding: 10px 20px;
+  margin: 10px 0;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: var(--buttonHoverColor);
+}
+
+img.home-photo {
+  flex: 1;
+  max-width: 42%;
+  height: auto;
+  border-radius: 10px;
+  margin-left: 20px;
+}

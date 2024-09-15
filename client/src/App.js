@@ -1,4 +1,26 @@
-import React, { useState, useEffect } from 'react';
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import AddMentor from "./pages/AddMentor";
+import ViewAllMentors from "./pages/ViewAllMentors";
+import About from "./pages/About";
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route exact path="/" Component={Home} />
+        <Route path="/addMentor" Component={AddMentor} />
+        <Route path="/viewAllMentors" Component={ViewAllMentors} />
+        <Route path="/about" Component={About} />
+      </Routes>
+    </Router>
+  );
+}
+
+export default App;
+
+/*import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import firstPerson from './images/person1.svg';
 const port = process.env.PORT || 5001;
@@ -20,4 +42,4 @@ function App() {
   );
 }
 
-export default App;
+export default App;*/

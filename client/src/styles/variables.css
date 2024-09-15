@@ -1,0 +1,9 @@
+:root {
+  --headerColor: #fabebd;
+  --bodyColor: #fabebd4d;
+  --titleColor: #333;
+  --paragraphColor: #555;
+  --buttonColor: #fabebd;
+  --buttonTextColor: white;
+  --buttonHoverColor: #fabebd4d;
+}
