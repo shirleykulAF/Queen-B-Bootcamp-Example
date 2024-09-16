@@ -1,9 +1,9 @@
 const pool = require("./db");
-const queires = require("./queries");
+const queries = require("./queries");
 
-// GET all mentors - Route ( /api/mentors)
-const getMentors = (req, res) => {
-  pool.query(queires.getMentors, (error, results) => {
+// GET all users
+const getAllUsers = (req, res) => {
+  pool.query(queries.getAllUsers, (error, results) => {
     if (error) {
       throw error;
     }
@@ -11,44 +11,105 @@ const getMentors = (req, res) => {
   });
 };
 
-//////// (below are optional) ////////
+// GET all mentors - Route ( /api/mentors)
+const getMentors = (req, res) => {
+  pool.query(queries.getMentors, (error, results) => {
+    if (error) {
+      throw error;
+    }
+    res.status(200).json(results.rows);
+  });
+};
 
 // check if already email exists
-const checkEmail = async (eamil) => {
+const checkEmail = async (email) => {
   try {
-    const result = await pool.query(queires.checkEmail, [email]);
-    return result.rows > 0;
+    const result = await pool.query(queries.checkEmail, [email]);
+    return result.rows.length;
   } catch (error) {
     throw error;
   }
 };
 
-// ADD new account- Route ( /api/mentors)
-const addMentor = async (req, res) => {
+// ADD new account- Route
+const signup = async (req, res) => {
   const {
     email,
+    userType,
+    password,
     first_name,
     last_name,
     phone_number,
     linkedin,
     programming_language,
   } = req.body;
+
   try {
-    const emailChecked = checkEmail(email);
-    if (emailChecked) {
-      res.status(400).send("Email already exists");
-    } else {
-      await pool.query(queires.createMentor, [
-        email,
-        first_name,
-        last_name,
-        phone_number,
-        linkedin,
-      ]);
-      if (programming_language) {
-        pool.query(queires.addMentorLangs, [email, programming_language]);
+    // check validation
+    if (email.trim() == '' || userType.trim() == '' || password.trim() == '') {
+      res.status(400).send({ error: "All field are required" });
+      return;
+    }
+
+    if(userType=='mentor') {
+      // check validation for mentor
+      if (first_name.trim() == '' || last_name.trim() == '' || phone_number.trim() == '' || 
+          linkedin.trim() == '' || programming_language.trim() == '') {
+        res.status(400).send({ error: "All field are required" });
+        return;
       }
-      res.status(201).send("Account created successfully");
+    }
+
+    // check if email already exists
+    const result = pool.query(queries.checkEmail, [email]);
+    if ((await result).rows.length) {
+      res.status(400).send({ error: "Email already exists" });
+      return;
+    } else {
+      // add the user to the db
+      await pool.query(queries.signup, [email, password, userType]);
+
+      // add the mentor details to the db
+      if(userType=='mentor') {
+        await pool.query(queries.createMentor, [
+          email,
+          first_name,
+          last_name,
+          phone_number,
+          linkedin,
+        ]);
+        if (programming_language) {
+          pool.query(queries.addMentorLangs, [email, programming_language]);
+        } 
+      }
+      
+      res.status(200).json({email, userType});
+      // res.status(201).send("Account created successfully");  
+    }
+  } catch (error) {
+    throw error;
+  }
+};
+
+// login route
+const login = async (req, res) => {
+  const { email, password } = req.body;
+
+  try {
+    // check validation
+    if (email.trim() == '' || password.trim() == '') {
+      res.status(400).send({ error: "Email or password are missing" });
+      return;
+    }
+
+    const result = pool.query(queries.login, [email, password]);
+
+    if ((await result).rows.length) {
+      const user = { email: (await result).rows[0].email, userType: (await result).rows[0].usertype}
+      res.status(200).send(user);
+    } else {
+      res.status(400).send({ error: "Email or password are incorrect"});
+      return;
     }
   } catch (error) {
     throw error;
@@ -103,4 +164,4 @@ const updateMentor = async (req, res) => {
   }
 };
 
-module.exports = { getMentors, addMentor, deleteMentor, updateMentor };
+module.exports = { getMentors, signup, deleteMentor, updateMentor, getAllUsers, login };
