@@ -19,7 +19,40 @@ CREATE TABLE IF NOT EXISTS languages (
     FOREIGN KEY (email) REFERENCES mentors(email) ON DELETE CASCADE
 );
 
--
+-- Create the user table
+CREATE TABLE IF NOT EXISTS users (
+    email VARCHAR(255) PRIMARY KEY,
+    password VARCHAR(255) NOT NULL,
+    userType VARCHAR(50) NOT NULL
+);
+
+-- Insert data into the user table for the 20 female mentors
+INSERT INTO users (email, password, userType) VALUES
+('sara.smith@example.com', 'password123', 'mentor'),
+('emma.johnson@example.com', 'password123', 'mentor'),
+('olivia.brown@example.com', 'password123', 'mentor'),
+('ava.jones@example.com', 'password123', 'mentor'),
+('isabella.garcia@example.com', 'password123', 'mentor'),
+('mia.martinez@example.com', 'password123', 'mentor'),
+('amelia.rodriguez@example.com', 'password123', 'mentor'),
+('harper.hernandez@example.com', 'password123', 'mentor'),
+('evelyn.lopez@example.com', 'password123', 'mentor'),
+('abigail.moore@example.com', 'password123', 'mentor'),
+('sofia.gonzalez@example.com', 'password123', 'mentor'),
+('avery.hill@example.com', 'password123', 'mentor'),
+('ella.scott@example.com', 'password123', 'mentor'),
+('lily.green@example.com', 'password123', 'mentor'),
+('chloe.adams@example.com', 'password123', 'mentor'),
+('nora.baker@example.com', 'password123', 'mentor'),
+('scarlett.nelson@example.com', 'password123', 'mentor'),
+('aria.carter@example.com', 'password123', 'mentor'),
+('hannah.mitchell@example.com', 'password123', 'mentor'),
+('zoe.perry@example.com', 'password123', 'mentor'),
+('lucy.wilson@example.com', 'password123', 'mentee'),
+('grace.thomas@example.com', 'password123', 'mentee'),
+('ella.clark@example.com', 'password123', 'mentee'),
+('sophie.turner@example.com', 'password123', 'mentee'),
+('ruby.evans@example.com', 'password123', 'mentee');
 
 -- Insert 20 female mentors
 INSERT INTO mentors (email, first_name, last_name, phone_number, linkedin) VALUES

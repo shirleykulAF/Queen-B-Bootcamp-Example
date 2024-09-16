@@ -1,36 +1,54 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-import firstPerson from "./images/person1.svg";
+import { BrowserRouter, Routes, Route, Navigate} from 'react-router-dom'
+import { useAuthContext } from './hooks/useAuthContext'
 
 // components
 import Home from "./pages/Home";
-import MentorsDetails from "./components/MentorsDetails";
-
-const port = process.env.PORT || 5001;
+import Welcome from "./pages/Welcome";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+import MentorHome from './pages/MentorHome';
 
 function App() {
-  const [message, setMessage] = useState("");
-
-  useEffect(() => {
-    axios
-      .get(`http://localhost:${port}/api`)
-      .then((response) => setMessage(response.data))
-      .catch((error) =>
-        console.error(`There was an error retrieving the message: ${error}`)
-      );
-  }, []);
+  
+  const { user } = useAuthContext()
 
   return (
-    <>
-      {/* we can delete this section */}
-      <div className="App">
-        {Home}
-        {/* <img src={firstPerson} alt="person1" /> */}
-      </div>
-      {/* ************************** */}
-
-      <Home />
-    </>
+    <div className="App">
+      <BrowserRouter>
+        <div className='pages'>
+          <Routes>
+            <Route
+              path="/"
+              element={ 
+                  <Welcome />
+              }
+            />
+            <Route
+              path="/login"
+              element={ !user ?
+                <Login />
+                : user.userType==='mentee' ? <Navigate to='/home'/> : <Navigate to='/mentorHome'/>
+              }
+            />
+            <Route
+              path="/signup"
+              element={ !user ?
+                <Signup />
+                : user.userType==='mentee' ? <Navigate to='/home'/> : <Navigate to='/mentorHome'/>
+              }
+            />
+            <Route
+              path="/home"
+              element={ <Home/> }
+            />
+            <Route
+              path="/mentorHome"
+              element={ <MentorHome/> }
+            />
+          </Routes>
+        </div>
+      </BrowserRouter>
+    </div>
   );
 }
 

@@ -1,12 +1,7 @@
-import React from "react";
-
 // hooks
 import { useLogout } from '../hooks/useLogout'
 
-// components
-import MentorsDetails from "../components/MentorsDetails";
-
-const Home = () => {
+const MentorHome = () => {
   const { logout } = useLogout()
 
   const handleLogoutBtn = () => {
@@ -15,13 +10,12 @@ const Home = () => {
 
   return (
     <div className="container">
-      <h1>Mentors</h1>
+      <h1>Mentors Home</h1>
 
       <a href="/" onClick={handleLogoutBtn}>Log Out</a>
 
-      <MentorsDetails />
     </div>
   );
 };
 
-export default Home;
+export default MentorHome;
