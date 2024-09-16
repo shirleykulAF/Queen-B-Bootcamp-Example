@@ -1,6 +1,5 @@
 // get all users
-const getAllUsers = 
-  "SELECT * FROM users"
+const getAllUsers = "SELECT * FROM users";
 
 // get all mentors
 const getMentors = `
@@ -43,11 +42,10 @@ const deleteMentor = "DELETE FROM mentors WHERE email = $1";
 const updateMentor =
   "UPDATE mentoers SET first_name = $1, last_name = $2, phone_number = $3, linkedin = $4 WHERE email = $5;";
 
-const signup = 
+const signup =
   "INSERT INTO users (email, password, userType) VALUES ($1, $2, $3);";
 
-const login = 
-  "SELECT * FROM users WHERE email = $1 AND password = $2;";
+const login = "SELECT * FROM users WHERE email = $1";
 
 module.exports = {
   getAllUsers,
@@ -58,5 +56,5 @@ module.exports = {
   addMentorLangs,
   updateMentor,
   signup,
-  login
+  login,
 };

@@ -1,5 +1,7 @@
+const bcrypt = require("bcrypt");
 const pool = require("./db");
 const queries = require("./queries");
+const SALT_ROUNDS = 10;
 
 // GET all users
 const getAllUsers = (req, res) => {
@@ -46,15 +48,20 @@ const signup = async (req, res) => {
 
   try {
     // check validation
-    if (email.trim() == '' || userType.trim() == '' || password.trim() == '') {
+    if (email.trim() == "" || userType.trim() == "" || password.trim() == "") {
       res.status(400).send({ error: "All field are required" });
       return;
     }
 
-    if(userType=='mentor') {
+    if (userType == "mentor") {
       // check validation for mentor
-      if (first_name.trim() == '' || last_name.trim() == '' || phone_number.trim() == '' || 
-          linkedin.trim() == '' || programming_language.trim() == '') {
+      if (
+        first_name.trim() == "" ||
+        last_name.trim() == "" ||
+        phone_number.trim() == "" ||
+        linkedin.trim() == "" ||
+        programming_language.trim() == ""
+      ) {
         res.status(400).send({ error: "All field are required" });
         return;
       }
@@ -67,10 +74,11 @@ const signup = async (req, res) => {
       return;
     } else {
       // add the user to the db
-      await pool.query(queries.signup, [email, password, userType]);
+      const hashedPassword = await bcrypt.hash(password, SALT_ROUNDS);
+      await pool.query(queries.signup, [email, hashedPassword, userType]);
 
       // add the mentor details to the db
-      if(userType=='mentor') {
+      if (userType == "mentor") {
         await pool.query(queries.createMentor, [
           email,
           first_name,
@@ -80,11 +88,11 @@ const signup = async (req, res) => {
         ]);
         if (programming_language) {
           pool.query(queries.addMentorLangs, [email, programming_language]);
-        } 
+        }
       }
-      
-      res.status(200).json({email, userType});
-      // res.status(201).send("Account created successfully");  
+
+      res.status(200).json({ email, userType });
+      // res.status(201).send("Account created successfully");
     }
   } catch (error) {
     throw error;
@@ -97,19 +105,28 @@ const login = async (req, res) => {
 
   try {
     // check validation
-    if (email.trim() == '' || password.trim() == '') {
+    if (email.trim() == "" || password.trim() == "") {
       res.status(400).send({ error: "Email or password are missing" });
       return;
     }
 
-    const result = pool.query(queries.login, [email, password]);
+    const result = await pool.query(queries.login, [email]);
 
-    if ((await result).rows.length) {
-      const user = { email: (await result).rows[0].email, userType: (await result).rows[0].usertype}
-      res.status(200).send(user);
-    } else {
-      res.status(400).send({ error: "Email or password are incorrect"});
+    if (result.rows.length === 0) {
+      res.status(400).send({ error: "Email or password are incorrect" });
       return;
+    } else {
+      const storedPassword = result.rows[0].password;
+      const isMatch = await bcrypt.compare(password, storedPassword);
+      if (isMatch) {
+        const user = {
+          email: (await result).rows[0].email,
+          userType: (await result).rows[0].usertype,
+        };
+        res.status(200).send(user);
+      } else {
+        res.status(400).send({ error: "Email or password are incorrect" });
+      }
     }
   } catch (error) {
     throw error;
@@ -164,4 +181,11 @@ const updateMentor = async (req, res) => {
   }
 };
 
-module.exports = { getMentors, signup, deleteMentor, updateMentor, getAllUsers, login };
+module.exports = {
+  getMentors,
+  signup,
+  deleteMentor,
+  updateMentor,
+  getAllUsers,
+  login,
+};
