@@ -1,23 +1,14 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "../styles/Home.css";
-import logo from "../assets/logo.png";
 import homePhoto from "../assets/homepagePhoto.png";
+import "../styles/Home.css";
+import Header from "../components/Header";
 
 const Home = () => {
   const navigate = useNavigate();
   return (
     <div>
-      <header>
-        <img src={logo} alt="Logo" />
-        <nav>
-          <ul>
-            <li>
-              <a href="/about">About Us</a>
-            </li>
-          </ul>
-        </nav>
-      </header>
+      <Header />
       <main>
         <section>
           <div className="leftSide-container">
