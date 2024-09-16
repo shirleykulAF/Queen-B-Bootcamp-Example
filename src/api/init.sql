@@ -47,6 +47,7 @@ INSERT INTO mentors (email, first_name, last_name, phone_number, linkedin) VALUE
 -- Insert associated programming languages for each mentor
 INSERT INTO languages (email, programming_language) VALUES
 ('sara.smith@example.com', 'Python'),
+('sara.smith@example.com', 'Java'),
 ('emma.johnson@example.com', 'Java'),
 ('olivia.brown@example.com', 'JavaScript'),
 ('ava.jones@example.com', 'Ruby'),

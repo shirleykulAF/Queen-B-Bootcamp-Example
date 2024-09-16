@@ -6,15 +6,17 @@ const getMentors = `
         m.last_name,
         m.phone_number,
         m.linkedin,
-        l.programming_language
+        STRING_AGG(l.programming_language, ', ') AS programming_languages
       FROM
-        mentors m
+          mentors m
       LEFT JOIN
-        languages l
+          languages l
       ON
-        m.email = l.email
+          m.email = l.email
+      GROUP BY
+          m.email
       ORDER BY
-        m.email;
+          m.email;
     `;
 
 //////// (below are optional) ////////

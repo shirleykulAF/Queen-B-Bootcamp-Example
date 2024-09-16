@@ -38,7 +38,7 @@ const MentorCard = ({ mentor }) => {
               Linkedin Profile
             </a>
           </p>
-          <p>{mentor.programming_languages.join(", ")}</p>
+          <p>{mentor.programming_languages.split(', ').join(', ')}</p>
         </p>
         {/* <a href="#" className="btn btn-primary">Go somewhere</a> */}
       </div>
