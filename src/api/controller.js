@@ -92,7 +92,6 @@ const signup = async (req, res) => {
       }
 
       res.status(200).json({ email, userType });
-      // res.status(201).send("Account created successfully");
     }
   } catch (error) {
     throw error;
@@ -137,19 +136,21 @@ const login = async (req, res) => {
 const deleteMentor = async (req, res) => {
   const email = req.params.email;
   try {
-    const emailChecked = checkEmail(email);
-    if (!emailChecked) {
-      res.status(400).send("Email does not exist");
+    const emailChecked = pool.query(queries.checkEmail, [email]);
+    if (!(await emailChecked).rows.length) {
+      res.status(400).send({ error: "Email does not exist" });
+      return;
     } else {
       await pool.query(queries.deleteMentor, [email]);
-      res.status(200).send("Account deleted successfully");
+      await pool.query(queries.deleteMentorsFromUsers, [email]);
+      res.status(200).send({ success: "Account deleted successfully" });
     }
   } catch (error) {
     throw error;
   }
 };
 
-// PUT mentor details- Route (/api/mentors/:email)
+// PUT mentor details- Route
 const updateMentor = async (req, res) => {
   const {
     email,
@@ -159,10 +160,12 @@ const updateMentor = async (req, res) => {
     linkedin,
     programming_language,
   } = req.body;
+
   try {
-    const emailChecked = checkEmail(email);
-    if (!emailChecked) {
-      res.status(400).send("Email does not exist");
+    const emailChecked = pool.query(queries.checkEmail, [email]);
+    if (!(await emailChecked).rows.length) {
+      res.status(400).send({ error: "Email does not exist" });
+      return;
     } else {
       await pool.query(queries.updateMentor, [
         first_name,
@@ -174,12 +177,27 @@ const updateMentor = async (req, res) => {
       if (programming_language) {
         pool.query(queries.addMentorLangs, [email, programming_language]);
       }
-      res.status(200).send("Account updated successfully");
+      res.status(200).send({ success: "Account updated successfully" });
     }
   } catch (error) {
     throw error;
   }
 };
+
+const getMentorDetailsByEmail = async (req, res) => {
+  const email = req.params.email;
+
+  try {
+    const user = await pool.query(queries.getMentorDetailsByEmail, [email]);
+    if(user.rows.length === 0) {
+      res.status(400).send({ error: "Error fetching mentor details" });
+      return;
+    }
+    res.status(200).send(user.rows[0]);    
+  } catch (error) {
+    throw error;
+  }
+}
 
 module.exports = {
   getMentors,
@@ -188,4 +206,5 @@ module.exports = {
   updateMentor,
   getAllUsers,
   login,
+  getMentorDetailsByEmail,
 };

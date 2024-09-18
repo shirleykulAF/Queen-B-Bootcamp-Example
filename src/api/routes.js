@@ -12,18 +12,18 @@ router.get("/mentors", controller.getMentors);
 // add mentor route
 // router.post("/mentors", controller.addMentor);
 
-//////// (below are optional) ////////
-
 // delete mentor route
-router.delete("/mentors/:email", controller.deleteMentor);
+router.delete("/deleteMentors/:email", controller.deleteMentor);
 
 // update mentor route
-router.put("/mentors/:email", controller.updateMentor);
+router.put("/updateMentorsDetails", controller.updateMentor);
 
-// signup route (optional)
+// signup route
 router.post("/signup", controller.signup);
 
-// login route (optional)
+// login route
 router.post("/login", controller.login);
+
+router.get("/getMentorDetailsByEmail/:email", controller.getMentorDetailsByEmail)
 
 module.exports = router;
