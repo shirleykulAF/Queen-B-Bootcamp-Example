@@ -1,7 +1,9 @@
 // display the welcom page to the web
 import React from 'react';
+import Carousel from '../components/Carousel';
 import { Link } from 'react-router-dom';
-import './WelcomePage.css'; // Your custom CSS file for styling
+import './WelcomePage.css';
+
 
 const WelcomePage = () => {
     return (
@@ -12,6 +14,8 @@ const WelcomePage = () => {
 
                 {/* Get Started button - navigates to sign up */}
                 <Link to="/signup" className="welcome-button">Get Started</Link>
+
+                <Carousel />
             </header>
         </div>
     );

@@ -1,0 +1,16 @@
+.carousel-container {
+  padding-top: 40px;
+  width: 100%; /* Adjust as needed */
+  margin: 0 auto; /* Center the carousel */
+}
+
+.carousel-item img {
+  width: 20%; /* Make images responsive */
+  border-radius: 10px; /* Optional: Add some styling */
+}
+
+/* Hide arrows (if needed) */
+.slick-prev,
+.slick-next {
+  display: none !important; /* Force hide arrows */
+}
