@@ -1,39 +1,43 @@
 /* Navbar container */
 .navbar {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    justify-content: space-around;
+    /* Adjust spacing */
     align-items: center;
     padding: 0 20px;
     height: 60px;
-    width: 100%; /* This makes the navbar take up full width */
-    background-color: (rgba (255,255,255,0));
-    position: fixed; /* Keep the navbar fixed at the top */
-    top: 0; /* Ensure the navbar stays at the top */
+    width: 100%;
+    /* This makes the navbar take up full width */
+    background-color: (rgba (255, 255, 255, 0));
+    position: fixed;
+    /* Keep the navbar fixed at the top */
+    top: 0;
+    /* Ensure the navbar stays at the top */
     left: 0;
-    z-index: 1000; /* Ensure the navbar stays above other elements */
+    z-index: 1000;
+    /* Ensure the navbar stays above other elements */
 }
 
 /* Left section for the Home button */
 .navbar-left {
-    flex: 1; /* Ensures it takes up equal space on the left */
+    flex: 1;
+    /* Ensures it takes up equal space on the left */
     text-align: left;
-}
-
-/* Home button styling */
-.navbar-home-button {
-    font-size: 16px;
-    text-decoration: none;
-    color: #333;
-    padding: 8px 16px;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
 }
 
 /* Center logo */
 .navbar-logo {
-    flex: 0; /* Prevents the logo section from growing */
+    flex: 0;
+    /* Prevents the logo section from growing */
     text-align: center;
+    /* transition: background-color 0.3s ease;  */
+    transition: fill 5s ease;
+}
+
+.navbar-logo:hover {
+    filter: brightness(0) saturate(100%) invert(20%) sepia(100%) saturate(400%) hue-rotate(200deg);
+    opacity: 40%;
 }
 
 .logo-image {
@@ -45,23 +49,63 @@
 .navbar-right {
     display: flex;
     align-items: center;
-    flex: 1; /* Ensures it takes up equal space on the right */
-    justify-content: flex-end; /* Right align the items */
+    flex: 1;
+    /* Ensures it takes up equal space on the right */
+    justify-content: flex-end;
+    /* Right align the items */
 }
 
+.navbar-search-container {
+    position: relative;
+    /* Needed for positioning the icon */
+}
+
+/* Normal search bar styling */
 .search-bar {
-    padding: 8px;
+    padding: 8px 16px;
     margin-right: 20px;
     border: 1px solid #ddd;
-    border-radius: 4px;
+    border-radius: 20px;
     outline: none;
+    transition: all 0.3s ease;
+    background-color: #e6e2e5;
+    width: 200px;
+}
+
+/* Hover effect */
+.search-bar:hover {
+    border: 3px solid #fac7e2;
+    background-color: #f8f8f8;
+    /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);  */
+    width: 200px;
+    /* Slightly increase width on hover for expansion effect */
+}
+
+/* Focus effect (when clicking inside the search bar) */
+.search-bar:focus {
+    border: 3px solid #feaad7;
+    /* Change border on focus */
+    background-color: #ffffff;
+    /* Ensure background stays white on focus */
+    /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);  */
 }
 
 .navbar-link {
     margin-right: 20px;
     text-decoration: none;
+    background-color: transparent;
+    border: none;
+    border: none;
     color: #333;
     font-size: 16px;
+    transition: color 200ms ease;
+    /* Smooth transition for color change */
+}
+
+.navbar-link:hover {
+    color: #0d0c22;
+    /* Change color on hover */
+    opacity: 60%;
 }
 
 .navbar-button {
@@ -71,4 +115,11 @@
     border-radius: 4px;
     text-decoration: none;
     font-weight: bold;
+    transition: background-color 0.3s ease;
+    /* Smooth transition for background change */
+}
+
+.navbar-button:hover {
+    background-color: #d93c7a;
+    /* Change background on hover */
 }

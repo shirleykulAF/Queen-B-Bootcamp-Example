@@ -8,7 +8,7 @@ const Navbar = () => {
         <nav className="navbar">
             {/* Left side - Home button */}
             <div className="navbar-left">
-                <Link to="/" className="navbar-home-button">Home</Link> {/* Links to welcome page */}
+                <Link to="/" className="navbar-link">Home</Link> {/* Links to welcome page */}
             </div>
 
             {/* Center logo (clickable to go to the welcome page) */}
@@ -20,10 +20,10 @@ const Navbar = () => {
 
             {/* Right side - Search, Login, and Sign Up buttons */}
             <div className="navbar-right">
-                <input 
-                    type="text" 
-                    placeholder="Search" 
-                    className="search-bar" 
+                <input
+                    type="text"
+                    placeholder="Search"
+                    className="search-bar"
                 />
                 <Link to="/login" className="navbar-link">Login</Link>
                 <Link to="/signup" className="navbar-button">Sign Up</Link> {/* Links to signup page */}
