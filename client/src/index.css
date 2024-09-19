@@ -5,7 +5,15 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
+  background-image: linear-gradient(#ffcfda, rgb(255, 228, 240));
+  background-repeat: no-repeat;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  Justify-content: center; 
+  Align-items: center; 
+  display: flex;
+  }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

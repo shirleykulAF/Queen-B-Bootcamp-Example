@@ -1,0 +1,50 @@
+/* Welcome page container */
+.welcome-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height of the viewport */
+    /* background-color: #f5f5f5; */
+    padding: 0 20px;
+    text-align: center;
+}
+
+/* Header styling */
+.welcome-header {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Main title */
+.welcome-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Subtitle */
+.welcome-subtitle {
+    font-size: 1.5rem;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+/* Get Started button */
+.welcome-button {
+    display: inline-block;
+    padding: 16px 32px;
+    font-size: 1.2rem;
+    background-color: #ea4c89; /* Pink color like Dribbble */
+    color: white;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.welcome-button:hover {
+    background-color: #d93a78; /* Slightly darker on hover */
+}

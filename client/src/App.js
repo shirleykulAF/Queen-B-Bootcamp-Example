@@ -3,10 +3,12 @@ import { useAuthContext } from './hooks/useAuthContext'
 
 // components
 import Home from "./pages/Home";
-import Welcome from "./pages/Welcome";
+import Welcome from "./pages/WelcomePage";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import MentorHome from './pages/MentorHome';
+import Navbar from './components/Navbar'; // if Navbar is inside a components folder
+
 
 function App() {
   
@@ -14,8 +16,10 @@ function App() {
 
   return (
     <div className="App">
+      <Navbar />
+      <div style={{ paddingTop: '60px' }}>
       <BrowserRouter>
-        <div className='pages'>
+        <div className='pages'> 
           <Routes>
             <Route
               path="/"
@@ -48,7 +52,7 @@ function App() {
           </Routes>
         </div>
       </BrowserRouter>
-    </div>
+    </div></div>
   );
 }
 

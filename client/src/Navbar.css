@@ -1,0 +1,75 @@
+/* Navbar container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 60px;
+    width: 100%; /* This makes the navbar take up full width */
+    background-color: (rgba (255,255,255,0));
+    border-bottom: 1px solid #e5e5e5;
+    position: fixed; /* Keep the navbar fixed at the top */
+    top: 0; /* Ensure the navbar stays at the top */
+    left: 0;
+    z-index: 1000; /* Ensure the navbar stays above other elements */
+}
+
+/* Left section for the Home button */
+.navbar-left {
+    flex: 1; /* Ensures it takes up equal space on the left */
+    text-align: left;
+}
+
+/* Home button styling */
+.navbar-home-button {
+    font-size: 16px;
+    text-decoration: none;
+    color: #333;
+    padding: 8px 16px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* Center logo */
+.navbar-logo {
+    flex: 0; /* Prevents the logo section from growing */
+    text-align: center;
+}
+
+.logo-image {
+    height: 40px;
+    cursor: pointer;
+}
+
+/* Right section: Search, Login, Sign Up */
+.navbar-right {
+    display: flex;
+    align-items: center;
+    flex: 1; /* Ensures it takes up equal space on the right */
+    justify-content: flex-end; /* Right align the items */
+}
+
+.search-bar {
+    padding: 8px;
+    margin-right: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+}
+
+.navbar-link {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+.navbar-button {
+    padding: 8px 16px;
+    background-color: #ea4c89;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+}
