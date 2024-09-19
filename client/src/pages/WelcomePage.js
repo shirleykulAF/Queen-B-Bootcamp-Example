@@ -1,9 +1,9 @@
 // display the welcom page to the web
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../WelcomePage.css'; // Your custom CSS file for styling
-const Welcome = () => {
-    
+import './WelcomePage.css'; // Your custom CSS file for styling
+
+const WelcomePage = () => {
     return (
         <div className="welcome-container">
             <header className="welcome-header">
@@ -11,10 +11,10 @@ const Welcome = () => {
                 <p className="welcome-subtitle">Join a community of like-minded women in tech, find mentors, and grow your skills together.</p>
 
                 {/* Get Started button - navigates to sign up */}
-                <a herf="/signup" className="welcome-button">Get Started</a>
+                <Link to="/signup" className="welcome-button">Get Started</Link>
             </header>
         </div>
-    )
-}
+    );
+};
 
-export default Welcome
+export default WelcomePage;

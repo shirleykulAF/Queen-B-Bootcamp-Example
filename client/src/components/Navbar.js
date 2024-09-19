@@ -1,33 +1,35 @@
 import React from 'react';
-import '../Navbar.css'; // Assuming you'll have CSS to style the navbar
+import { Link } from 'react-router-dom'; // Use Link for navigation
+import './Navbar.css'; // Assuming you'll have CSS to style the navbar
 import ReinaImage from '../assets/Reina.png'; // Make sure to import your image correctly
 
 const Navbar = () => {
     return (
         <nav className="navbar">
-            {/* Left side empty for now */}
+            {/* Left side - Home button */}
             <div className="navbar-left">
-                <a href="/" className="navbar-home-button">Home</a> {/* This will route to the welcome page */}
+                <Link to="/" className="navbar-home-button">Home</Link> {/* Links to welcome page */}
             </div>
 
-            {/* Center logo */}
+            {/* Center logo (clickable to go to the welcome page) */}
             <div className="navbar-logo">
-            <a href="/">
+                <Link to="/">
                     <img src={ReinaImage} alt="Logo" className="logo-image" />
-                </a>            </div>
+                </Link>
+            </div>
 
-            {/* Right side with search, login, and sign-up buttons */}
+            {/* Right side - Search, Login, and Sign Up buttons */}
             <div className="navbar-right">
                 <input 
                     type="text" 
                     placeholder="Search" 
                     className="search-bar" 
                 />
-                <a href="/login" className="navbar-link">Login</a>
-                <a href="/signup" className="navbar-button">Sign Up</a>
+                <Link to="/login" className="navbar-link">Login</Link>
+                <Link to="/signup" className="navbar-button">Sign Up</Link> {/* Links to signup page */}
             </div>
         </nav>
     );
-};
+}
 
 export default Navbar;
