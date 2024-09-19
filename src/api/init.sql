@@ -101,5 +101,3 @@ INSERT INTO languages (email, programming_language) VALUES
 ('aria.carter@example.com', 'TypeScript'),
 ('hannah.mitchell@example.com', 'C++'),
 ('zoe.perry@example.com', 'Scala');
-
-

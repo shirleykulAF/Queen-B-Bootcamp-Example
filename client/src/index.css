@@ -35,3 +35,12 @@ code {
   width: 100%;
   height: auto;
 }
+
+.mentorHome {
+  display: flex;
+  flex-direction: column;
+}
+
+.mentorHome input {
+  margin-bottom: 2%;
+}

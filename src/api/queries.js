@@ -22,8 +22,6 @@ const getMentors = `
           m.email;
     `;
 
-//////// (below are optional) ////////
-
 // check if already email exists
 const checkEmail = "SELECT * FROM users WHERE email = $1";
 
@@ -35,17 +33,22 @@ const createMentor =
 const addMentorLangs =
   "INSERT INTO languages (email, programming_language) VALUES ($1, $2);";
 
-// delete account
+// delete account from mentors table
 const deleteMentor = "DELETE FROM mentors WHERE email = $1";
+
+// delete account from users table
+const deleteMentorsFromUsers = "DELETE FROM users WHERE email = $1";
 
 // update mentor details
 const updateMentor =
-  "UPDATE mentoers SET first_name = $1, last_name = $2, phone_number = $3, linkedin = $4 WHERE email = $5;";
+  "UPDATE mentors SET first_name = $1, last_name = $2, phone_number = $3, linkedin = $4 WHERE email = $5;";
 
 const signup =
   "INSERT INTO users (email, password, userType) VALUES ($1, $2, $3);";
 
 const login = "SELECT * FROM users WHERE email = $1";
+
+const getMentorDetailsByEmail = "SELECT * FROM mentors WHERE email = $1";
 
 module.exports = {
   getAllUsers,
@@ -57,4 +60,6 @@ module.exports = {
   updateMentor,
   signup,
   login,
+  getMentorDetailsByEmail,
+  deleteMentorsFromUsers,
 };
