@@ -1,15 +1,13 @@
 /* Navbar container */
 .navbar {
     display: flex;
-    /* justify-content: space-between; */
     justify-content: space-around;
-    /* Adjust spacing */
     align-items: center;
     padding: 0 20px;
     height: 60px;
     width: 100%;
-    /* This makes the navbar take up full width */
-    background-color: (rgba (255, 255, 255, 0));
+    /* background-color: (rgba(255, 228, 240, 0)); */
+    background-color: #ffcfda; 
     position: fixed;
     /* Keep the navbar fixed at the top */
     top: 0;
@@ -105,7 +103,7 @@
 .navbar-link:hover {
     color: #0d0c22;
     /* Change color on hover */
-    opacity: 60%;
+    opacity: 50%;
 }
 
 .navbar-button {
