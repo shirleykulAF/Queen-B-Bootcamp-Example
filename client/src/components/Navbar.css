@@ -54,14 +54,16 @@
   /* Right align the items */
 }
 
+/* Container for search bar and icon */
 .navbar-search-container {
   position: relative;
-  /* Needed for positioning the icon */
+  display: flex;
+  align-items: center;
 }
 
-/* Normal search bar styling */
+/* Style for the search input field */
 .search-bar {
-  padding: 8px 16px;
+  padding: 7px 16px 8px 30px; /* Extra left padding to make room for the icon */
   margin-right: 20px;
   border: 1px solid #ddd;
   border-radius: 20px;
@@ -71,22 +73,27 @@
   width: 200px;
 }
 
-/* Hover effect */
+/* Search icon styling */
+.search-icon {
+  position: absolute;
+  left: 10px; 
+  width: 15px;
+  height: 15px;
+  color: #aaa; 
+  pointer-events: none; 
+}
+
+/* Hover effect for search input */
 .search-bar:hover {
   border: 3px solid #fac7e2;
   background-color: #f8f8f8;
-  /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);  */
   width: 200px;
-  /* Slightly increase width on hover for expansion effect */
 }
 
-/* Focus effect (when clicking inside the search bar) */
+/* Focus effect for search input */
 .search-bar:focus {
   border: 3px solid #feaad7;
-  /* Change border on focus */
   background-color: #ffffff;
-  /* Ensure background stays white on focus */
-  /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);  */
 }
 
 .navbar-link {
