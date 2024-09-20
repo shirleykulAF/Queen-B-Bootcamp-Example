@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import MentorCard from "./MentorCard";
+import './MentorsDetails.css'; // Import custom styles for the grid
 
 const MentorsDetails = () => {
   const [mentors, setMentors] = useState([]);
@@ -20,7 +21,7 @@ const MentorsDetails = () => {
 
   return (
     <div className="mentors-container">
-      <h2>Mentors Details Page</h2>
+      <h2 className="mentors-title">Take a look at our amazing mentors</h2>
       <div className="card-container">
         {mentors.map((mentor) => (
           <MentorCard key={mentor.email} mentor={mentor} />

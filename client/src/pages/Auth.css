@@ -2,11 +2,11 @@
 .auth-container {
   background-color: #fff;
   padding: 40px;
-  border-radius: 15px; 
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   max-width: 400px;
-  margin: 40px auto; 
-  text-align: center; 
+  margin: 40px auto;
+  text-align: center;
 }
 
 /* Heading styling */
@@ -128,11 +128,116 @@
   cursor: pointer;
   line-height: 1;
   vertical-align: middle;
-  transition: color 0.3s ease, opacity 0.3s ease; 
+  transition: color 0.3s ease, opacity 0.3s ease;
 }
 
 /* Hover effect: change the opacity to 50% */
 .language-tag button:hover {
-  opacity: 0.5; 
-  background-color: transparent; 
+  opacity: 0.5;
+  background-color: transparent;
 }
+
+/* ------ Mentor Home Page ------ */
+.mentor-home .auth-container {
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 500px;
+  margin: 50px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.mentor-home h2 {
+  text-align: center;
+  color: #080341;
+  margin-bottom: 20px;
+}
+
+.mentor-home label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.mentor-home input {
+  width: 100%;
+  padding: 8px 12px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.auth-button {
+  width: 100%;
+  background-color: #ea4c89;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.auth-button.delete {
+  background-color: #ff5252;
+}
+
+.auth-button:hover {
+  background-color: #d94175;
+}
+
+.logout-link {
+  text-align: right;
+  color: #ea4c89;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.logout-link:hover {
+  color: #d94175;
+}
+
+.error-message {
+  color: red;
+}
+
+.success-message {
+  color: green;
+}
+
+/* Modal close button */
+.modal-close-btn {
+  background-color: #ea4c89;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* ------ Browse Page ------ */
+.home-section .auth-container {
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 600px;
+  margin: 50px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.home-subtitle {
+    font-size: .8rem;
+    color: #363232;
+    margin-bottom: 40px;
+  }
+
+.home-section h2 {
+  text-align: center;
+  color: #080341;
+  margin-bottom: 20px;
+}
+
+.home-section .auth-container {
+  padding: 20px;
+}
+
+/* MentorsDetails styling can be done here if needed */
