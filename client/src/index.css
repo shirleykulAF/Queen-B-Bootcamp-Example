@@ -9,7 +9,7 @@ body {
     sans-serif, "Mona Sans", Helvetica, Arial;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: linear-gradient(#ffcfda, rgb(255, 228, 240));
+  background-image: linear-gradient(#f8f7f4, rgb(255, 255, 255)); /* ffcfda*/
   background-repeat: no-repeat;
   height: 100%;
   background-repeat: no-repeat;
