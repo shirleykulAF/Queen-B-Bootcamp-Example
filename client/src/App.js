@@ -8,10 +8,11 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import MentorHome from "./pages/MentorProfile";
 import Navbar from "./components/Navbar"; // if Navbar is inside a components folder
+import MentorsBrowse from './pages/MentorsBrowse';
 
 function App() {
   const { user } = useAuthContext();
-
+console.log('user', user)
   return (
     <Router>
       <div>
@@ -53,8 +54,8 @@ function App() {
             />
 
             {/* Routes for home pages */}
-            <Route path="/MentorsBrowse" element={<Home />} />
-            <Route path="/MentorProfile" element={<MentorHome />} />
+            <Route path="/Login" element={<Login />} />
+            <Route path="/Signup" element={<Signup />} />
           </Routes>
         </div></div>
     </Router>
