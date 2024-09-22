@@ -23,6 +23,8 @@
     border-radius: 30px;
     width: 100%; /* Adjust based on the size you need */
     background-color: white; /* White background for the input */
+    font-family: Arial, sans-serif; /* Ensures the input text uses Arial */
+
 }
 
 .search-button {
