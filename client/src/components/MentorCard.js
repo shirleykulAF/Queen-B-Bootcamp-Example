@@ -18,13 +18,12 @@ const images = {
 };
 
 const MentorCard = ({ mentor }) => {
-  // Determine the image based on the mentor's email (or any other unique property)
-  const index = Math.abs(mentor.email.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0)) % 7;
-  const image = images[`person${index + 1}`];
-
+  // TODO - change the image to be dynamic
+  // const image = images[`person${(parseInt(mentor.email % 7)) + 1}`];
   return (
     <div className="card" style={{ width: "18rem" }}>
-      <img src={image} alt={`${mentor.first_name} ${mentor.last_name}`} />
+      {/* Make sure the path to the image is correct */}
+      <img src={person5} alt="" />
       <div className="card-body">
         <h5 className="card-title">
           <h3>
@@ -41,6 +40,7 @@ const MentorCard = ({ mentor }) => {
           </p>
           <p>{mentor.programming_languages.split(', ').join(', ')}</p>
         </p>
+        {/* <a href="#" className="btn btn-primary">Go somewhere</a> */}
       </div>
     </div>
   );
