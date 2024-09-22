@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { useAuthContext } from '../hooks/useAuthContext';
 import './Auth.css'; // Assuming you are using the same auth styles for consistency
 
-const MentorHome = () => {
+const MentorProfile = () => {
   const { user } = useAuthContext();
   const { logout } = useLogout();
   const navigate = useNavigate();
@@ -184,4 +184,4 @@ const MentorHome = () => {
   );
 };
 
-export default MentorHome;
+export default MentorProfile;
