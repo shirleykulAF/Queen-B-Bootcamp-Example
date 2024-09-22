@@ -1,0 +1,53 @@
+@import "../../../styles/variables.css";
+
+.form-step1-continer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Adds space between each label/input */
+
+  /* Form Box Style*/
+  width: 400px;
+  margin-top: 70px;
+  padding: 20px;
+  background-color: var(--mentorModalColor);
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: grid;
+  align-items: center;
+  font-size: 16px;
+}
+
+.label-name-continer {
+  display: flex;
+}
+
+.asterisk {
+  margin-right: 10px;
+}
+
+input {
+  padding: 5px;
+  border-radius: 10px;
+  border-color: #ccc;
+}
+
+textarea {
+  border-radius: 10px;
+  resize: none;
+}
+
+.error-text {
+  color: red;
+  margin-left: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.next-button {
+  width: 50%;
+  margin-left: auto;
+}

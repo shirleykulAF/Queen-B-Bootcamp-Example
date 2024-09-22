@@ -1,0 +1,12 @@
+@import "../../../styles/variables.css";
+
+.form-continer {
+  /*
+  border: 2px solid;
+  border-width: medium;
+  */
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+  height: 90vh;
+}
