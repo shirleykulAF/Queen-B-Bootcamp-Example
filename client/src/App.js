@@ -1,17 +1,17 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Home from "./pages/Home";
-import AddMentor from "./pages/AddMentor";
-import ViewAllMentors from "./pages/ViewAllMentors";
-import About from "./pages/About";
+import Home from "./pages/Home/Home";
+import MentorRegistration from "./pages/MentorRegistration/MentorRegistration";
+import DisplayMentors from "./pages/DisplayMentors/DisplayMentors";
+import About from "./pages/About/About";
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route exact path="/" Component={Home} />
-        <Route path="/addMentor" Component={AddMentor} />
-        <Route path="/viewAllMentors" Component={ViewAllMentors} />
+        <Route path="/addMentor" Component={MentorRegistration} />
+        <Route path="/viewAllMentors" Component={DisplayMentors} />
         <Route path="/about" Component={About} />
       </Routes>
     </Router>

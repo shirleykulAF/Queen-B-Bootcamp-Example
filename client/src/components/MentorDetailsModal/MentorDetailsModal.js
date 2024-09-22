@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../styles/MentorDetailsModal.css";
+import "./MentorDetailsModal.css";
 
 import { SlSocialLinkedin } from "react-icons/sl";
 import { TfiEmail } from "react-icons/tfi";

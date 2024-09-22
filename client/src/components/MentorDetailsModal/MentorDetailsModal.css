@@ -1,4 +1,4 @@
-@import "./variables.css";
+@import "../../styles/variables.css";
 
 .modal-overlay {
   position: fixed;
