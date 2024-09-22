@@ -5,8 +5,8 @@ import { useNavigate } from 'react-router-dom';
 import { useAuthContext } from '../hooks/useAuthContext';
 import './Auth.css'; // Assuming you are using the same auth styles for consistency
 
-const MentorProfile = () => {
-  const { user } = useAuthContext();
+const Profile = () => {
+  const { user, userType } = useAuthContext(); // Assuming userType is returned by useAuthContext
   const { logout } = useLogout();
   const navigate = useNavigate();
 
@@ -157,9 +157,14 @@ const MentorProfile = () => {
           </>
         )}
 
-        <button onClick={handleUpdateBtn} className="auth-button">
-          Update Details
-        </button>
+
+{userType === 'mentor' && mentorDetails && (
+  <button type="button" onClick={handleUpdateBtn} className="auth-button">
+    Update Details
+  </button>
+)}
+
+        
 
         <button onClick={handleDeleteBtn} className="auth-button delete">
           Delete Account
@@ -184,4 +189,4 @@ const MentorProfile = () => {
   );
 };
 
-export default MentorProfile;
+export default Profile;
