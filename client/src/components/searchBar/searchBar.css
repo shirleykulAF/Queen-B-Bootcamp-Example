@@ -1,0 +1,39 @@
+.search-bar-container {
+    padding: 10px;
+    background-color: #ffe0e9; /* Light pink background */
+    border-radius: 50px; /* Rounded edges */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif; /* Arial font applied here */
+
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    font-size: 16px;
+    line-height: 20px;
+    border: none;
+    outline: none;
+    padding: 8px 16px;
+    border-radius: 30px;
+    width: 100%; /* Adjust based on the size you need */
+    background-color: white; /* White background for the input */
+}
+
+.search-button {
+    background-color: transparent; /* Transparent background for the icon button */
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    margin-left: -45px; /* Negative margin to overlap the button over the input */
+}
+
+.search-button i {
+    color: black; /* Icon color */
+    font-size: 24px; /* Icon size */
+}

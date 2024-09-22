@@ -17,4 +17,4 @@ INSERT INTO mentors (full_name, email, phone_number, whatsapp_link, linkedin_pro
 ('Fiona Davis', 'fiona.davis@example.com', 'mailto:fiona.davis@example.com', '789-012-3456', 'https://wa.me/7890123456', 'https://www.linkedin.com/in/fionadavis', ARRAY['Swift', 'iOS']),
 ('Grace Hill', 'grace.hill@example.com', 'mailto:grace.hill@example.com', '890-123-4567', 'https://wa.me/8901234567', 'https://www.linkedin.com/in/gracehill', ARRAY['PHP', 'Laravel']),
 ('Helen Lopez', 'helen.lopez@example.com', 'mailto:helen.lopez@example.com', '901-234-5678', 'https://wa.me/9012345678', 'https://www.linkedin.com/in/helenlopez', ARRAY['JavaScript', 'Node.js']),
-('Iris Taylor', 'iris.taylor@example.com', 'mailto:iris.taylor@example.com', '012-345-6789', 'https://wa.me/0123456789', 'https://www.linkedin.com/in/iristaylor', ARRAY['Go', 'Kubernetes']);
+('Iris Taylor', 'iris.taylor@example.com', 'mailto:iris.taylor@example.com', '012-345-6789', 'https://wa.me/0123456789', 'https://www.linkedin.com/in/iristaylor', ARRAY['Go', 'Kubernetes']);מםגק
