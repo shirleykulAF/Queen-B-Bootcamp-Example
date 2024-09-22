@@ -6,9 +6,10 @@ import Home from "./pages/MentorsBrowse";
 import WelcomePage from "./pages/WelcomePage";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
-import MentorHome from "./pages/MentorProfile";
+import MentorHome from "./pages/Profile";
 import Navbar from "./components/Navbar"; // if Navbar is inside a components folder
 import MentorsBrowse from './pages/MentorsBrowse';
+import Profile from './pages/Profile';
 
 function App() {
   const { user } = useAuthContext();
@@ -24,6 +25,9 @@ console.log('user', user)
           <Routes>
             {/* Route for the welcome page */}
             <Route path="/" element={<WelcomePage />} />
+            <Route path="/MentorsBrowse" element={<MentorsBrowse />} />
+            <Route path="/Profile" element={<Profile />} />
+
 
             {/* Route for the signup page */}
             <Route
@@ -34,7 +38,7 @@ console.log('user', user)
                 ) : user.userType === "mentee" ? (
                   <Navigate to="/MentorsBrowse" />
                 ) : (
-                  <Navigate to="/MentorProfile" />
+                  <Navigate to="/Profile" />
                 )
               }
             />
@@ -48,7 +52,7 @@ console.log('user', user)
                 ) : user.userType === "mentee" ? (
                   <Navigate to="/MentorsBrowse" />
                 ) : (
-                  <Navigate to="/MentorProfile" />
+                  <Navigate to="/Profile" />
                 )
               }
             />
