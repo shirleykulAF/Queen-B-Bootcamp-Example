@@ -15,7 +15,7 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, '../client/build')));
 
 app.get('/api/helloworld', (req, res) => {
-  res.send('Hello Alina');
+  res.send('Hello Girls');
 });
 
 app.get('/*', (req, res) => {
