@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import CardsGrid from "../components/CardsGrid/CardsGrid";
+import CardsGrid from "../../components/CardsGrid/CardsGrid";
 import Header from "../../components/Header/Header";
 import MentorDetailsModal from "../../components/MentorDetailsModal/MentorDetailsModal";
 
