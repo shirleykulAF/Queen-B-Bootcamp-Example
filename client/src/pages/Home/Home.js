@@ -25,7 +25,9 @@ const Home = () => {
               with the right mentor today! <br />
             </p>
             <div className="button-container">
-              <button onClick={() => navigate("/AddMentor")}>Add Mentor</button>
+              <button onClick={() => navigate("/MentorRegistration")}>
+                Add Mentor
+              </button>
               <button onClick={() => navigate("/ViewAllMentors")}>
                 View All Mentors
               </button>

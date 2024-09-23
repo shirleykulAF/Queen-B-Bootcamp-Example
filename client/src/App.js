@@ -10,7 +10,7 @@ function App() {
     <Router>
       <Routes>
         <Route exact path="/" Component={Home} />
-        <Route path="/addMentor" Component={MentorRegistration} />
+        <Route path="/MentorRegistration" Component={MentorRegistration} />
         <Route path="/viewAllMentors" Component={DisplayMentors} />
         <Route path="/about" Component={About} />
       </Routes>

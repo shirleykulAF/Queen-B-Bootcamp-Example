@@ -1,0 +1,53 @@
+@import "../../../styles/variables.css";
+
+.stepper-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  margin: 20px auto;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.step-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  background-color: white;
+  color: #666;
+  transition: all 0.3s ease;
+}
+
+.step.active .step-circle {
+  background-color: var(--buttonColor);
+  color: white;
+}
+
+.line {
+  width: 500px;
+  height: 2px;
+  margin-bottom: 55px;
+  background-color: #666;
+}
+
+.step p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+.step.active p {
+  font-weight: bold;
+  color: #000;
+}

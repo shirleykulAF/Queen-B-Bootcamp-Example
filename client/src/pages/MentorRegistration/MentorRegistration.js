@@ -1,13 +1,14 @@
 import React from "react";
 import Header from "../../components/Header/Header.js";
+import MentorFrom from "../../components/MentorFrom/Form/MentorFrom.js";
 
-const AddMentor = () => {
+const MentorRegistration = () => {
   return (
     <div>
       <Header />
-      AddMentor
+      <MentorFrom />
     </div>
   );
 };
 
-export default AddMentor;
+export default MentorRegistration;
