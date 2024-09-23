@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import CardsGrid from "../../components/CardsGrid/CardsGrid";
 import Header from "../../components/Header/Header";
 import MentorDetailsModal from "../../components/MentorDetailsModal/MentorDetailsModal";
+import SearchByName from "../../components/SearchByName/SearchByName";
 
-const mentorData = {
+const mentorData = [{
   full_name: "Eden Ismah-Moshe",
   email: "eden12012@gmail.com",
   phone_number: "0506396105",
@@ -16,13 +17,14 @@ const mentorData = {
   company: "QuennB",
   geographical_location: "Tel Aviv, Israel",
   programming_languages: ["JavaScript", "React", "React Native", "Python"],
-};
+}];
 
 const ViewAllMentors = () => {
   return (
     <div>
       <Header />
       <CardsGrid/>
+      <SearchByName data={mentorData}/>
       <MentorDetailsModal data={mentorData} />
     </div>
   );
