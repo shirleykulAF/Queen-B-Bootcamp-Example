@@ -1,0 +1,10 @@
+
+.cardsGrid {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 40px;
+    margin: 100px;
+
+}
