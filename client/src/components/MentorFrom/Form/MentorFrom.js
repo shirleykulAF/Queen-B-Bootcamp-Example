@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 import "./MentorFrom.css";
 import Step1 from "../FormStep1/FormStep1";
 import Step2 from "../FormStep2/FormStep2";
 import { LiaCrownSolid } from "react-icons/lia";
 import { CgBee } from "react-icons/cg";
+
+const API_BASE_URL = "http:/localhost:5001";
 
 const MentorFrom = () => {
   const navigate = useNavigate();
@@ -28,8 +31,18 @@ const MentorFrom = () => {
     setFormData({ ...formData, ...data });
   };
 
-  const handleSubmitForm = () => {
+  const handleSubmitForm = async () => {
     setSubmit(true);
+    /*
+    try {
+      await axios.put(`${API_BASE_URL}/addMentors`, {
+        formData,
+      });
+    } catch (error) {
+      console.error("Error add new mentor to the database:", error);
+      throw error;
+    }
+      */
   };
 
   return (
