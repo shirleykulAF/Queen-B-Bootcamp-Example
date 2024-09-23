@@ -10,6 +10,7 @@ const FormStep2 = ({ onNext, onBack, onChange, formData }) => {
   );
   const [company, setCompany] = useState(formData.company || "");
   const [linkedinURL, setLinkedinURL] = useState(formData.linkedinURL || "");
+  const [expertise, setExpertise] = useState(formData.expertise || "");
   const [error, setError] = useState("");
 
   const handleChange = (e) => {
@@ -28,6 +29,9 @@ const FormStep2 = ({ onNext, onBack, onChange, formData }) => {
       case "linkedinURL":
         setLinkedinURL(value);
         break;
+      case "expertise":
+        handleSetExpertise(value);
+        break;
       default:
         break;
     }
@@ -35,12 +39,18 @@ const FormStep2 = ({ onNext, onBack, onChange, formData }) => {
     onChange({ [name]: value });
   };
 
+  const handleSetExpertise = (data) => {
+    const dataArray = data.split(",");
+    setExpertise(dataArray);
+  };
+
   const handleClickOnSubmitButton = () => {
     if (
       role === "" ||
       yearsOfExperience === "" ||
       company === "" ||
-      linkedinURL === ""
+      linkedinURL === "" ||
+      expertise === ""
     ) {
       setError("Please Enter All The Required Fields");
     } else if (!isLinkedinURLValid(linkedinURL)) {
@@ -90,6 +100,17 @@ const FormStep2 = ({ onNext, onBack, onChange, formData }) => {
           Linkedin URL <CgAsterisk color="red" className="asterisk" />{" "}
         </div>
         <input name="linkedinURL" value={linkedinURL} onChange={handleChange} />
+      </label>
+      <label>
+        <div className="label-name-continer">
+          Expertise Field <CgAsterisk color="red" className="asterisk" />
+        </div>
+        <h5 className="expertise-label">
+          {" "}
+          Please enter your areas of expertise, separated by commas (e.g.
+          JavaScript,Python).
+        </h5>
+        <textarea name="expertise" value={expertise} onChange={handleChange} />
       </label>
       {error ? <h4 className="error-text">{error}</h4> : ""}
       <div className="buttons">

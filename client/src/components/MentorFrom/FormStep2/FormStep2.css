@@ -26,6 +26,10 @@ input {
   border-color: #ccc;
 }
 
+.expertise-label {
+  margin-top: 10px;
+}
+
 .error-text {
   color: red;
   margin-left: auto;
