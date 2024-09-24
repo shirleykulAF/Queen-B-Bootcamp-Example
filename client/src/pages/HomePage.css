@@ -1,0 +1,65 @@
+.HomePage {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+}
+
+header {
+    display: flex;
+    justify-content: center;  /* Center the content horizontally */
+    align-items: center;  /* Center the content vertically */
+    position: relative;
+    padding: 20px;
+    background-color: #f8d7da; /* Pink background */
+}
+
+.search-bar-container {
+    flex-grow: 1;
+    max-width: 600px; /* Limit search bar width */
+    display: flex;
+    justify-content: center;  /* Center search bar */
+}
+
+.signup-button-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;  /* Position the button on the top right */
+}
+
+.signup-button {
+    background-color: transparent; /* No background */
+    border: 2px solid #6c757d; /* Grey border */
+    color: #6c757d; /* Grey text */
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.signup-button:hover {
+    background-color: #6c757d; /* Grey background on hover */
+    color: white; /* White text on hover */
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+footer {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.logo {
+    font-size: 24px;
+    color: #000;
+}

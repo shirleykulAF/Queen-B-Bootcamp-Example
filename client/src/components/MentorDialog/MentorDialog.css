@@ -1,0 +1,36 @@
+.mentor-dialog {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    margin: 0 auto;
+    background-color: #fff;
+  }
+  
+  .mentor-dialog h2 {
+    margin-top: 10px;
+  }
+  
+  .mentor-actions {
+    margin-top: 20px;
+  }
+  
+  .mentor-actions button {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .mentor-actions button:hover {
+    background-color: #0056b3;
+  }
+  
+  .mentor-actions p {
+    margin: 5px 0;
+  }
+  

@@ -1,24 +1,15 @@
 import React from 'react';
 import './Card.css';
-import BackButton from './subcomponents/BackButton/BackButton';
-import Image from './subcomponents/Image/Image';
-import Info from './subcomponents/Info/Info';
-import Actions from './subcomponents/Actions/Actions';
 
-const Card = ({ mentor, onBackClick }) => {
-  const mentor = {
-    name: 'John Doe',
-    description: 'Software Engineer',
-    email: 'ghghj@jhk'
-  }
+const Card = ({ image, name, technologies }) => {
   return (
     <div className="card">
-      <BackButton onClick={onBackClick} />
-      <Image src={mentor.image} alt={mentor.name} />
-      <Info name={mentor.name} description={mentor.description} />
-      <Actions email={mentor.email} phone={mentor.phone} />
+      <img src={image} alt={name} className="card-image" style={{ width: '100px', borderRadius: '50%' }} />
+      <h3>{name}</h3>
+      <p>{technologies.join(', ')}</p>
     </div>
   );
 };
 
 export default Card;
+

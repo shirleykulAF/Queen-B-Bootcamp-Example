@@ -1,8 +1,12 @@
 import React from 'react';
-import logoImage from 'client/src/images/logo.png';
-import './Logo.css'; 
+import './Logo.css';  // Add your own styling here
 
+const Logo = () => {
+  return (
+    <div className="logo">
+      <h2>QueenB</h2>
+    </div>
+  );
+};
 
-function Logo() {
-    return <img src={logoImage} alt="Company Logo" className="logo" />;
-}
+export default Logo;
