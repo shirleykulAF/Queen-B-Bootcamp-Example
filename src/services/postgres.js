@@ -1,3 +1,4 @@
+require("dotenv").config();
 const pg = require("pg");
 
 const PG_NOT_INITIALIZED = "Postgres not initialized";

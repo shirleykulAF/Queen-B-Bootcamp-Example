@@ -14,6 +14,11 @@ function createUser(req, res) {
   res.send(`User ${userId} created`);
 }
 
+function AddMentor(req, res) {
+  // add mentor to db
+  const data = req.body;
+}
+
 module.exports = {
   getAllUsers,
   createUser,

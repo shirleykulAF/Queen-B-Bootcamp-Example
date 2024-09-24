@@ -4,17 +4,8 @@ const cors = require("cors");
 const path = require("path");
 const app = express();
 const port = process.env.PORT || 5001;
-const { Client } = require("pg");
+const postgres = require("./services/postgres");
 
-const client = new Client({
-  host: "localhost",
-  user: "postgres",
-  port: 5432,
-  password: process.env.DB_PASSWORD,
-  database: "postgres",
-});
-
-client.connect();
 /*
 CORS (Cross-Origin Resource Sharing) is a browser security feature that restricts
 cross-origin HTTP requests with other servers and specifies which domains access your resources.
@@ -33,6 +24,8 @@ app.get("/*", (req, res) => {
   // res.send('Anything else');
   res.sendFile(path.join(__dirname, "../client/build", "index.html"));
 });
+
+postgres.init();
 
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
