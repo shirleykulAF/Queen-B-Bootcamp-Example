@@ -3,7 +3,7 @@ const cors = require("cors");
 const path = require("path");
 const { Client } = require("pg");
 const postgres = require('./services/postgres')
-const mentorRoutes = require("./routes/Routes")
+const mentorRoutes = require("./Routes/routes")
 require("dotenv").config();
 
 // Constants
@@ -13,17 +13,8 @@ const port = process.env.PORT || 5001;
 // Create Express Server
 const app = express();
 
+// Connect to Postgres
 postgres.init();
-// client.connect();
-
-// const client = new Client({
-//   host: "localhost",
-//   user: "postgres",
-//   port: 5432,
-//   password: process.env.DB_PASSWORD,
-//   database: "postgres",
-// });
-// client.connect();
 
 
 // Middleware
@@ -39,21 +30,7 @@ app.use(express.static(path.join(__dirname, "../client/build")));
 
 
 // Routes
-app.use(mentorRoutes);
-
-
-// // Find out why we need this
-// app.get("/api/helloworld", (req, res) => {
-//   res.send("Hello World");
-// });
-
-// app.get("/*", (req, res) => {
-//   // res.send('Anything else');
-//   res.sendFile(path.join(__dirname, "../client/build", "index.html"));
-// });
-
-// Connect to Postgres
-// postgres.init();
+app.use('/api/mentor', mentorRoutes);
 
 
 // Start the server
