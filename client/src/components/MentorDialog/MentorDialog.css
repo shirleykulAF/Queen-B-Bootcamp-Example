@@ -1,36 +1,50 @@
-.mentor-dialog {
-    border: 1px solid #ddd;
-    padding: 20px;
-    border-radius: 10px;
-    width: 300px;
-    margin: 0 auto;
-    background-color: #fff;
-  }
-  
-  .mentor-dialog h2 {
-    margin-top: 10px;
-  }
-  
-  .mentor-actions {
-    margin-top: 20px;
-  }
-  
-  .mentor-actions button {
-    display: block;
-    margin: 10px 0;
-    padding: 10px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .mentor-actions button:hover {
-    background-color: #0056b3;
-  }
-  
-  .mentor-actions p {
-    margin: 5px 0;
-  }
-  
+/* The backdrop for the modal with a more transparent background */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3); /* 0.3 is the transparency level */
+  z-index: 10;  /* Ensure it appears below the dialog */
+}
+
+/* Dialog container */
+.mentor-dialog-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 350px; /* Adjust size as needed */
+  z-index: 20; /* Ensure it's above the backdrop */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+/* Mentor dialog specific styling */
+.mentor-dialog h2 {
+  margin-bottom: 10px;
+}
+
+.mentor-dialog p {
+  margin: 5px 0;
+}
+
+.mentor-actions button {
+  margin: 10px 0;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.mentor-actions button:hover {
+  background-color: #0056b3;
+}
