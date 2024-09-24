@@ -3,8 +3,8 @@ const controller = require("../controllers/Controllers.js");
 
 const router = express.Router();
 
-router.get("/api/memtor");
-router.put("/api/memtor");
-router.get("/api/memtor/search");
+router.get("/api/memtor", controller.getAllMentors);
+router.put("/api/memtor", controller.addMentor);
+router.get("/api/memtor/search", controller.getMentorByField);
 
 module.exports = router;

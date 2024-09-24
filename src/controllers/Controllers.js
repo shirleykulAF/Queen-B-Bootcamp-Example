@@ -2,8 +2,6 @@
 
 
 
-
-
 function getAllMentors(req, res) {
   console.log("Received request get all mentors");
   res.send(["Get all users response", "User 1", "User 2"]);
@@ -27,7 +25,7 @@ function getMentorByField(req, res){
 
 
 module.exports = {
-  getAllUsers,
-  createUser,
+  getAllMentors,
+  addMentor,
   getMentorByField,
 };
