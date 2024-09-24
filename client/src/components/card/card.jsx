@@ -6,6 +6,11 @@ import Info from './subcomponents/Info/Info';
 import Actions from './subcomponents/Actions/Actions';
 
 const Card = ({ mentor, onBackClick }) => {
+  const mentor = {
+    name: 'John Doe',
+    description: 'Software Engineer',
+    email: 'ghghj@jhk'
+  }
   return (
     <div className="card">
       <BackButton onClick={onBackClick} />

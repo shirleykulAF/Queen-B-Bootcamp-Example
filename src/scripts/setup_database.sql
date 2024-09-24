@@ -8,7 +8,7 @@ INSERT INTO users (username, password, role) VALUES
 
 -- Insert data into Mentors Table
 INSERT INTO mentors (full_name, email, phone_number, whatsapp_link, linkedin_profile, technologies) VALUES
-('Jane Doe', 'jane.doe@example.com', 'mailto:jane.doe@example.com', '123-456-7890', ' https://wa.me/1234567890', 'https://www.linkedin.com/in/janedoe', ARRAY['JavaScript', 'Python'])
+('Jane Doe', 'jane.doe@example.com', 'mailto:jane.doe@example.com', '123-456-7890', ' https://wa.me/1234567890', 'https://www.linkedin.com/in/janedoe', ARRAY['JavaScript', 'Python']),
 ('Alice Johnson', 'alice.johnson@example.com', 'mailto:alice.johnson@example.com', '234-567-8901', 'https://wa.me/2345678901', 'https://www.linkedin.com/in/alicejohnson', ARRAY['Python', 'Django']),
 ('Bethany Cole', 'bethany.cole@example.com', 'mailto:bethany.cole@example.com', '345-678-9012', 'https://wa.me/3456789012', 'https://www.linkedin.com/in/bethanycole', ARRAY['JavaScript', 'React']),
 ('Clara Brown', 'clara.brown@example.com', 'mailto:clara.brown@example.com', '456-789-0123', 'https://wa.me/4567890123', 'https://www.linkedin.com/in/clarabrown', ARRAY['Java', 'Spring Boot']),
