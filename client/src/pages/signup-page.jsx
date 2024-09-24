@@ -20,13 +20,17 @@ const options = [
   { value: 'SQL', label: 'SQL' },
   { value: 'React', label: 'React' },
   { value: 'Node.js', label: 'Node.js' },
+  { value: 'linkedin', label: 'linkedin' },
+  { value: 'CV', label: 'CV' },
 ];
 
 const CreateNewMentor = () => {
+
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
   const [linkedinProfile, setLinkedinProfile] = useState('');
+  const [aboutMe, setAboutMe] = useState('');
   const [technologies, setTechnologies] = useState([]);
 
   const handleTechnologyChange = (selectedOptions) => {
@@ -40,6 +44,7 @@ const CreateNewMentor = () => {
       email,
       phoneNumber,
       linkedinProfile,
+      aboutMe,
       technologies: technologies.map(option => option.value), 
     };
     alert((JSON.stringify(mentor)));
@@ -75,6 +80,12 @@ const CreateNewMentor = () => {
           type="url"
           value={linkedinProfile}
           onChange={(e) => setLinkedinProfile(e.target.value)}
+        />
+        <label>About Me:</label>
+        <textarea
+          type="text"
+          value={aboutMe}
+          onChange={(e) => setAboutMe(e.target.value)}
         />
         <label>Technologies:</label>
         <Select
