@@ -11,11 +11,7 @@ An example app for the queenB Initiative - Boilerplate
 * install Docker - in order to run a local postgres database - https://docs.docker.com/engine/install/
 * install node.js - https://phoenixnap.com/kb/install-node-js-npm-on-windows
 * install npm - package manager - Node / npm: https://nodejs.org/en/download
-*  pgAdmin (postgres client)
-
-  Windows: https://www.postgresql.org/ftp/pgadmin/pgadmin4/v7.6/windows/
-
-  Mac: https://www.postgresql.org/ftp/pgadmin/pgadmin4/v7.6/macos/
+*  pgAdmin (postgres client) -  https://www.pgadmin.org/download/
 
 
 ## Running locally
@@ -91,8 +87,29 @@ https://codedamn.com/news/reactjs/how-to-connect-react-with-node-js
 
 
 
-### Running a local Postgres database
+## Running a local Postgres database
+
+* install Docker - https://docs.docker.com/engine/install/
+* open the docker
+* run postgres from the docker
 
 ```
 docker run --name qb-postgres -e POSTGRES_PASSWORD=mysecretpassword -p 5432:5432 -d postgres
 ```
+
+For More info - https://www.dbvis.com/thetable/how-to-set-up-postgres-using-docker/
+
+
+### Connect to your DB from the server 
+
+To connect to the db use the following paramaters:
+
+* Host: localhost
+* Port: 5432
+* Database: your database (here - qb-postgres)
+
+  You can use the third party library - pg.
+  
+  [Postgres Instructions](https://help.scalegrid.io/docs/postgresql-connecting-to-nodejs-driver)
+
+  
