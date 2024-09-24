@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-// import firstPerson from '../images/person1.svg';
+// import { ReactSVG } from 'react-svg';
+import firstPerson from '../images/person1.svg';
 const port = process.env.PORT || 5001;
 
 function MyComp() {
@@ -24,7 +25,8 @@ function MyComp() {
   return (
     <div className="App">
       <h1>{message}</h1>
-      <img src={'../images/person1.svg'} alt="person1" onClick={} />
+      {/*<ReactSVG src='../images/person1.svg' alt="person1" />*/}
+      <img src={firstPerson} alt="person1" />
       <button onClick={getUser}>User</button>
     </div>
   );
