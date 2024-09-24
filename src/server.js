@@ -14,15 +14,35 @@ app.use(express.json());
 // enables the server to serve the client app without running it
 app.use(express.static(path.join(__dirname, '../client/build')));
 
-app.get('/api/helloworld', (req, res) => {
-  res.send('Hello Alina');
+const { Client } = require('pg');
+
+const client = new Client({
+    user: 'postgres',
+    host: 'localhost',
+    database: 'postgres',
+    password: 'Op1234',
+    port: 5432,
 });
 
-app.get('/*', (req, res) => {
-  // res.send('Anything else');
-  res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
-});
 
+client.connect()
+    .then(() => console.log('Connected to the database'))
+    .catch(err => console.error('Connection error', err.stack));
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
 });
+
+app.post('/mentors', (req, res) => {
+
+  const { fullName, email, phoneNumber, linkedinProfile, aboutMe, technologies } = req.body;
+  
+  client.query('INSERT INTO mentors (full_name, email, phone_number, linkedin_url, about_me, technologies) VALUES ($1, $2, $3, $4, $5, $6)', [fullName, email, phoneNumber, linkedinProfile, aboutMe, technologies])
+  .then(() => {
+    res.status(201).send('Mentor added!');
+  })
+  .catch(err => {
+    console.error('Error executing query', err.stack);
+    res.status(500).send('Error adding mentor');
+  });
+});
+
