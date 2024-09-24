@@ -1,25 +1,31 @@
-function getAllUsers(req, res) {
-  console.log("Received request get all users");
-  res.send(["Get all users response", "User 1", "User 2"]);
+const postgres = require("../services/postgres");
+
+function getAllMentors(req, res) {
+  const data = postgres.getAllMentors();
+  console.log("Received request get all mentors");
+  res.send(data);
 }
 
-function createUser(req, res) {
+function addMentor(req, res) {
   // received a request for creating a user - userId
   // with the data in the body
   console.log("Received request create user");
-
-  const { userId } = req.params;
+  // const { userId } = req.params;
   const data = req.body;
-  console.log(`User ${userId} created`, data);
-  res.send(`User ${userId} created`);
+
+  console.log("data: ", data);
+  postgres.createMentor(data);
+
+  //console.log(`User ${userId} created`, data);
+  res.send(`User created`);
 }
 
-function AddMentor(req, res) {
-  // add mentor to db
-  const data = req.body;
+function getMentorByField(req, res) {
+  console.log("Searching for your desired mentors");
 }
 
 module.exports = {
-  getAllUsers,
-  createUser,
+  getAllMentors,
+  addMentor,
+  getMentorByField,
 };
