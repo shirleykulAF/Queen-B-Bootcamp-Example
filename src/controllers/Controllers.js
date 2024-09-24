@@ -1,10 +1,23 @@
 
+const postgres = require('../services/postgres')
 
 
-
-function getAllMentors(req, res) {
-  console.log("Received request get all mentors");
-  res.send(["Get all users response", "User 1", "User 2"]);
+async function getAllMentors(req, res) {
+  try {
+    console.log("Received request to get all mentors");
+    const mentors = await postgres.getAllMentors();
+    console.log(mentors.data);  
+    
+    // checking that the db is not empty and sending back the data
+    if (mentors.data.length === 0) {
+      res.status(404).json({ message: 'No mentors found' });
+    } else {
+      res.status(200).json(mentors);
+    }
+  } catch (error) {
+    console.error('Error fetching mentors:', error);
+    res.status(500).send('Error fetching mentors from database');
+  }
 }
 
 function addMentor(req, res) {
