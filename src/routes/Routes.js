@@ -3,9 +3,8 @@ const controller = require("../controllers/Controllers.js");
 
 const router = express.Router();
 
-router.post("/api/memtor", () => {});
-router.get("/api/memtor/:id", () => {});
-router.update("/api/memtor", () => {});
-// router.put("/addMentor", controller.addMentors);
+router.get("/api/memtor");
+router.put("/api/memtor");
+router.get("/api/memtor/search");
 
 module.exports = router;
