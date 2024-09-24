@@ -12,7 +12,7 @@ async function getAllMentors(req, res) {
     if (mentors.data.length === 0) {
       res.status(404).json({ message: 'No mentors found' });
     } else {
-      res.status(200).json(mentors);
+      res.status(200).json(mentors.data);
     }
   } catch (error) {
     console.error('Error fetching mentors:', error);
