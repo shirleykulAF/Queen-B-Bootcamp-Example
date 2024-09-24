@@ -3,10 +3,10 @@
 .form-step2-continer {
   display: flex;
   flex-direction: column;
-  gap: 10px; /* Adds space between each label/input */
 
   /* Form Box Style*/
   width: 400px;
+  margin-top: 15px;
   padding: 20px;
   background-color: var(--mentorModalColor);
   border: 2px solid #ccc;

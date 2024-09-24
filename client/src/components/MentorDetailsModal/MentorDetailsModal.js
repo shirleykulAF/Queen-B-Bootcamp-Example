@@ -16,6 +16,7 @@ const MentorDetailsModal = ({ data }) => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  console.log("mentor: ", data);
   return (
     <>
       <button onClick={handleShow}>View Mentor Modal</button>

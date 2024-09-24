@@ -6,18 +6,24 @@ function getAllMentors(req, res) {
   res.send(data);
 }
 
-function addMentor(req, res) {
-  // received a request for creating a user - userId
-  // with the data in the body
-  console.log("Received request create user");
-  // const { userId } = req.params;
+async function addMentor(req, res) {
   const data = req.body;
+  try {
+    const result = await postgres.createMentor(data);
 
-  console.log("data: ", data);
-  postgres.createMentor(data);
-
-  //console.log(`User ${userId} created`, data);
-  res.send(`User created`);
+    if (result.ok) {
+      return res
+        .status(201)
+        .send({ message: `User ${result.data.id} created`, data: result.data });
+    } else {
+      return res
+        .status(400)
+        .send({ error: "Error creating mentor", details: result.error });
+    }
+  } catch (error) {
+    console.error("Error in addMentor:", error);
+    return res.status(500).send({ error: "Internal server error" });
+  }
 }
 
 function getMentorByField(req, res) {

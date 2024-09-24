@@ -94,26 +94,26 @@ async function createMentor(data) {
   `;
 
   const values = [
-    data.name,
+    data.fullName,
     data.email,
-    data.phone_number,
-    data.linkedin_url,
-    data.profile_photo,
+    data.phoneNumber,
+    data.linkedinURL,
+    data.photo,
     data.about,
-    data.position,
-    data.experience,
+    data.role,
+    data.yearsOfExperience,
     data.company,
-    data.geographical_location,
-    data.programming_languages,
+    data.location,
+    `{${data.expertise.split(",").join(",")}}`,
   ];
 
   try {
     const result = await runSingleQuery(query, values);
 
-    if (!result.ok) {
-      return result;
+    if (result && result.rows && result.rows.length) {
+      return { ok: true, data: result.rows[0] };
     }
-    return { ok: true, data: result.rows[0] };
+    return { ok: false, error: "No rows returned" };
   } catch (error) {
     console.error("Error creating mentor:", error);
     return { ok: false, error };
