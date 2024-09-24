@@ -4,6 +4,7 @@ const path = require('path');
 const app = express();
 require('dotenv').config();
 const routes = require('./routes/userRoutes.js');
+const pgConnector = require('./services/postgres');
 const port = process.env.PORT || 5001;
 
 /*
@@ -16,11 +17,10 @@ app.use(express.json());
 // enables the server to serve the client app without running it
 app.use(express.static(path.join(__dirname, '../client/build')));
 
-// app.get('/api/helloworld', (req, res) => {
-//   res.send('Hello World');
-// });
-// apply routes
 app.use(routes);
+
+// connect to Postgres
+pgConnector.init();
 
 app.get('*', (req, res) => {
   // res.send('Anything else');

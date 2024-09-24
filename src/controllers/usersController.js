@@ -1,7 +1,8 @@
-
+const pgConnector = require('../services/postgres');
 
 function getAllUsers(req, res) {
   console.log('Received request get all users');
+  pgConnector.getAllUsers();
   res.send(['Get all users response', 'User 1', 'User 2']);
 }
 
