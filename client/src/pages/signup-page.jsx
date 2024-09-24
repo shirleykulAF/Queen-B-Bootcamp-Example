@@ -47,8 +47,22 @@ const CreateNewMentor = () => {
       aboutMe,
       technologies: technologies.map(option => option.value), 
     };
-    alert((JSON.stringify(mentor)));
-  };
+    
+    fetch('http://localhost:5001/mentors', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(mentor),
+    })
+    
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error('There was an error adding the mentor');
+      }
+      return response.json();
+    })
+    .catch(error => console.error('There was an error adding the mentor', error));
+   };
+  
 
   return (
     <div className="create">
@@ -101,5 +115,6 @@ const CreateNewMentor = () => {
     </div>
   );
 };
+
 
 export default CreateNewMentor;
