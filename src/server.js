@@ -3,7 +3,8 @@ const cors = require("cors");
 const path = require("path");
 const { Client } = require("pg");
 const postgres = require("./services/postgres");
-const mentorRoutes = require("./routes/Routes");
+const mentorRoutes = require("./routes/mentorRoutes");
+const usersRoutes = require("./routes/usersRoutes");
 require("dotenv").config();
 
 // Constants
@@ -28,6 +29,7 @@ app.use(express.static(path.join(__dirname, "../client/build")));
 
 // Routes
 app.use("/api/mentor", mentorRoutes);
+app.use("/api/users", usersRoutes);
 
 // Start the server
 app.listen(port, () => {

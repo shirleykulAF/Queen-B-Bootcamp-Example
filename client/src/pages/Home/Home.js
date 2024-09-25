@@ -25,12 +25,8 @@ const Home = () => {
               with the right mentor today! <br />
             </p>
             <div className="button-container">
-              <button onClick={() => navigate("/MentorRegistration")}>
-                Add Mentor
-              </button>
-              <button onClick={() => navigate("/ViewAllMentors")}>
-                View All Mentors
-              </button>
+              <button onClick={() => navigate("/login")}>Log In</button>
+              <button onClick={() => navigate("/signin")}>Sign Up</button>
             </div>
           </div>
           <img className="home-photo" src={homePhoto} alt="homePhoto" />
