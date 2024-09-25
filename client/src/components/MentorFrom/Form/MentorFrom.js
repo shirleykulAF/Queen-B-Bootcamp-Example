@@ -33,10 +33,9 @@ const MentorFrom = () => {
 
   console.log(formData);
   const handleSubmitForm = async () => {
-    setSubmit(true);
-
     try {
       const response = await axios.put(`${API_BASE_URL}/api/mentor`, formData);
+      setSubmit(true);
     } catch (error) {
       console.error("Error add new mentor to the database:", error);
       throw error;
