@@ -1,3 +1,39 @@
+// import React, { useState } from "react";
+// import TextField from "@mui/material/TextField";
+// import IconButton from "@mui/material/IconButton";
+// import SearchIcon from "@mui/icons-material/Search";
+
+// const SearchByName = ({ onSearch }) => { // No need for data prop
+//     const [inputText, setInputText] = useState("");
+
+//     const inputHandler = (event) => {
+//         setInputText(event.target.value); // Store input text
+//     };
+
+//     // Function to handle when the search button is clicked
+//     const handleSearchClick = () => {
+//         onSearch(inputText); // Call onSearch with the input text
+//     };
+
+//     return (
+//         <div className="search-mentor-by-name" style={{ display: 'flex', alignItems: 'center' }}>
+//             <TextField
+//                 id="search-mentor-by-name"
+//                 onChange={inputHandler}
+//                 fullWidth
+//                 label="Search by Mentor Name"
+//             />
+
+//             {/* Search Button with Magnifying Glass Icon */}
+//             <IconButton onClick={handleSearchClick} aria-label="search">
+//                 <SearchIcon />
+//             </IconButton>
+//         </div>
+//     );
+// };
+
+// export default SearchByName;
+
 import React, { useState, useEffect  } from "react";
 import TextField from "@mui/material/TextField";
 import IconButton from "@mui/material/IconButton";
