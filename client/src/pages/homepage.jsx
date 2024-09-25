@@ -21,7 +21,10 @@ const HomePage = ({ message }) => {
         {/* Sign-Up button on the top-right */}
         <div className="signup-button-container">
           <Link to="/signup">
-            <button className="signup-button">Sign Up</button>
+            <button className="signup-button">Mentor Sign-Up</button>
+          </Link>
+          <Link to="/login">
+            <button className="signup-button">Mentee Log-In</button>
           </Link>
         </div>
       </header>

@@ -1,4 +1,4 @@
-.card {
+/* .card {
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 20px;
@@ -44,4 +44,60 @@
   .card:hover h3 {
     color: #f8d7da;
   }
-  
+   */
+   .card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    width: 250px;
+    height: 350px;  /* Set a fixed height for the card */
+    background-color: #fff;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;  /* Ensure content is spaced properly */
+    align-items: center;
+    overflow: hidden; /*Prevent overflow */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.card p {
+    margin: 5px 0;
+    font-size: 1em;
+    color: #666;
+    overflow: hidden;  /* Hide overflow text */
+    white-space: nowrap;  /* Prevent wrapping */
+    text-overflow: ellipsis;  /* Add ellipsis if text overflows */
+    max-width: 100%;  /* Ensure text doesn't overflow the card */
+}
+
+.card p.technologies {
+    font-size: 0.9em;
+    color: #f8d7da;
+    margin-top: 10px;
+}
+
+.card:hover h3 {
+    color: #f8d7da;
+}

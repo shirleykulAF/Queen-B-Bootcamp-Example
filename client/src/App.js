@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import axios from 'axios';
 import HomePage from './pages/HomePage';
 import SignUpPage from './pages/signup-page';
+import LogInPage from './pages/login-page';
 import firstPerson from './images/person1.svg';
 import './App.css';
 
@@ -29,6 +30,7 @@ function App() {
           />
           {/* Sign-Up Page Route */}
           <Route path="/signup" element={<SignUpPage />} />
+          <Route path="/login" element={<LogInPage />} />
         </Routes>
       </div>
     </Router>

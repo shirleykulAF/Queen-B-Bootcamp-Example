@@ -141,8 +141,8 @@ function Feed({ searchTerm }) {  // Accept the searchTerm as a prop
   useEffect(() => {
     const mentorData = [
       {
-        image: "https://via.placeholder.com/150",
-        name: "Alice Johnson",
+        image: "https://static.wixstatic.com/media/449abe_7b15686b2118476da4a733a7861dd772~mv2.jpg/v1/fill/w_1080,h_1080,al_c,q_85/sn-color.jpg",
+        name: "Dana Mashevich",
         technologies: ["JavaScript", "React", "Node.js"],
         about: "Full-stack developer with 8 years of experience building scalable web applications.",
         phone: "123-456-7890",
@@ -150,8 +150,8 @@ function Feed({ searchTerm }) {  // Accept the searchTerm as a prop
         linkedin: "https://www.linkedin.com/in/alicejohnson"
       },
       {
-        image: "https://via.placeholder.com/150",
-        name: "Bob Smith",
+        image: "https://m.media-amazon.com/images/I/717VleQPsjL.jpg",
+        name: "Michelle Fishman",
         technologies: ["Python", "Django", "PostgreSQL"],
         about: "Back-end developer specializing in Python and databases for over 5 years.",
         phone: "234-567-8901",
@@ -159,8 +159,8 @@ function Feed({ searchTerm }) {  // Accept the searchTerm as a prop
         linkedin: "https://www.linkedin.com/in/bobsmith"
       },
       {
-        image: "https://via.placeholder.com/150",
-        name: "Carla Lewis",
+        image: "https://static.wixstatic.com/media/999c17_dfdb32fca7214f9ea8fee52555d7cc7c~mv2.jpg/v1/fit/w_320,h_320,q_90/999c17_dfdb32fca7214f9ea8fee52555d7cc7c~mv2.jpg",
+        name: "Michal Wolpert",
         technologies: ["Java", "Spring Boot", "MySQL"],
         about: "Senior Java developer with expertise in microservices architecture and cloud-based solutions.",
         phone: "345-678-9012",
@@ -168,8 +168,8 @@ function Feed({ searchTerm }) {  // Accept the searchTerm as a prop
         linkedin: "https://www.linkedin.com/in/carlalewis"
       },
       {
-        image: "https://via.placeholder.com/150",
-        name: "David Kim",
+        image: "https://images.desenio.com/zoom/18197-8snoopylove50x70-79406.jpg",
+        name: "Lior Mandelboim",
         technologies: ["Ruby on Rails", "PostgreSQL", "Heroku"],
         about: "Experienced Ruby on Rails developer with a focus on web performance and optimization.",
         phone: "456-789-0123",
@@ -177,8 +177,8 @@ function Feed({ searchTerm }) {  // Accept the searchTerm as a prop
         linkedin: "https://www.linkedin.com/in/davidkim"
       },
       {
-        image: "https://via.placeholder.com/150",
-        name: "Evelyn Martinez",
+        image: "https://snoopy.uno/cdn/shop/files/MYCROMPEANUTS097.png?v=1711363250&width=1445",
+        name: "Yuval Goldshtein",
         technologies: ["C#", ".NET", "Azure"],
         about: "Software architect and .NET specialist with over 10 years in the software industry.",
         phone: "567-890-1234",
@@ -186,8 +186,8 @@ function Feed({ searchTerm }) {  // Accept the searchTerm as a prop
         linkedin: "https://www.linkedin.com/in/evelynmartinez"
       },
       {
-        image: "https://via.placeholder.com/150",
-        name: "Franklin Moore",
+        image: "https://img.posterstore.com/zoom/18200-8snoopysurfboard50x70-73500-75297.jpg?auto=compress%2Cformat&fit=max&w=3840",
+        name: "Alina Dronov",
         technologies: ["PHP", "Laravel", "Vue.js"],
         about: "Web developer with a passion for building dynamic, responsive, and user-friendly applications.",
         phone: "678-901-2345",
@@ -195,7 +195,7 @@ function Feed({ searchTerm }) {  // Accept the searchTerm as a prop
         linkedin: "https://www.linkedin.com/in/franklinmoore"
       },
       {
-        image: "https://via.placeholder.com/150",
+        image: "https://images2.alphacoders.com/519/thumb-1920-519574.jpg",
         name: "Grace Lee",
         technologies: ["Kotlin", "Android", "Firebase"],
         about: "Mobile app developer specializing in Android development with extensive experience in Kotlin.",
@@ -204,7 +204,7 @@ function Feed({ searchTerm }) {  // Accept the searchTerm as a prop
         linkedin: "https://www.linkedin.com/in/gracelee"
       },
       {
-        image: "https://via.placeholder.com/150",
+        image: "https://images.desenio.com/zoom/18201-8snoopyonthebeach50x70-13522-50090.jpg",
         name: "Henry Walker",
         technologies: ["Go", "Kubernetes", "Docker"],
         about: "DevOps engineer with expertise in cloud infrastructure, automation, and container orchestration.",
@@ -213,7 +213,7 @@ function Feed({ searchTerm }) {  // Accept the searchTerm as a prop
         linkedin: "https://www.linkedin.com/in/henrywalker"
       },
       {
-        image: "https://via.placeholder.com/150",
+        image: "https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/snoopy-love-john-m-hasting.jpg",
         name: "Isabella Adams",
         technologies: ["Python", "Machine Learning", "TensorFlow"],
         about: "Data scientist with a passion for machine learning and building AI-powered solutions.",
@@ -222,8 +222,26 @@ function Feed({ searchTerm }) {  // Accept the searchTerm as a prop
         linkedin: "https://www.linkedin.com/in/isabellaadams"
       },
       {
-        image: "https://via.placeholder.com/150",
-        name: "James Brown",
+        image: "https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/1-snoopy-love-dustin-l-carrico.jpg",
+        name: "Jina Brown",
+        technologies: ["C++", "Embedded Systems", "IoT"],
+        about: "Embedded systems engineer with a focus on developing IoT solutions and real-time applications.",
+        phone: "012-345-6789",
+        email: "james.brown@example.com",
+        linkedin: "https://www.linkedin.com/in/jamesbrown"
+      },
+      {
+        image: "https://render.fineartamerica.com/images/rendered/default/canvas-print/7/8/mirror/break/images/artworkimages/medium/3/1-snoopy-happy-susan-d-love-canvas-print.jpg",
+        name: "Jennie Brown",
+        technologies: ["C++", "Embedded Systems", "IoT"],
+        about: "Embedded systems engineer with a focus on developing IoT solutions and real-time applications.",
+        phone: "012-345-6789",
+        email: "james.brown@example.com",
+        linkedin: "https://www.linkedin.com/in/jamesbrown"
+      },
+      {
+        image: "https://img.posterstore.com/zoom/18197-8snoopylove50x70-23204-14418.jpg",
+        name: "Yona Barber",
         technologies: ["C++", "Embedded Systems", "IoT"],
         about: "Embedded systems engineer with a focus on developing IoT solutions and real-time applications.",
         phone: "012-345-6789",
