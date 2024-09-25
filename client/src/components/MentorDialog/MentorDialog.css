@@ -1,0 +1,51 @@
+/* The backdrop for the modal with a more transparent background */
+.modal-backdrop-custom {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.5);  /* Reduced opacity */
+  z-index: 10;
+}
+
+/* Dialog container */
+.mentor-dialog-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 350px; /* Adjust size as needed */
+  z-index: 20; /* Ensure it's above the backdrop */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow to make the dialog stand out */
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+/* Mentor dialog specific styling */
+.mentor-dialog-container h2 {
+  margin-bottom: 10px;
+}
+
+.mentor-dialog-container p {
+  margin: 5px 0;
+}
+
+/* Style for the mentor action buttons */
+.mentor-actions button {
+  margin: 10px 0;
+  background-color: #5a6268;  /* Grey color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.mentor-actions button:hover {
+  background-color: #f8d7da;  /* Darker grey on hover */
+}
