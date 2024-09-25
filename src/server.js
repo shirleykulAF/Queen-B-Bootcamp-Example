@@ -3,7 +3,7 @@ const cors = require("cors");
 const path = require("path");
 const { Client } = require("pg");
 const postgres = require("./services/postgres");
-const mentorRoutes = require("./Routes/routes");
+const mentorRoutes = require("./routes/Routes");
 require("dotenv").config();
 
 // Constants
@@ -25,8 +25,6 @@ app.use(cors());
 app.use(express.json());
 // enables the server to serve the client app without running it
 app.use(express.static(path.join(__dirname, "../client/build")));
-
-app.use(routes);
 
 // Routes
 app.use("/api/mentor", mentorRoutes);
