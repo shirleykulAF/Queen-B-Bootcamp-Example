@@ -5,11 +5,19 @@ import "./Header.css";
 const Header = () => {
   return (
     <header>
-      <img src={logo} alt="Logo" />
+      <a href="/">
+        <img src={logo} alt="Logo" />
+      </a>
       <nav>
-        <ul>
+        <ul className="home-ul">
           <li>
-            <a href="/about">About Us</a>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/viewAllMentors">View All Mentors</a>
+          </li>
+          <li>
+            <a href="/MentorRegistration">Register As Mentor</a>
           </li>
         </ul>
       </nav>

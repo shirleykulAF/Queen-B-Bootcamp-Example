@@ -16,7 +16,7 @@ node_modules/
 .idea/
 
 #.env 
-./env 
+.env 
 
 # TSC output
 dist/
