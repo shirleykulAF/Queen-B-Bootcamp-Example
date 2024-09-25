@@ -1,0 +1,17 @@
+@import "../../styles/variables.css";
+
+.registration-title-wrapper {
+  text-align: center;
+  background-color: var(--headerColor);
+  padding: 10px 20px;
+}
+
+.registration-title {
+  font-size: 30px;
+  font-family: "Lucida Console", "Courier New", monospace;
+  background-color: var(--headerColor);
+}
+
+.registration-component-wrapper {
+  padding: 30px;
+}

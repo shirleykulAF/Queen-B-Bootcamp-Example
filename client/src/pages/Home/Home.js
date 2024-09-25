@@ -26,7 +26,7 @@ const Home = () => {
             </p>
             <div className="button-container">
               <button onClick={() => navigate("/login")}>Log In</button>
-              <button onClick={() => navigate("/signin")}>Sign Up</button>
+              <button onClick={() => navigate("/signup")}>Sign Up</button>
             </div>
           </div>
           <img className="home-photo" src={homePhoto} alt="homePhoto" />

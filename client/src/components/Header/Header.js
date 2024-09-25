@@ -1,5 +1,7 @@
 import React from "react";
 import logo from "../../assets/logo.png";
+import { PiSignOutBold } from "react-icons/pi";
+
 import "./Header.css";
 
 const Header = () => {
@@ -11,7 +13,9 @@ const Header = () => {
       <nav>
         <ul className="home-ul">
           <li>
-            <a href="/">Home</a>
+            <a href="/">
+              Signout <PiSignOutBold />
+            </a>
           </li>
         </ul>
       </nav>
