@@ -1,16 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import axios from 'axios';
-<<<<<<< HEAD
 //import firstPerson from './images/person1.svg';
 import CreateNewMentor from './pages/signup-page.jsx';
-=======
-import HomePage from './pages/HomePage';
+
+import HomePage from './pages/homepage';
 import SignUpPage from './pages/signup-page';
 import LogInPage from './pages/login-page';
 import firstPerson from './images/person1.svg';
 import './App.css';
->>>>>>> main
 
 const port = process.env.PORT || 5001;
 
@@ -25,10 +23,6 @@ function App() {
   }, []);
 
   return (
-<<<<<<< HEAD
-   
-    <CreateNewMentor/>
-=======
     <Router>
       <div className="App">
         <Routes>
@@ -43,7 +37,6 @@ function App() {
         </Routes>
       </div>
     </Router>
->>>>>>> main
   );
 }
 
