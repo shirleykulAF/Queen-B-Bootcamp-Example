@@ -7,6 +7,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import { FiPhone } from "react-icons/fi";
 
 const MentorDetailsModal = ({ data }) => {
+  console.log(data);
   const whatsappLink = `https://wa.me/+972${data.phone_number}`;
   const callLink = `tel:+972${data.phone_number}`;
   const emailLink = `mailto:${data.email}`;
