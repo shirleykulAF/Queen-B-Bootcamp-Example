@@ -32,10 +32,11 @@ app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
 });
 
+//this post is working good and add successfully the mentor to the database.
 app.post('/mentors', (req, res) => {
 
   const { fullName, email, phoneNumber, linkedinProfile, aboutMe, technologies } = req.body;
-  
+  // להוסיף פה בדיקה של אם אימייל כב קיים במערכת אז להחזיר שגיאה
   client.query('INSERT INTO mentors (full_name, email, phone_number, linkedin_url, about_me, technologies) VALUES ($1, $2, $3, $4, $5, $6)', [fullName, email, phoneNumber, linkedinProfile, aboutMe, technologies])
   .then(() => {
     res.status(201).send('Mentor added!');
@@ -44,5 +45,40 @@ app.post('/mentors', (req, res) => {
     console.error('Error executing query', err.stack);
     res.status(500).send('Error adding mentor');
   });
+  
 });
+
+//this get is working good - returns all the entries in the mentors table.
+app.get('/mentors', (req, res) => {
+
+  client.query('SELECT * FROM mentors')
+  .then((result) => {
+    //console.log(result.rows);
+    res.status(200).send(result.rows);
+  })
+  .catch(err => {
+    console.error('Error executing query', err.stack);
+    res.status(500).send('Error getting mentors');
+  });
+});
+
+/*
+//this get is to return a mentors by name - still not working
+//and also need to change the name to email.
+app.get('/mentors', (req, res) => {
+  const { name } = req.query;
+  console.log(name);
+  client.query('SELECT * FROM mentors WHERE full_name = $1', [name])
+  .then((result) => {
+    res.status(200).send(result.rows);
+  })
+  .catch(err => {
+    console.error('Error executing query', err.stack);
+    res.status(500).send('Error getting mentors');
+  });
+});
+*/
+
+
+  
 

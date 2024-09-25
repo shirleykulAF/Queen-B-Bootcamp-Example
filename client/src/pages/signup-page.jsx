@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Select from 'react-select';
 import './CreateNewMentor.css';
 
@@ -24,6 +24,8 @@ const options = [
   { value: 'CV', label: 'CV' },
 ];
 
+
+
 const CreateNewMentor = () => {
 
   const [fullName, setFullName] = useState('');
@@ -32,6 +34,23 @@ const CreateNewMentor = () => {
   const [linkedinProfile, setLinkedinProfile] = useState('');
   const [aboutMe, setAboutMe] = useState('');
   const [technologies, setTechnologies] = useState([]);
+  const full_name = 'Omer Penso';
+
+ /* useEffect(() => {
+    //fetch(`http://localhost:5001/mentors?name=${encodeURIComponent(full_name)}`)
+    fetch(`http://localhost:5001/mentors`)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Failed to fetch mentors');
+        }
+        return response.json();
+      })
+      .then((data) => {
+        alert(JSON.stringify(data, null, 2));  // Alert the fetched mentors
+      })
+      .catch((error) => console.error('Error fetching mentors:', error));
+  }, []);
+  */
 
   const handleTechnologyChange = (selectedOptions) => {
     setTechnologies(selectedOptions || []);
@@ -48,18 +67,21 @@ const CreateNewMentor = () => {
       technologies: technologies.map(option => option.value), 
     };
     
+    //the post request is working good and add successfully the mentor to the database.
     fetch('http://localhost:5001/mentors', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(mentor),
     })
-    
     .then((response) => {
       if (!response.ok) {
         throw new Error('There was an error adding the mentor');
       }
-      return response.json();
-    })
+     return response.text();
+    }) 
+    .then((data) => {
+      alert(data);
+      })
     .catch(error => console.error('There was an error adding the mentor', error));
    };
   
