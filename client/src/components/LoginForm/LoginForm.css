@@ -1,0 +1,52 @@
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    padding: 20px;
+    background-color: white; /* White background for the form */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow to elevate the form */
+  }
+  
+  .input-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #6c757d; /* Grey color for label */
+  }
+  
+  input {
+    width: 100%;
+    padding: 8px 16px;
+    border: none;
+    outline: none;
+    border-radius: 30px; /* Rounded input fields */
+    font-size: 16px;
+    line-height: 20px;
+    background-color: white; /* White background for the input */
+    font-family: Arial, sans-serif; /* Ensures the input text uses Arial */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow around input fields */
+  }
+  
+  /* Style for error messages */
+  .error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+  }
+  

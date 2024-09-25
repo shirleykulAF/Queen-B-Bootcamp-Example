@@ -1,0 +1,16 @@
+
+button {
+    background-color: transparent; /* Transparent background */
+    border: 2px solid #6c757d; /* Grey border */
+    color: #6c757d; /* Grey text */
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
+  }
+  
+  button:hover {
+    background-color: #6c757d; /* Grey background on hover */
+    color: white; /* White text on hover */
+  }
