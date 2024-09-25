@@ -126,7 +126,8 @@ function Feed({ searchTerm }) {
 }
 
 export default Feed;
-*/import React, { useState, useEffect } from 'react';
+*/
+import React, { useState, useEffect } from 'react';
 import Card from '../Card/Card';  // Import the Card component
 import MentorDialog from '../MentorDialog/MentorDialog';  // Import the MentorDialog component
 import './Feed.css';  // Import the CSS for Feed component
@@ -248,6 +249,7 @@ function Feed({ searchTerm }) {  // Accept the searchTerm as a prop
   // Function to handle card click
   const handleCardClick = (mentor) => {
     setSelectedMentor(mentor);  // Set the selected mentor
+    console.log("Selected mentor:", mentor);  // Log the selected mentor
     setShowDialog(true);  // Show the dialog
   };
 

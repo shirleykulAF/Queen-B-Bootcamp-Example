@@ -37,11 +37,11 @@
   
   .card p.technologies {
     font-size: 0.9em;
-    color: #007bff;
+    color: #f8d7da;
     margin-top: 10px;
   }
   
   .card:hover h3 {
-    color: #007bff;
+    color: #f8d7da;
   }
   

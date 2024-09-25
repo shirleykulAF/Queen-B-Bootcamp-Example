@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import './MentorDialog.css';
-import BackButton from './subcomponents/BackButton/BackButton';
 import Image from './subcomponents/Image/Image';
 
 const MentorDialog = ({ mentor, onBackClick }) => {
@@ -39,20 +38,16 @@ const MentorDialog = ({ mentor, onBackClick }) => {
   }, [mentor]);
 
   return (
-    <>
+<>
       {/* Backdrop */}
-      <div className="modal-backdrop" onClick={onBackClick}>
+      <div className="modal-backdrop-custom" onClick={onBackClick}>
         {/* Logging when the backdrop is rendered */}
         {console.log("Backdrop rendered")}
       </div>
 
       {/* Mentor Dialog */}
       <div className="mentor-dialog-container">
-        {/* Log when the BackButton is rendered */}
-        {console.log("BackButton rendered")}
-        <BackButton onClick={onBackClick} />
-        
-        {/* Render and log Image */}
+
         <Image src={mentor.image} alt={mentor.name} />
         <h2>{mentor.name}</h2>
         <p><strong>Technologies:</strong> {mentor.technologies.join(', ')}</p>
@@ -60,21 +55,22 @@ const MentorDialog = ({ mentor, onBackClick }) => {
 
         <div className="mentor-actions">
           <button onClick={togglePhone}>
-            {showPhone ? 'Hide Phone' : 'Show Phone'}
+            {showPhone ? 'Hide Phone' : 'Phone'}
           </button>
           {showPhone && <p>{mentor.phone}</p>}
           
           <button onClick={toggleEmail}>
-            {showEmail ? 'Hide Email' : 'Show Email'}
+            {showEmail ? 'Hide Email' : 'Email'}
           </button>
           {showEmail && <p>{mentor.email}</p>}
           
           <button onClick={toggleLinkedIn}>
-            {showLinkedIn ? 'Hide LinkedIn' : 'Show LinkedIn'}
+            {showLinkedIn ? 'Hide LinkedIn' : 'LinkedIn'}
           </button>
           {showLinkedIn && <p><a href={mentor.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn Profile</a></p>}
         </div>
       </div>
+      
     </>
   );
 };
