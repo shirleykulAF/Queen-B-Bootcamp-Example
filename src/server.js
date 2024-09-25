@@ -50,17 +50,37 @@ app.post('/mentors', (req, res) => {
 
 //this get is working good - returns all the entries in the mentors table.
 app.get('/mentors', (req, res) => {
-
   client.query('SELECT * FROM mentors')
-  .then((result) => {
-    //console.log(result.rows);
-    res.status(200).send(result.rows);
-  })
-  .catch(err => {
-    console.error('Error executing query', err.stack);
-    res.status(500).send('Error getting mentors');
-  });
+    .then((result) => {
+      const formattedMentors = result.rows.map(mentor => {
+        // Log the raw technologies for debugging
+        //console.log('Raw technologies:', mentor.technologies); 
+        
+        // Replace curly braces with square brackets and then parse
+        const techString = mentor.technologies
+          .replace(/{/g, '[') // Replace opening brace with opening bracket
+          .replace(/}/g, ']'); // Replace closing brace with closing bracket
+
+        let technologiesArray = [];
+        try {
+          technologiesArray = JSON.parse(techString); // Parse to array
+        } catch (error) {
+          console.error('Error parsing technologies:', error);
+        }
+
+        return {
+          ...mentor,
+          technologies: technologiesArray // Set the parsed array
+        };
+      });
+      res.status(200).json(formattedMentors); // Send the formatted data as JSON
+    })
+    .catch(err => {
+      console.error('Error executing query', err.stack);
+      res.status(500).send('Error getting mentors');
+    });
 });
+
 
 /*
 //this get is to return a mentors by name - still not working

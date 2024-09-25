@@ -17,12 +17,12 @@ body {
     margin-bottom: 30px;
   }
   .create input, .create select {
-    width: 100%;
-    padding: 6px 10px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
-    box-sizing: border-box;
-    display: block;
+    width: 100% !important;
+    padding: 6px 10px !important;
+    margin: 10px 0 !important;
+    border: 1px solid #ddd !important;
+    box-sizing: border-box !important;
+    display: block !important;
   }
   .create button {
     background: #150d10;
