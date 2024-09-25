@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import axios from 'axios';
-import HomePage from './pages/HomePage';
+import HomePage from './pages/homepage';
 import SignUpPage from './pages/signup-page';
-import LogInPage from './pages/login-page';
+import LogInPage from './pages/Login';
 import firstPerson from './images/person1.svg';
 import './App.css';
 
