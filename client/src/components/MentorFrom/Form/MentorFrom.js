@@ -31,7 +31,6 @@ const MentorFrom = () => {
     setFormData({ ...formData, ...data });
   };
 
-  console.log(formData);
   const handleSubmitForm = async () => {
     try {
       const response = await axios.put(`${API_BASE_URL}/api/mentor`, formData);

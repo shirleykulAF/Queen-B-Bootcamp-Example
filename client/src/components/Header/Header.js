@@ -13,12 +13,6 @@ const Header = () => {
           <li>
             <a href="/">Home</a>
           </li>
-          <li>
-            <a href="/viewAllMentors">View All Mentors</a>
-          </li>
-          <li>
-            <a href="/MentorRegistration">Register As Mentor</a>
-          </li>
         </ul>
       </nav>
     </header>
