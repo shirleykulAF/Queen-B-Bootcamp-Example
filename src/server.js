@@ -1,20 +1,23 @@
-require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const path = require("path");
-const app = express();
-const port = process.env.PORT || 5001;
 const { Client } = require("pg");
+const postgres = require('./services/postgres')
+const mentorRoutes = require("./Routes/routes")
+require("dotenv").config();
 
-const client = new Client({
-  host: "localhost",
-  user: "postgres",
-  port: 5432,
-  password: process.env.DB_PASSWORD,
-  database: "postgres",
-});
+// Constants
+const port = process.env.PORT || 5001;
 
-client.connect();
+
+// Create Express Server
+const app = express();
+
+// Connect to Postgres
+postgres.init();
+
+
+// Middleware
 /*
 CORS (Cross-Origin Resource Sharing) is a browser security feature that restricts
 cross-origin HTTP requests with other servers and specifies which domains access your resources.
@@ -25,15 +28,12 @@ app.use(express.json());
 // enables the server to serve the client app without running it
 app.use(express.static(path.join(__dirname, "../client/build")));
 
-app.get("/api/helloworld", (req, res) => {
-  res.send("Hello World");
-});
 
-app.get("/*", (req, res) => {
-  // res.send('Anything else');
-  res.sendFile(path.join(__dirname, "../client/build", "index.html"));
-});
+// Routes
+app.use('/api/mentor', mentorRoutes);
 
+
+// Start the server
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
 });

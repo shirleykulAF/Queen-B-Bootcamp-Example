@@ -71,6 +71,17 @@ async function getAllUsers(userId, accountId) {
   return { ok: true, data: result.rows };
 }
 
+async function getAllMentors(userId, accountId) {
+  const result = await runSingleQuery(`SELECT * from mentors`);
+
+  if (!result.ok) {
+    return result;
+  }
+
+  return { ok: true, data: result.rows };
+}
+
+
 async function createUser(userId, accountId) {
   const result = await runSingleQuery(
     `INSERT INTO users (id, name) VALUES ($1, $2)`
@@ -88,4 +99,5 @@ module.exports = {
   connCheck,
   getAllUsers,
   createUser,
+  getAllMentors,
 };
