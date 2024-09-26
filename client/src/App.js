@@ -1,3 +1,30 @@
+// import React, { useState } from "react";
+// import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+// import Home from "./pages/Home/Home";
+// import MentorRegistration from "./pages/MentorRegistration/MentorRegistration";
+// import ViewAllMentors from "./pages/DisplayMentors/ViewAllMentors"; // Fixed the import
+// import About from "./pages/About/About";
+
+// function App() {
+//   const [selectedName, setSelectedName] = useState(null); // State for selected name
+
+//   return (
+//     <Router>
+//       <Routes>
+//         <Route exact path="/" Component={Home} />
+//         <Route path="/MentorRegistration" Component={MentorRegistration} />
+//         <Route
+//           path="/viewAllMentors"
+//           element={<ViewAllMentors selectedName={selectedName} setSelectedName={setSelectedName} />} // Pass selected name and setter
+//         />
+//         <Route path="/about" Component={About} />
+//       </Routes>
+//     </Router>
+//   );
+// }
+
+// export default App;
+
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home/Home";
