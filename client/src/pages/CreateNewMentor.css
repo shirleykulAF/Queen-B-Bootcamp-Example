@@ -1,34 +1,61 @@
-body {
-  background-color: #eca1a6;
-}
+
+
+.content {
+  background-color: #f8d7da; /* Background color for the content */
+  height: 100%; /* Full height */
+  position: relative; /* Enable positioning for child elements */
+} 
 
 .create {
-    max-width: 400px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  .create label {
-    text-align: left;
-    display: block;
-  }
-  .create h2 {
-    font-size: 35px;
-    color: #150d10;
-    margin-bottom: 30px;
-  }
-  .create input, .create select {
-    width: 100% !important;
-    padding: 6px 10px !important;
-    margin: 10px 0 !important;
-    border: 1px solid #ddd !important;
-    box-sizing: border-box !important;
-    display: block !important;
-  }
-  .create button {
-    background: #150d10;
-    color: #fff;
-    border: 15px;
-    padding: 8px;
-    border-radius: 8px;
-    cursor: pointer;
-  }
+  max-width: 400px;
+  margin: 0 auto; /* Center the form */
+  text-align: center;
+}
+
+.create label {
+  text-align: left;
+  display: block;
+}
+
+.create h2 {
+  font-size: 35px;
+  color: #150d10;
+  margin-bottom: 30px;
+}
+
+.create input, .create select {
+  width: 100% !important;
+  padding: 6px 10px !important;
+  margin: 10px 0 !important;
+  border: 1px solid #ddd !important;
+  box-sizing: border-box !important;
+  display: block !important;
+}
+
+.back-button {
+  position: absolute; /* Use absolute positioning */
+  top: 20px; /* Distance from the top */
+  left: 20px; /* Distance from the left */
+  z-index: 1000; /* Ensure it appears above other elements */
+  background-color: #5a6268; /* Button color */
+  color: white; /* Text color */
+  border: none; /* No border */
+  padding: 10px 15px; /* Padding */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor */
+}
+
+.create button {
+  margin: 10px 0;
+  background-color: #5a6268; /* Grey color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.create button:hover {
+  background-color: #f8d7da; /* Light background on hover */
+}

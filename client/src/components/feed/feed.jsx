@@ -24,12 +24,12 @@ function Feed({ searchTerm }) {  // Accept the searchTerm as a prop
           image: mentor.img_url, // Assuming your API has `img_url`
           name: mentor.full_name, // Assuming your API has `full_name`
           technologies: mentor.technologies, // Assuming this is an array
-          about: mentor.about, // Assuming your API has `about`
-          phone: mentor.phone, // Assuming your API has `phone`
+          about: mentor.about_me, // Assuming your API has `about`
+          phone: mentor.phone_number, // Assuming your API has `phone`
           email: mentor.email, // Assuming your API has `email`
-          linkedin: mentor.linkedin // Assuming your API has `linkedin`
+          linkedin: mentor.linkedin_url // Assuming your API has `linkedin`
         }));
-
+        console.log('Transformed mentors:', mentorData);
         setItems(mentorData);  // Set the original mentor data
         setFilteredItems(mentorData);  // Initially show all mentors
       } catch (error) {
@@ -52,6 +52,7 @@ function Feed({ searchTerm }) {  // Accept the searchTerm as a prop
 
   // Function to handle card click
   const handleCardClick = (mentor) => {
+    console.log('this is what passed to mentorDialog:', mentor);
     setSelectedMentor(mentor);  // Set the selected mentor
     setShowDialog(true);  // Show the dialog
   };
