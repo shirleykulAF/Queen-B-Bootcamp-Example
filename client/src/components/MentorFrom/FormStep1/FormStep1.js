@@ -3,6 +3,24 @@ import { CgAsterisk } from "react-icons/cg";
 import ProgressStepper from "../ProgressStepper/ProgressStepper";
 import "./FormStep1.css";
 
+import person1 from "../../../assets/images/person1.svg";
+import person2 from "../../../assets/images/person2.svg";
+import person3 from "../../../assets/images/person3.svg";
+import person4 from "../../../assets/images/person4.svg";
+import person5 from "../../../assets/images/person5.svg";
+import person6 from "../../../assets/images/person6.svg";
+import person7 from "../../../assets/images/person7.svg";
+
+const imagesOptions = [
+  person1,
+  person2,
+  person3,
+  person4,
+  person5,
+  person6,
+  person7,
+];
+
 const FormStep1 = ({ onNext, onChange, formData }) => {
   const [fullName, setFullName] = useState(formData.fullName || "");
   const [email, setEmail] = useState(formData.email || "");
@@ -28,21 +46,20 @@ const FormStep1 = ({ onNext, onChange, formData }) => {
       case "location":
         setLocation(value);
         break;
-      case "photo":
-        setPhoto(URL.createObjectURL(e.target.files[0]));
-        break;
       case "about":
         setAbout(value);
         break;
       default:
         break;
     }
+
     // updated data to the parent component (MentorFrom) to store it
-    onChange(
-      name === "photo"
-        ? { [name]: URL.createObjectURL(e.target.files[0]) }
-        : { [name]: value }
-    );
+    onChange({ [name]: value });
+  };
+
+  const handlePhotoClick = (image) => {
+    setPhoto(image);
+    onChange({ photo: image });
   };
 
   const handleClickOnNextButton = () => {
@@ -51,7 +68,8 @@ const FormStep1 = ({ onNext, onChange, formData }) => {
       email === "" ||
       phoneNumber === "" ||
       location === "" ||
-      about === ""
+      about === "" ||
+      photo === ""
     ) {
       setError("Please Enter All The Required Fields");
     } else if (!isFullNameValid(fullName)) {
@@ -95,39 +113,72 @@ const FormStep1 = ({ onNext, onChange, formData }) => {
   return (
     <div className="form-step1-continer">
       <ProgressStepper currentStep={1} />
-      <label>
-        <div className="label-name-continer">
-          Full Name <CgAsterisk color="red" className="asterisk" />
+
+      <div className="input-continer">
+        <div className="left-continer">
+          <label>
+            <div className="label-name-continer">
+              Full Name <CgAsterisk color="red" className="asterisk" />
+            </div>
+            <input name="fullName" value={fullName} onChange={handleChange} />
+          </label>
+          <label>
+            <div className="label-name-continer">
+              Email <CgAsterisk color="red" className="asterisk" />
+            </div>
+            <input name="email" value={email} onChange={handleChange} />
+          </label>
+          <label>
+            <div className="label-name-continer">
+              Phone Number <CgAsterisk color="red" className="asterisk" />
+            </div>
+            <input
+              name="phoneNumber"
+              value={phoneNumber}
+              onChange={handleChange}
+            />
+          </label>
+          <label>
+            <div className="label-name-continer">
+              Location <CgAsterisk color="red" className="asterisk" />
+            </div>
+            <input name="location" value={location} onChange={handleChange} />
+          </label>{" "}
+          <label>
+            <div className="label-name-continer">
+              About <CgAsterisk color="red" className="asterisk" />
+            </div>
+            <textarea
+              name="about"
+              rows={4}
+              value={about}
+              onChange={handleChange}
+            />
+          </label>
         </div>
-        <input name="fullName" value={fullName} onChange={handleChange} />
-      </label>
-      <label>
-        <div className="label-name-continer">
-          Email <CgAsterisk color="red" className="asterisk" />
+
+        <div className="right-continer">
+          <label>
+            <div className="label-name-continer">
+              Photo <CgAsterisk color="red" className="asterisk" />
+            </div>
+            <div className="images-continer">
+              {imagesOptions.map((image, index) => (
+                <img
+                  key={index}
+                  src={image}
+                  alt={`image option-${index}`}
+                  onClick={() => handlePhotoClick(image)}
+                  className="image-option"
+                  style={{
+                    border: photo === image ? "2px solid black" : "",
+                  }}
+                />
+              ))}
+            </div>
+          </label>
         </div>
-        <input name="email" value={email} onChange={handleChange} />
-      </label>
-      <label>
-        <div className="label-name-continer">
-          Phone Number <CgAsterisk color="red" className="asterisk" />
-        </div>
-        <input name="phoneNumber" value={phoneNumber} onChange={handleChange} />
-      </label>
-      <label>
-        <div className="label-name-continer">
-          Location <CgAsterisk color="red" className="asterisk" />
-        </div>
-        <input name="location" value={location} onChange={handleChange} />
-      </label>{" "}
-      <label>
-        <div className="label-name-continer">
-          About <CgAsterisk color="red" className="asterisk" />
-        </div>
-        <textarea name="about" rows={4} value={about} onChange={handleChange} />
-      </label>
-      <label>
-        Photo <input name="photo" type="file" onChange={handleChange} />
-      </label>
+      </div>
       {error ? <h4 className="error-text">{error}</h4> : ""}
       <button className="next-button" onClick={handleClickOnNextButton}>
         Next
@@ -135,5 +186,11 @@ const FormStep1 = ({ onNext, onChange, formData }) => {
     </div>
   );
 };
+
+/*
+ <label>
+        Photo <input name="photo" type="file" onChange={handleChange} />
+      </label>
+      */
 
 export default FormStep1;

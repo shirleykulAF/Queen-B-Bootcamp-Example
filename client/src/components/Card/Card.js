@@ -1,29 +1,37 @@
-import React from "react";
-import './Card.css'
-// this is the most simple version. 
+import React, { useState } from "react";
+import './Card.css'; // Assuming the relevant CSS styles are in here
+import PopUp from '../PopUp/PopUp'; // Import the PopUp component
 
-const Card = ({mentorName, mentorBrief, mentorPhotoPath}) => {
+const Card = ({ singleMentor }) => {
+    const [showPopUp, setShowPopUp] = useState(false); // State to control pop-up visibility
+
+    const handleShowPopUp = () => {
+        setShowPopUp(true);
+    };
+
+    const handleClosePopUp = () => {
+        setShowPopUp(false);
+    };
+
     return (
-	<div className="Card">
+        <div className="Card">
+            <div className="cardContainer">
+                <h2 className="title">{singleMentor.name}</h2>
+                <div className="image">
+                    <img src={singleMentor.profile_photo} alt="Mentor's Image" />
+                </div>
+                <p className="about">{singleMentor.about}</p>
 
-        <div className="cardContainer">
+                {/* Button to trigger the pop-up */}
+                <button onClick={handleShowPopUp} className="popup-button">
+                    Show Details
+                </button>
+            </div>
 
-
-        <h2 className="title">{mentorName}</h2>
-        <div className="image">
-        <img src={mentorPhotoPath} alt="Mentor's Image" />
+            {/* PopUp component */}
+            <PopUp show={showPopUp} onClose={handleClosePopUp} data={singleMentor} />
         </div>
-        <p className="about">
-            {mentorBrief}
-        </p>
-        </div>
-	</div>
-  );
+    );
 };
 
 export default Card;
-
-
-
-
-

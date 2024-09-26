@@ -1,15 +1,21 @@
 import React from "react";
 import logo from "../../assets/logo.png";
+import { PiSignOutBold } from "react-icons/pi";
+
 import "./Header.css";
 
 const Header = () => {
   return (
     <header>
-      <img src={logo} alt="Logo" />
+      <a href="/">
+        <img src={logo} alt="Logo" />
+      </a>
       <nav>
-        <ul>
+        <ul className="home-ul">
           <li>
-            <a href="/about">About Us</a>
+            <a href="/">
+              Signout <PiSignOutBold />
+            </a>
           </li>
         </ul>
       </nav>

@@ -1,0 +1,11 @@
+@import "../../styles/variables.css";
+
+.footer {
+  width: 100%;
+  padding: 1rem;
+  color: var(--footerTextColor);
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  background-color: var(--myPurple);
+}

@@ -31,19 +31,23 @@ import Home from "./pages/Home/Home";
 import MentorRegistration from "./pages/MentorRegistration/MentorRegistration";
 import ViewAllMentors from "./pages/DisplayMentors/ViewAllMentors";
 import About from "./pages/About/About";
+import LoginPage from "./pages/UserRegistration/LoginPage/LoginPage";
+import SignupPage from "./pages/UserRegistration/SignupPage/SignupPage";
 
 function App() {
   return (
     <div className="App">
-    <Router>
-      {/* maybe add here another div with className="pages" */}
-      <Routes>
-        <Route exact path="/" Component={Home} />
-        <Route path="/MentorRegistration" Component={MentorRegistration} />
-        <Route path="/viewAllMentors" Component={ViewAllMentors} />
-        <Route path="/about" Component={About} />
-      </Routes>
-    </Router>
+      <Router>
+        {/* maybe add here another div with className="pages" */}
+        <Routes>
+          <Route exact path="/" Component={Home} />
+          <Route exact path="/login" Component={LoginPage} />
+          <Route exact path="/signup" Component={SignupPage} />
+          <Route path="/MentorRegistration" Component={MentorRegistration} />
+          <Route path="/viewAllMentors" Component={ViewAllMentors} />
+          <Route path="/about" Component={About} />
+        </Routes>
+      </Router>
     </div>
   );
 }

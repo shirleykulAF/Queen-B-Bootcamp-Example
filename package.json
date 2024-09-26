@@ -15,8 +15,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@heroicons/react": "^1.0.6",
+    "classnames": "^2.5.1",
+    "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
-    "express": "^4.18.2"
+    "dotenv": "^16.4.5",
+    "express": "^4.18.2",
+    "pg": "^8.13.0"
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
