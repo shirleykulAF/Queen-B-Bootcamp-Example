@@ -7,5 +7,5 @@
   text-align: center;
   position: relative;
   bottom: 0;
-  background-color: var(--myPurple);
+  background-color: var(--headerColor);
 }

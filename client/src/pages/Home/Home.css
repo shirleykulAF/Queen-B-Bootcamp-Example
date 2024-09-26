@@ -6,7 +6,7 @@ body {
   letter-spacing: 0.5 px;
   margin: 0;
   padding: 0;
-  background-color: var(--GumColor);
+  background-color: var(--bodyColor);
 }
 
 nav ul {
@@ -14,7 +14,7 @@ nav ul {
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: space-around
+  justify-content: space-around;
 }
 
 nav ul li {
@@ -44,29 +44,8 @@ section p {
   font-size: 18px;
   color: var(--paragraphColor);
   text-align: center;
-  line-height: 1.6; 
+  line-height: 1.6;
   margin-bottom: 20px;
-}
-
-.button-container {
-  display: inline-flex; 
-  gap: 40px;
-  justify-content: center;
-}
-
-button {
-  background-color: var(--buttonColor);
-  border: none;
-  color: var(--buttonTextColor);
-  padding: 10px 20px;
-  margin: 10px 0;
-  cursor: pointer;
-  font-size: 1rem;
-  border-radius: 5px;
-}
-
-button:hover {
-  background-color: var(--buttonHoverColor);
 }
 
 img.home-photo {
@@ -76,8 +55,6 @@ img.home-photo {
   border-radius: 10px;
   margin-left: 20px;
 }
-
-
 
 /* .content-wrapper {
   position: relative;
@@ -90,7 +67,6 @@ img.home-photo {
   align-items: center;
   width: 100%;
 }
-
 
 /* .content {
   padding: 100px;
@@ -111,7 +87,7 @@ header {
 
 main {
   padding: 40px;
-  display: flex; 
+  display: flex;
   /* justify-content: space-between; */
   flex-direction: column;
   align-items: center;
@@ -137,9 +113,6 @@ section {
   height: auto;
 }
 
-
-
-
 .wave-container {
   /* position: absolute;
   bottom: 0;
@@ -148,7 +121,7 @@ section {
   height: auto;
   z-index: 1;  */
   width: 100%;
-/*  height: auto; */
+  /*  height: auto; */
   overflow: hidden;
   margin-bottom: -5px;
 }
@@ -156,8 +129,37 @@ section {
 .wave-svg {
   width: 100%;
   height: auto;
+  color: var(--myLightBlue);
 }
 
+button {
+  height: 40px;
+  background-color: var(--buttonColor);
+  border: none;
+  color: var(--buttonTextColor);
+  padding: 10px 20px;
+  margin: 10px 0;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: var(--buttonHoverColor);
+}
+
+.button-container {
+  display: inline-flex;
+  gap: 40px;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .button-74 {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}
 
 @media (min-width: 768px) {
   section {

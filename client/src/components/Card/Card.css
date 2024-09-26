@@ -1,71 +1,69 @@
 @import "../../styles/variables.css";
 
 .Card {
-    display: flex;
-    flex-direction: column;
-    height: 340px;
-    width: 290px;
-
-  }
+  display: flex;
+  flex-direction: column;
+  height: 340px;
+  width: 290px;
+}
 
 .Card h1 {
-    text-align: center;
+  text-align: center;
 }
 
 .cardContainer {
-    background: silver;
-    width: 100%;
-    margin: 10px 15px 15px 10px;
-    padding: 12px;
-    text-align: center;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    /* border-radius: 2em;
+  background: silver;
+  width: 100%;
+  margin: 10px 15px 15px 10px;
+  padding: 12px;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  /* border-radius: 2em;
     border: groove 0.3em hotpink; */
-    background-color: var(--headerColor);
-    box-shadow: 0px 0px 9px 6px #fabebd;
+  background-color: var(--myPurple);
+  border-radius: 10px;
+  /*box-shadow: 0px 0px 9px 6px var(--myPurple);*/
 }
 
-.title{
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bolder;
-    padding: inherit;
-    /* text-shadow: 1px 1px 0px black, 0px 0px 0px purple; */
-    font-size: 1.5rem;
-    line-height: 1.6;
-    letter-spacing: 4px;
-    color: var(--myDarkBlue);
+.title {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bolder;
+  padding: inherit;
+  /* text-shadow: 1px 1px 0px black, 0px 0px 0px purple; */
+  font-size: 1.5rem;
+  line-height: 1.6;
+  letter-spacing: 4px;
+  color: var(--myDarkBlue);
 }
 
 .image img {
-    max-width: 100px; /* Adjust the size as needed */
-    max-height: 100px;
-    /* height: auto; */
-  }
-
-.about {
-    height: 75px;
-    font-size: small;
-    overflow-y: scroll;
-
+  max-width: 100px; /* Adjust the size as needed */
+  max-height: 100px;
+  /* height: auto; */
 }
 
-.popup-button{
-    background-color: var(--myDarkBlue);
-    border: none;
-    color: var(--myWhite);
-    margin: 10px 89px;
-    cursor: pointer;
-    font-size: 11px;
-    border-radius: 25px;
+.about {
+  height: 75px;
+  font-size: small;
+  overflow-y: scroll;
+}
+
+.popup-button {
+  background-color: var(--myDarkBlue);
+  border: none;
+  color: var(--myWhite);
+  margin: 10px 89px;
+  cursor: pointer;
+  font-size: 11px;
+  border-radius: 25px;
 }
 
 .popup-button:hover {
   background-color: var(--myLightBlue);
 }
-  
 
 /* .body {
     display: flex;
