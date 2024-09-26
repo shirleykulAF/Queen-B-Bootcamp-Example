@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const path = require("path");
-const { Client } = require("pg");
+// const { Client } = require("pg");
 const postgres = require('./services/postgres')
 const mentorRoutes = require("./Routes/routes")
 require("dotenv").config();

@@ -4,8 +4,12 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  /* padding: 5px 85px; */
+  /* padding: 2vw; */
+  font-size: 1.5rem;
+  /* padding: 1rem; */
   background-color: var(--headerColor);
+  width: 100%;
 }
 
 header img {

@@ -1,5 +1,6 @@
 :root {
-  --headerColor: #fabebd;
+  /* --headerColor: #fabebd; */
+  --headerColor: #bcbbf2;
   --bodyColor: #fabebd4d;
   --titleColor: #333;
   --paragraphColor: #555;
@@ -7,4 +8,16 @@
   --buttonTextColor: white;
   --buttonHoverColor: #fabebd4d;
   --mentorModalColor: #ebe1e1;
+  
+  --GumColor: #ea88b9;
+  --myPurple: #CCA1C9;
+  --shadowColor: #fabebd;
+  --myDarkBlue: #0B1957;
+  --myCutePink: #FA9EBC;
+  --myWhite: #F8F3EA;
+  --myLightBlue: #bcbbf2;
+  --myOrange: #e4aaa2;
+
+
+
 }
