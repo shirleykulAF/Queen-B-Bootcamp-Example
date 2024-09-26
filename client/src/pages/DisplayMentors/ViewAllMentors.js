@@ -10,6 +10,20 @@ const ViewAllMentors = () => {
   const [mentors, setMentors] = useState(null);
 
   //this is a mock data for SearchByName and MentorDetailsModal
+  const modalData = {
+    name: "Merissa Mayer",
+    email: "MerissaMayer@gmail.com",
+    phone_number: "0506396105",
+    linkedin_url: "https://www.linkedin.com/in/marissamayer",
+    profile_photo: "/static/media/person1.8e74dd75947a3715eeb2bb4bf9f45a9d.svg",
+    about:
+      "an American business executive and investor who served as president and chief executive officer of Yahoo! from 2012 to 2017.",
+    position: "Board of Directors",
+    experience: 20,
+    company: "AT&T",
+    geographical_location: "San Francisco, California, United States",
+    programming_languages: ["JavaScript", "React", "React Native", "Python"],
+  };
   const mentorData = [
     {
       full_name: "John Doe",
@@ -53,7 +67,7 @@ const ViewAllMentors = () => {
         <Header />
         <CardsGrid mentorsList={mentors} />
         {/* <SearchByName data={mentors}/> */}
-        {/*<MentorDetailsModal data={edenData} */}
+        {/*<MentorDetailsModal data={modalData} />*/}
       </div>
     )
   );
