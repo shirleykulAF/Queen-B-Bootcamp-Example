@@ -194,6 +194,19 @@ async function getPasswordOfUser(email) {
   }
 }
 
+async function getByFilter(filter) {
+  const result = await runSingleQuery(
+    `SELECT * FROM mentors
+    WHERE ${filter} = name OR ${filter} = ANY (programming_languages)`
+  );
+
+  if (!result.ok) {
+    return result;
+  }
+
+  return { ok: true, data: result.rows };
+}
+
 module.exports = {
   init,
   createMentor,
@@ -204,4 +217,5 @@ module.exports = {
   createUser,
   findUserByEmail,
   getPasswordOfUser,
+  getByFilter,
 };
