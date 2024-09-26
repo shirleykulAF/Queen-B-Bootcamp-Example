@@ -1,6 +1,6 @@
 :root {
-  /* --headerColor: #fabebd; */
-  --headerColor: #bcbbf2;
+  --headerColor: #fabebd;
+  /* --headerColor: #bcbbf2;*/
   --bodyColor: #fabebd4d;
   --titleColor: #333;
   --paragraphColor: #555;
@@ -8,16 +8,13 @@
   --buttonTextColor: white;
   --buttonHoverColor: #fabebd4d;
   --mentorModalColor: #ebe1e1;
-  
+
   --GumColor: #ea88b9;
-  --myPurple: #CCA1C9;
+  --myPurple: #cca1c9;
   --shadowColor: #fabebd;
-  --myDarkBlue: #0B1957;
-  --myCutePink: #FA9EBC;
-  --myWhite: #F8F3EA;
+  --myDarkBlue: #0b1957;
+  --myCutePink: #fa9ebc;
+  --myWhite: #f8f3ea;
   --myLightBlue: #bcbbf2;
   --myOrange: #e4aaa2;
-
-
-
 }

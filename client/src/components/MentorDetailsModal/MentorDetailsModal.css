@@ -1,4 +1,4 @@
-/* @import "../../styles/variables.css";
+@import "../../styles/variables.css";
 
 .modal-overlay {
   position: fixed;
@@ -10,6 +10,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1000;
 }
 
 .modal {
@@ -18,7 +19,10 @@
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   position: relative;
-  width: 400px;
+  max-width: 500px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .close-button {
@@ -35,8 +39,8 @@
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  object-fit: fill;
-  margin-left: 120px;
+  object-fit: cover;
+  object-position: top;
 }
 
 .fullName {
@@ -57,7 +61,7 @@
   text-align: center;
   margin-top: 0px;
   font-size: medium;
-}*/
+}
 
 .data-container {
   display: grid;

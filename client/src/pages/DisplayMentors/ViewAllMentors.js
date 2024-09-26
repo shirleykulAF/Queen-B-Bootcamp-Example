@@ -67,7 +67,7 @@ const ViewAllMentors = () => {
         <Header />
         <CardsGrid mentorsList={mentors} />
         {/* <SearchByName data={mentors}/> */}
-        {/*<MentorDetailsModal data={modalData} />*/}
+        {/*<MentorDetailsModal data={modalData}> */}
       </div>
     )
   );
