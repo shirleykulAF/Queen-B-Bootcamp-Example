@@ -1,4 +1,11 @@
+
 const express = require('express');
+
+
+const mentorsRoutes = require('./routes')
+
+
+
 const cors = require('cors');
 const path = require('path');
 const app = express();
@@ -15,8 +22,13 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, '../client/build')));
 
 app.get('/api/helloworld', (req, res) => {
-  res.send('Hello World');
+  res.send('Hello iufiuifuWorld');
 });
+
+
+
+app.use('/api/mentors',mentorsRoutes);
+
 
 app.get('/*', (req, res) => {
   // res.send('Anything else');

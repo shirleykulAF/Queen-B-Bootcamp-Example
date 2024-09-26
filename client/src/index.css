@@ -1,13 +1,337 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: cursive;
+  background-color: #faeaf9;
+  background-position: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.imageQueen {
+  border-radius: 5px;
+  bottom: 0;
+  margin-top: 20px; /* Adds space between the image and the button */
 }
+
+
+.wrapper {
+  border-radius: 40px;
+  padding: 20px; 
+  top: 10px;
+  background-color: #fcf4f4;
+  border: 1px;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper h1 {
+  color: #e75480; 
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.wrapper input {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 40px;
+  transition: all 0.3s ease-in-out;
+  border-color: #cd1a6e;
+  outline: none;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.wrapper button {
+  text-align: center;
+  font-family: cursive; /* שונה ל-cursive */
+  color: #110308;
+  margin-top: 20px;
+  font-size: 18px;
+  background-color: #ffffff; 
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.wrapper p {
+  font-size: 18px;
+}
+
+/* Navbar Styles */
+.navbar {
+  width: 100%;
+  background-color: #e75480;
+  padding: 15px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.navbar-logo {
+  color: white;
+  font-size: 24px;
+  text-align:left;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu li {
+  margin-left: 20px;
+}
+
+.navbar-menu li a {
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  font-family: cursive; /* Matching the overall design */
+  padding: 10px 15px;
+  transition: background-color 0.3s ease;
+  border-radius: 4px;
+}
+
+.navbar-menu li a:hover {
+  background-color: #faeaf9;
+  color: #e75480;
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  .navbar-container {
+      flex-direction: column;
+  }
+
+  .navbar-menu {
+      flex-direction: column;
+      width: 100%;
+  }
+
+  .navbar-menu li {
+      margin: 10px 0;
+  }
+
+  .navbar-logo {
+      margin-bottom: 15px;
+     
+  }
+}
+.new-mentor-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 60px;
+  background-color: #f2f2f2;
+  border-radius: 50px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  border: 2px solid #ccc;
+  box-sizing: border-box;
+}
+
+.new-mentor-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 40px;
+  color: #f26fac;
+}
+
+.new-mentor-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 20px; /* הוספת px */
+  color: #494949;
+  font-family: cursive; /* שונה ל-cursive */
+}
+
+.new-mentor-form input,
+.new-mentor-form select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.new-mentor-form button {
+  background-color: #f26fac;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  align-items: center;
+  font-family: cursive; 
+  font-size: 30px;
+}
+
+.search-bar {
+  position: fixed;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 350px; 
+  background-color: #f8f0f5; 
+  border: 2px solid #e75480; 
+  border-radius: 25px; 
+  padding: 20px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.search-bar input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  font-family: cursive; /* שונה ל-cursive */
+  padding: 0px; 
+  border-radius: 25px; 
+}
+
+.search-bar input::placeholder {
+  color: #050102; 
+  text-align: center;
+  opacity: 0.8;
+}
+
+.search-bar input:focus {
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.mentors-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  font-family: cursive; /* שונה ל-cursive */
+}
+
+.mentors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); 
+  gap: 30px; 
+  width: 100%; 
+  max-width: 1200px;
+  font-family: cursive; /* שונה ל-cursive */
+}
+
+.mentor-card {
+  border: 2px solid #e75480; /* צבע רך יותר */
+  background-color: #ffffff; 
+  border-radius: 110px; 
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); 
+  font-family: cursive; 
+  width: 220px;
+  height: 220px;
+}
+
+.mentor-card:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+}
+
+.mentor-card img {
+  width: 100px; 
+  height: 100px; 
+  border-radius: 50%; 
+  margin-bottom: 15px; 
+}
+
+.mentor-card h3 {
+  font-family: cursive; 
+  font-size: 20px;
+  color: #3d2c3f; 
+  margin: 10px 0; 
+  font-weight: bold; 
+}
+
+.mentor-card ul {
+  font-family: cursive; 
+  font-size: 16px; 
+  list-style-type: none; 
+  padding: 0; 
+  color: #555; 
+}
+
+.mentor-container1 {
+  background-color: #f8f9fa;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  max-width: 600px; /* הגדלתי את הרוחב המקסימלי */
+  margin: 30px auto;
+  text-align: left;
+  transition: transform 0.2s;
+  position: relative; /* שימוש בעמדה יחסית */
+  z-index: 1; /* ודא שהכרטיסייה תישאר מעל תוכן אחר */
+}
+
+.mentor-image {
+  width: 140px; /* הגדלתי את גודל התמונה */
+  height: 140px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 15px;
+  border: 3px solid #2c3e50;
+}
+
+.mentor-name {
+  text-align: center;
+  font-size: 28px; /* הגדלתי את גודל הטקסט */
+  color: #34495e;
+  font-weight: bold;
+}
+
+.mentor-language, .mentor-email, .mentor-phone, .mentor-summary {
+  font-size: 20px; /* הגדלתי את גודל הטקסט */
+  margin: 10px 0;
+  color: #555;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .mentor-container1 {
+      padding: 20px;
+      max-width: 90%; /* רוחב גמיש במובייל */
+  }
+
+  .mentor-name {
+      font-size: 24px; /* גודל טקסט קטן יותר במובייל */
+  }
+
+  .mentor-language, .mentor-email, .mentor-phone, .mentor-summary {
+      font-size: 18px; /* גודל טקסט קטן יותר במובייל */
+  }
+}
+
