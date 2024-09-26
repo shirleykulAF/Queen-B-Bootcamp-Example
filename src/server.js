@@ -4,18 +4,18 @@ const path = require("path");
 // const { Client } = require("pg");
 const postgres = require('./services/postgres')
 const mentorRoutes = require("./Routes/routes")
+const usersRoutes = require("./routes/usersRoutes");
+
 require("dotenv").config();
 
 // Constants
 const port = process.env.PORT || 5001;
-
 
 // Create Express Server
 const app = express();
 
 // Connect to Postgres
 postgres.init();
-
 
 // Middleware
 /*
@@ -28,10 +28,9 @@ app.use(express.json());
 // enables the server to serve the client app without running it
 app.use(express.static(path.join(__dirname, "../client/build")));
 
-
 // Routes
-app.use('/api/mentor', mentorRoutes);
-
+app.use("/api/mentor", mentorRoutes);
+app.use("/api/users", usersRoutes);
 
 // Start the server
 app.listen(port, () => {

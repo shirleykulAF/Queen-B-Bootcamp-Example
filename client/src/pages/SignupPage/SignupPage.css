@@ -1,0 +1,55 @@
+.signup-continer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  /* Form Box Style */
+  width: 700px;
+  margin-top: 15px;
+  padding: 20px;
+  background-color: var(--mentorModalColor);
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-continer {
+  display: grid;
+  flex-direction: row; /* Ensures stacking of the inputs */
+  gap: 20px; /* Adds vertical spacing between the input fields */
+}
+
+label {
+  align-items: center;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.label-name-continer {
+  display: flex;
+}
+
+.asterisk {
+  margin-left: 10px;
+}
+
+input {
+  padding: 5px;
+  border-radius: 10px;
+  border-color: #ccc;
+}
+
+.signup-button {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: var(--buttonColor);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+}
+
+.link-continer {
+  display: flex;
+}

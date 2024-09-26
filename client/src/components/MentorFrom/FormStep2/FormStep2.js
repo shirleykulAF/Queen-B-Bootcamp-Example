@@ -10,7 +10,7 @@ const FormStep2 = ({ onNext, onBack, onChange, formData }) => {
   );
   const [company, setCompany] = useState(formData.company || "");
   const [linkedinURL, setLinkedinURL] = useState(formData.linkedinURL || "");
-  const [expertise, setExpertise] = useState(formData.expertise || "");
+  const [expertise, setExpertise] = useState(formData.expertise || []);
   const [error, setError] = useState("");
 
   const handleChange = (e) => {
@@ -40,8 +40,11 @@ const FormStep2 = ({ onNext, onBack, onChange, formData }) => {
   };
 
   const handleSetExpertise = (data) => {
+    console.log("data before: ", data);
     const dataArray = data.split(",");
     setExpertise(dataArray);
+
+    console.log("form2: ", dataArray);
   };
 
   const handleClickOnSubmitButton = () => {

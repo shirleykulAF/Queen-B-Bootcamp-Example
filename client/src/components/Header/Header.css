@@ -15,3 +15,8 @@ header {
 header img {
   height: 70px;
 }
+
+.home-ul {
+  display: flex;
+  margin-left: auto;
+}
