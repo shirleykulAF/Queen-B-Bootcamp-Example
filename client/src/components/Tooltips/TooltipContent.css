@@ -1,4 +1,4 @@
-/* @import "../../styles/variables.css";
+@import "../../styles/variables.css";
 
 .modal-overlay {
   position: fixed;
@@ -35,7 +35,7 @@
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  object-fit: fill;
+  object-fit: cover;
   margin-left: 120px;
 }
 
@@ -56,7 +56,6 @@
 .about {
   text-align: center;
   margin-top: 0px;
-  /*font-size: medium;*/
 }
 
 .data-container {
@@ -93,4 +92,4 @@
 
 .icons-container a:hover {
   background-color: var(--buttonHoverColor);
-} */
+}

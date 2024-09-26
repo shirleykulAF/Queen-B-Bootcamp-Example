@@ -30,24 +30,24 @@ const MentorDetailsModal = ({ data }) => {
             </button>
             <img
               className="mentor-photo"
-              src={data.photo_url}
+              src={data.profile_photo}
               alt="Mentor Photo"
             />
-            <h2 className="fullName">{data.full_name}</h2>
+            <h2 className="fullName">{data.name}</h2>
             <div className="skills-container">
               {data.programming_languages.map((val) => (
                 <h4 className="skill">#{val}</h4>
               ))}
             </div>
-            <h3 className="about">{data.general_description}</h3>
+            <h3 className="about">{data.about}</h3>
             <div className="data-container">
-              <p>{data.role}</p>
-              <p>{data.years_of_experience} Years Of Experience </p>
+              <p>{data.position}</p>
+              <p>{data.experience} Years Of Experience </p>
               <p>Work In {data.company}</p>
               <p>Live In {data.geographical_location}</p>
             </div>
             <div className="icons-container">
-              <a href={data.linkedin_profile} target="_blank">
+              <a href={data.linkedin_url} target="_blank">
                 <SlSocialLinkedin size="21" color="black" />
               </a>
               <a href={emailLink} target="_blank">
