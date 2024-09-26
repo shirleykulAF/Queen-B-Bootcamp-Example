@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import LoginForm from './components/LoginForm'; // Import the LoginForm component
+import LoginForm from '../components/LoginForm/LoginForm'; // Import the LoginForm component
 import './Login.css';
 
-function Login(){
-    const [errorMessage, setErrorMessage] = useState('');
-    const [loading, setLoading] = useState(false);
+function Login() {
+  const [errorMessage, setErrorMessage] = useState('');
+  const [loading, setLoading] = useState(false);
 
-    // Function to handle login submission
+  // Function to handle login submission
   const handleLogin = (fullName, password) => {
     setLoading(true); // Start loading state when login is initiated
     setErrorMessage(''); // Clear any previous error messages
@@ -31,8 +31,15 @@ function Login(){
       {/* Render the LoginForm and pass the handleLogin function */}
       <LoginForm onSubmit={handleLogin} />
 
-      {/* Display error message if present */}
-      {errorMessage && <p className="error-message">{errorMessage}</p>}
+      {/* Display loading indicator while login is processing */}
+      {loading ? (
+        <p>Loading...</p>
+      ) : (
+        <>
+          {/* Display error message if present */}
+          {errorMessage && <p className="error-message">{errorMessage}</p>}
+        </>
+      )}
     </div>
   );
 }

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import SearchBar from '../components/SearchBar/SearchBar';  // Import the SearchBar component
-import Feed from '../components/Feed/Feed';  // The feed with the cards
-import Logo from '../components/Logo/Logo';  // Assuming you have a Logo component
+import SearchBar from '../components/searchBar/searchBar';  // Import the SearchBar component
+import Feed from '../components/feed/feed';  // The feed with the cards
+import Logo from '../components/logo/logo';  // Assuming you have a Logo component
 import './HomePage.css';  // Add your HomePage layout CSS
 
 const HomePage = ({ message }) => {

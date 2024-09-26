@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import LoginButton from './LoginButton/LoginButton.jsx';
+import LoginButton from '../LoginButton/LoginButton';
 import './LoginForm.css';
 
 function LoginForm({ onSubmit }){
     const [fullName, setFullName] = useState('');
     const [password, setPassword] = useState('');
 
-    const handleLogin = (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
         onSubmit(fullName, password); // Call the parent handler with fullName and password
     };
