@@ -5,7 +5,7 @@ import axios from 'axios';
 import CreateNewMentor from './pages/signup-page';
 
 import HomePage from './pages/homepage';
-import LogInPage from './pages/login-page';
+import Login from './pages/Login';
 import firstPerson from './images/person1.svg';
 import './App.css';
 
@@ -32,7 +32,7 @@ function App() {
           />
           {/* Sign-Up Page Route */}
           <Route path="/signup" element={<CreateNewMentor />} />
-          <Route path="/login" element={<LogInPage />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
       </div>
     </Router>

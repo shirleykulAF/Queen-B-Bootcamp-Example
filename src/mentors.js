@@ -1,9 +1,10 @@
 //this post is working good and add successfully the mentor to the database.
 const startMentors = (app, client) => {
 app.post('/mentors', (req, res) => {
+    console.log('Incoming request:', req.body);  // Log the request
+
 
     const { fullName, email, phoneNumber, linkedinProfile, aboutMe, technologies } = req.body;
-    // להוסיף פה בדיקה של אם אימייל כב קיים במערכת אז להחזיר שגיאה
     client.query('INSERT INTO mentors (full_name, email, phone_number, linkedin_url, about_me, technologies) VALUES ($1, $2, $3, $4, $5, $6)', [fullName, email, phoneNumber, linkedinProfile, aboutMe, technologies])
     .then(() => {
       res.status(201).send('Mentor added!');
@@ -49,5 +50,6 @@ app.post('/mentors', (req, res) => {
   });
 };
 
-export default startMentors;
+module.exports = startMentors;
+
   

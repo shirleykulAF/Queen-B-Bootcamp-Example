@@ -1,0 +1,19 @@
+html, body {
+    background-color: #f8d7da; /* Light pink color */
+    margin: 0;
+    height: 100%;  /* Full height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Center the login form */
+.login-container {
+    text-align: center;
+    background-color: white; /* Keep the form background white or use another color if you prefer */
+    padding: 30px; /* Increased padding for more space inside */
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+    width: 400px; /* Increased width for a bigger container */
+    max-width: 90%; /* Ensure it’s responsive */
+}

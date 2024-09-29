@@ -33,7 +33,7 @@
 }
 
 .back-button {
-  position: absolute; /* Use absolute positioning */
+  /*position: absolute; /* Use absolute positioning */
   top: 20px; /* Distance from the top */
   left: 20px; /* Distance from the left */
   z-index: 1000; /* Ensure it appears above other elements */

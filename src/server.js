@@ -4,6 +4,7 @@ const path = require('path');
 const app = express();
 const port = process.env.PORT || 5001;
 const startMentors = require('./mentors');
+const startUsers = require('./users');
 
 const { Client } = require('pg');
 
@@ -29,8 +30,7 @@ const startServer = async () => {
   });
 
   startMentors(app, DB);
-
-   
+  startUsers(app, DB);
 
 };
 

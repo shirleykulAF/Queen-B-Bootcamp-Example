@@ -54,6 +54,7 @@ const CreateNewMentor = () => {
     };
     
     //the post request is working good and add successfully the mentor to the database.
+    
     fetch('http://localhost:5001/mentors', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -68,7 +69,7 @@ const CreateNewMentor = () => {
     .then((data) => {
       alert(data);
       })
-    .catch(error => console.error('There was an error adding the mentor', error));
+    .catch(error => console.error('There was an error adding the mentor', error.message));
    };
   
 

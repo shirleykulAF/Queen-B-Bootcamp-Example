@@ -8,7 +8,7 @@ const Card = ({ image, name, technologies }) => {
   // Convert the technologies array to a string
   const techStr = Array.isArray(techArray) && techArray.length > 0 ? techArray.join(', ') : '';
 
-  console.log(techStr);
+ // console.log(techStr);
   return (
     <div className="card">
       <img src={image} alt={name} className="card-image" style={{ width: '100px', borderRadius: '50%' }} />

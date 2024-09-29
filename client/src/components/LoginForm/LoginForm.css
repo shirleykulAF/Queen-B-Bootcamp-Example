@@ -1,0 +1,69 @@
+/* Styling the form */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    padding: 30px;
+    background-color: white; /* White background for the form */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow to elevate the form */
+    text-align: center; /* Center text inside the form */
+}
+
+/* Input group styling */
+.input-group {
+    margin-bottom: 15px;
+}
+
+/* Label styling */
+label {
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #6c757d; /* Grey color for label */
+}
+
+/* Input field styling */
+input {
+    width: 100%;
+    padding: 10px 16px;
+    border: 1px solid #ced4da; /* Light border for inputs */
+    outline: none;
+    border-radius: 30px; /* Rounded input fields */
+    font-size: 16px;
+    background-color: white; /* White background for the input */
+    font-family: Arial, sans-serif; /* Ensures the input text uses Arial */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow around input fields */
+    transition: border-color 0.3s ease; /* Transition for input focus */
+}
+
+/* Input focus effect */
+input:focus {
+    border-color: #80bdff; /* Change border color on focus */
+}
+
+/* Style for error messages */
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 30px;
+    background-color: #007bff; /* Primary blue color */
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
