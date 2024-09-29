@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import axios from 'axios';
-//import firstPerson from './images/person1.svg';
 import CreateNewMentor from './pages/signup-page';
-
 import HomePage from './pages/homepage';
 import Login from './pages/Login';
 import firstPerson from './images/person1.svg';

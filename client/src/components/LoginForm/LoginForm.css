@@ -17,6 +17,7 @@ form {
 
 /* Label styling */
 label {
+
     margin-bottom: 5px;
     font-size: 14px;
     font-weight: bold;
@@ -67,3 +68,4 @@ button {
 button:hover {
     background-color: #0056b3; /* Darker blue on hover */
 }
+

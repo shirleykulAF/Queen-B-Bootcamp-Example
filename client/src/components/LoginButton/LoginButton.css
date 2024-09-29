@@ -1,3 +1,4 @@
+
 button {
     background-color: transparent; /* Transparent background */
     border: 2px solid #6c757d; /* Grey border */
@@ -13,3 +14,4 @@ button {
     background-color: #6c757d; /* Grey background on hover */
     color: white; /* White text on hover */
 }
+
