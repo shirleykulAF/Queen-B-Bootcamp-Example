@@ -6,6 +6,15 @@ import person2 from './images/person2.svg';
 import person3 from './images/person3.svg';
 import person4 from './images/person4.svg';
 import person5 from './images/person5.svg';
+import myImage from './images/logo2.png';
+import { FiMenu } from "react-icons/fi";
+import { FaWhatsapp } from "react-icons/fa";
+
+import { MdEmail } from "react-icons/md";   
+
+import { DiJavascript1 } from "react-icons/di";
+import { HiOutlineDocumentReport } from "react-icons/hi"; // Heroicons
+
 
 const mentorsData = [
   {
@@ -86,22 +95,33 @@ const OneMentor = () => {
     <div className="mentor-container1">
       <img src={mentor.image} alt={mentor.name} className="mentor-image" />
       <h2 className="mentor-name">{mentor.name}</h2>
-      <p className="mentor-language"><strong>Programming language :</strong> {mentor.language}</p>
-      <p className="mentor-email"><strong>Email:</strong> {mentor.email}</p>
-      <p className="mentor-phone"><strong>Phone number:</strong> {mentor.phone}</p>
-      <p className="mentor-summary"><strong>Summary:</strong> {mentor.summary}</p>
+      <p className="mentor-language"><strong><DiJavascript1 size={40} color="pink" />:</strong> {mentor.language}</p>
+      <p className="mentor-email"><strong>  <MdEmail size={24} color="pink" /> :</strong> {mentor.email}</p>
+      <p className="mentor-phone"><strong>
+      
+      <FaWhatsapp size={24} color="pink" />:</strong> {mentor.phone}</p>
+      <p className="mentor-summary"><strong><HiOutlineDocumentReport size={40} color="pink" /> {/* Report Icon */}   
+      :</strong> {mentor.summary}</p>
 
-            <nav class="navbar">
-  <div class="navbar-container">
-    <a href="#" class="navbar-logo">QueenB</a>
-    <ul class="navbar-menu">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </div>
-</nav> 
+      <nav class="navbar">
+      <div class="navbar-container">
+      <div className='imageQueen'>
+          <img src={myImage} alt="תמונת רקע להתחברות" className="background-image" />
+          </div> 
+       
+        <ul class="navbar-menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+          <div className="lang">
+          <li><a href="#">&emsp; &emsp;&emsp; &emsp;Hebrew | Arabic</a>
+          &emsp;&emsp;&emsp; <FiMenu size={30} color="white" /></li>
+          </div> 
+        
+        </ul>
+      </div>
+    </nav>
     </div>
   );
 };

@@ -1,8 +1,10 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: cursive;
-  background-color: #faeaf9;
+  /* font-family: "Sunday", Sans-serif; */
+  font-family: "Fantasy";
+  /* background-color: #faeaf9; */
+  background-color: white;
   background-position: center;
   align-items: center;
   display: flex;
@@ -10,16 +12,76 @@ body {
   min-height: 100vh;
 }
 
-.imageQueen {
-  border-radius: 5px;
-  bottom: 0;
-  margin-top: 20px; /* Adds space between the image and the button */
+
+
+.homepage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #faeaf9;
+  font-family: "Sunday", Sans-serif;
 }
 
 
+.card {
+  margin-bottom: 40px; 
+  background-color: #fcf4f4;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px;
+  background-color: #f26fac;
+  color: rgb(19, 7, 7);
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 25px;
+}
+
+button:hover {
+  background-color: #d81b88;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.imageQueen {
+  border-radius: 5px;
+  top: 0;
+  padding-right: 11px;
+margin-top: -20px;
+margin-left: -80px;
+margin-bottom: -13px;
+
+
+}
 .wrapper {
   border-radius: 40px;
-  padding: 20px; 
+  padding: 130px; 
   top: 10px;
   background-color: #fcf4f4;
   border: 1px;
@@ -48,7 +110,7 @@ body {
 
 .wrapper button {
   text-align: center;
-  font-family: cursive; /* שונה ל-cursive */
+  font-family: "Sunday", Sans-serif; 
   color: #110308;
   margin-top: 20px;
   font-size: 18px;
@@ -66,7 +128,7 @@ body {
 /* Navbar Styles */
 .navbar {
   width: 100%;
-  background-color: #e75480;
+  background-color: #FF7D9C;
   padding: 15px 0;
   position: fixed;
   top: 0;
@@ -105,13 +167,14 @@ body {
 
 .navbar-menu li a {
   color: white;
-  font-size: 18px;
+  font-size: 30px;
   text-decoration: none;
-  font-family: cursive; /* Matching the overall design */
+  font-family: "Sunday", Sans-serif; 
   padding: 10px 15px;
   transition: background-color 0.3s ease;
   border-radius: 4px;
 }
+
 
 .navbar-menu li a:hover {
   background-color: #faeaf9;
@@ -126,71 +189,87 @@ body {
 
   .navbar-menu {
       flex-direction: column;
+      font-size:10px;
+
       width: 100%;
   }
 
   .navbar-menu li {
       margin: 10px 0;
-  }
-
-  .navbar-logo {
-      margin-bottom: 15px;
-     
+      font-size:10px;
   }
 }
 .new-mentor-form {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 60px;
-  background-color: #f2f2f2;
-  border-radius: 50px;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-  border: 2px solid #ccc;
+  margin-top: 50px;
+  max-width: 600px; /* Set a max width for the form */
+  margin: 0 auto; /* Center the form */
+  padding: 40px; /* Padding for spacing */
+  background-color: #faeaf9; /* Light background */
+  border-radius: 0; /* No border radius */
+  box-shadow: none; /* Remove shadow */
   box-sizing: border-box;
+  top:20px;
 }
 
 .new-mentor-form h2 {
-  text-align: center;
+  margin-top: 60px;
+  text-align: center; /* Center the heading */
   margin-bottom: 20px;
-  font-size: 40px;
+  font-size: 36px; /* Size adjustment */
   color: #f26fac;
+  top:20px;
 }
 
 .new-mentor-form label {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
-  font-size: 20px; /* הוספת px */
+  font-size: 18px; /* Consistent font size */
   color: #494949;
-  font-family: cursive; /* שונה ל-cursive */
+  font-family: "Sunday", Sans-serif;
+  text-align: left; /* Align labels to the left */
 }
 
 .new-mentor-form input,
 .new-mentor-form select {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
+  width: 100%; /* Full width */
+  padding: 12px; /* Input padding */
+  margin: 8px 0; /* Margin for spacing */
   box-sizing: border-box;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  border: 1px solid #ddd; /* Soft border */
+  border-radius:20px; /* Slightly rounded corners */
+  transition: border-color 0.3s ease; /* Transition on focus */
+}
+
+.new-mentor-form input:focus,
+.new-mentor-form select:focus {
+  border-color: #f26fac; /* Focus color */
+  outline: none; /* Remove outline */
 }
 
 .new-mentor-form button {
   background-color: #f26fac;
   color: white;
-  padding: 15px 20px;
-  border: none;
-  border-radius: 4px;
+  padding: 15px;
+  border: none; /* No border */
+  border-radius: 4px; /* Slightly rounded */
   cursor: pointer;
   margin-top: 10px;
-  align-items: center;
-  font-family: cursive; 
-  font-size: 30px;
+  font-family: "Sunday", Sans-serif; 
+  font-size: 24px; /* Font size */
+  transition: background-color 0.3s ease; /* Transition for hover */
+  width: 100%; /* Make the button full width */
 }
+
+.new-mentor-form button:hover {
+  background-color: #d81b88; /* Darker on hover */
+}
+
+
 
 .search-bar {
   position: fixed;
-  top: 80px;
+  top: 140px;
   left: 50%;
   transform: translateX(-50%);
   width: 350px; 
@@ -207,7 +286,7 @@ body {
   border: none;
   outline: none;
   font-size: 18px;
-  font-family: cursive; /* שונה ל-cursive */
+  font-family: "Sunday", Sans-serif; 
   padding: 0px; 
   border-radius: 25px; 
 }
@@ -230,6 +309,7 @@ body {
   width: 100%;
   padding: 20px;
   font-family: cursive; /* שונה ל-cursive */
+  margin-bottom: -900;
 }
 
 .mentors-grid {
@@ -251,7 +331,7 @@ body {
   text-decoration: none;
   color: inherit;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); 
-  font-family: cursive; 
+  font-family: "Sunday", Sans-serif; 
   width: 220px;
   height: 220px;
 }
@@ -269,7 +349,7 @@ body {
 }
 
 .mentor-card h3 {
-  font-family: cursive; 
+  font-family: "Sunday", Sans-serif; 
   font-size: 20px;
   color: #3d2c3f; 
   margin: 10px 0; 
@@ -277,7 +357,7 @@ body {
 }
 
 .mentor-card ul {
-  font-family: cursive; 
+  font-family: "Sunday", Sans-serif; 
   font-size: 16px; 
   list-style-type: none; 
   padding: 0; 
@@ -334,4 +414,3 @@ body {
       font-size: 18px; /* גודל טקסט קטן יותר במובייל */
   }
 }
-

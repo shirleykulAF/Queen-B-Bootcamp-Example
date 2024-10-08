@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import myImage from './images/logo1.png';
+import myImage from './images/logo2.png';
 import './index.css';
+import { FiMenu } from "react-icons/fi";
+
 
 
 
@@ -26,7 +28,7 @@ const LoginSignupForm = () => {
 
   return (
     <div className='wrapper'>
-      <h1>User Login and Mentor Registration</h1>
+      <h1>Mentee Login</h1>
       <input
         type="text"
         placeholder="UserName"
@@ -35,20 +37,23 @@ const LoginSignupForm = () => {
       />
       <Link to='/mentors'>
       <button onClick={handleLogin}>Login</button></Link>
-      <p>Want to register as a new mentor?</p>
-      <Link to='/new-mentor'>
-      <button onClick={handleSignup}>Register as a New Mentor</button></Link>
-      <div className='imageQueen'>
-      <img src={myImage} alt="תמונת רקע להתחברות" className="background-image" />
-      </div> 
+
       <nav class="navbar">
   <div class="navbar-container">
-    <a href="#" class="navbar-logo">QueenB</a>
+  <div className='imageQueen'>
+      <img src={myImage} alt="תמונת רקע להתחברות" className="background-image" />
+      </div> 
+   
     <ul class="navbar-menu">
       <li><a href="#">Home</a></li>
       <li><a href="#">About</a></li>
       <li><a href="#">Services</a></li>
       <li><a href="#">Contact</a></li>
+      <div className="lang">
+      <li><a href="#">&emsp; &emsp;&emsp; &emsp;Hebrew | Arabic</a>
+      &emsp;&emsp;&emsp; <FiMenu size={30} color="white" /></li>
+      </div> 
+    
     </ul>
   </div>
 </nav>    

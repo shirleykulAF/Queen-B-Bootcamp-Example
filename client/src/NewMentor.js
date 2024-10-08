@@ -1,4 +1,8 @@
 import React, { useState, useRef } from 'react';
+import myImage from './images/logo2.png';
+import { FiMenu } from "react-icons/fi";
+
+
 
 
 const NewMentor = () => {
@@ -118,16 +122,24 @@ const NewMentor = () => {
         <button onClick={handleSubmit}>Subbmit</button>
       </form>
       <nav class="navbar">
-  <div class="navbar-container">
-    <a href="#" class="navbar-logo">QueenB</a>
-    <ul class="navbar-menu">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </div>
-</nav> 
+      <div class="navbar-container">
+      <div className='imageQueen'>
+          <img src={myImage} alt="תמונת רקע להתחברות" className="background-image" />
+          </div> 
+       
+        <ul class="navbar-menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+          <div className="lang">
+          <li><a href="#">&emsp; &emsp;&emsp; &emsp;Hebrew | Arabic</a>
+          &emsp;&emsp;&emsp; <FiMenu size={30} color="white" /></li>
+          </div> 
+        
+        </ul>
+      </div>
+    </nav>
     </div>
   );
 };

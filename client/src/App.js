@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import LoginSignupForm from './LoginSignupForm';
 import Mentors from './Mentors';
 
+import Home from './Home';
 
 import NewMentor from './NewMentor';
 import OneMentor from './OneMentor';
@@ -34,7 +35,8 @@ function App() {
     <Router>
     <div>
       <Routes>
-        <Route path="/" element={<LoginSignupForm />} />
+      <Route path="/" element={<Home />} />
+      <Route path="/LoginSignupForm" element={<LoginSignupForm />} />
         <Route path="/mentors" element={<Mentors />} />
         <Route path="/new-mentor" element={<NewMentor />} />
         <Route path="/one-mentor/:name" element={<OneMentor />} /> 
